@@ -1,0 +1,68 @@
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 02</title>
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+        <h1>Exercício</h1>
+
+        <p> Utilizando o arquivo Atividade_02-2.html como base, insira, na área reservada para o código JavaScript, um código que
+            escreva no campo minhaResposta os tipos de cada uma das expressões abaixo, um em cada linha. Não se preocupe se você 
+            não conhece algumas dessas expressões. Você as conhecerá ao longo da disciplina. Nesta atividade, concentre-se apenas 
+            em conseguir descobrir o seu tipo. Note também que nesta questão está sendo exigida a exibição com quebra de linhas. 
+            Para isso, você poderá inserir no texto resultante a tag html < br > de quebra de linhas.</p>
+
+        <h2>Atividade 02-2</h2>
+
+        <p id="minhaResposta"></p>
+
+
+        <script>
+            var var01 = typeof 0;
+            var var02 = typeof 3.14;
+            var var03 = typeof Infinity;
+            var var04 = typeof NaN;
+            var var05 = typeof true;
+            var var06 = typeof 4>1;
+            var var07 = typeof "texto";
+            var var08 = typeof ("É tetra "+1994);
+            var var09 = typeof Symbol("id");
+            var var10 = typeof Date;
+            var var11 = typeof String;
+            var var12 = typeof [1,2,3,4];
+            var var13 = typeof null;
+            var var14 = typeof undefined;
+            var var15 = typeof alert;
+        
+            /// minha primeira solução: 
+            ///var var16 = "</br>"; 
+            /// var resposta = var01 + var16 + var02 + var16 + var03 + var16 + var04 + var16 + var05 + var16 + var06 + var16 + var07 + var16 + var08 + var16 + var09 + var16 + var10 + var16 + var11 + var16 + var12 + var16 + var13 + var16 + var14 + var16 + var15;       
+  
+
+            var resposta = var01 + "<br>";
+            resposta = resposta + var02 + "<br>";
+            resposta = resposta + var03 + "<br>";
+            resposta = resposta + var04 + "<br>";
+            resposta = resposta + var05 + "<br>";
+            resposta = resposta + var06 + "<br>";
+            resposta = resposta + var07 + "<br>";
+            resposta = resposta + var08 + "<br>";
+            resposta = resposta + var09 + "<br>";
+            resposta = resposta + var10 + "<br>";
+            resposta = resposta + var11 + "<br>";
+            resposta = resposta + var12 + "<br>";
+            resposta = resposta + var13 + "<br>";
+            resposta = resposta + var14 + "<br>";
+            resposta = resposta + var15 + "<br>";
+
+
+
+            document.getElementById("minhaResposta").innerHTML = resposta;
+
+        </script>
+
+        
+    </body>
+</html>

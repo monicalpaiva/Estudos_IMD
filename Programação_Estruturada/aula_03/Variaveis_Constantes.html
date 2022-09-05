@@ -1,0 +1,93 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Programação Estruturada - Aula 03</title>
+	</head>
+
+	<body>
+		<noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+        <h1>Variáveis e Constantes</h1>
+        <ul>
+            <li>De uma maneira geral, os identificadores JavaScript seguem as seguintes regras:
+                <ol>
+                    <li>Devem começar com uma letra, com $ ou com _.</li>
+                    <li>Podem conter letras, dígitos, _ e $</li>
+                    <li>Não podem ser palavras reservadas JavaScript, como, por exemplo, palavras-chave 
+                    da linguagem JavaScript. A palavra function, usada em JavaScript, para declarar 
+                    funções, é um exemplo de uma palavra-chave que não pode ser usada como 
+                    identificador de variável.</li>
+                    <li>Evite também usar nomes de objetos e propriedades HTML.</li>
+                </ol>
+            </li>
+        </ul>
+
+        <ul>
+            <li>Em JavaScript, existem maneiras diferentes de unir palavras quando damos nomes às variáveis:
+                <ol>
+                    <li>usando o sublinhado, como em valor_total;</li>
+                    <li>usando as primeiras letras maiúsculas (também chamado de Upper Camel Case), como em ValorTotal;</li>
+                    <li>usando as primeiras letras, exceto na primeira palavra, maiúsculas (também chamado de Lower Camel Case), 
+                        como em valorTotal.</li>
+                </ol>
+            </li>
+        </ul>
+
+        <p>Acesse o link: <a href="https://www.w3schools.com/js/js_reserved.asp">https://www.w3schools.com/js/js_reserved.asp</a> e conheça a lista de palavras reservadas JavaScript.</p>
+		
+        <h1>Declarando Várias Variáveis e o Valor Undefined</h1>
+        <p>Caso não tenha sido atribuído valores a uma variável, ela terá um valor Undefined</p>
+
+		<p id="texto1"></p>
+        <p id="texto2"></p>
+        <p id="texto3"></p>
+
+        <h1>Hoisting e Strict Mode</h1>
+        <p>Importante declarar incialmente os valores das variáveis</p>
+        <p id="texto4"></p>
+        <p id="texto5"></p>
+        <p>Com o texto <strong>"use strict"</strong>; eu dou o comando para iniciar o uso desse modo rigoroso</p>
+        <p id="texto6"></p>
+        <p id="texto7"></p>
+
+        <p>No anexo C da Especificação do JavaScript 2018, você encontra a lista de todas as restrições impostas quando usar o modo rigoroso.<br>
+        <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-strict-mode-of-ecmascript">https://www.ecma-international.org/ecma-262/9.0/index.html#sec-strict-mode-of-ecmascript</a></p>
+        
+        <h1>Declaração de Variáveis Usando Let</h1>
+        <p><strong>Escopo global e escopo de função</strong></p>
+        <p id="texto7"></p>
+		<script>
+            // Note que JavaScript é Case Sensitive
+			var x = "Olá mundo ",
+                y = 20, 
+                valorTotal = x + y; //atribuição em um mesmo var
+			var z;
+			document.getElementById("texto1").innerHTML = valorTotal;
+            document.getElementById("texto2").innerHTML = z;
+            var valorTotal;
+            document.getElementById("texto3").innerHTML = valorTotal;
+
+            x = 100;
+			document.getElementById("texto4").innerHTML = x;
+			var x;
+
+			document.getElementById("texto5").innerHTML = z;
+			var z;
+            z = 100;
+
+            "use strict";
+			//var a;
+			//a = 10;
+			document.getElementById("texto6").innerHTML = a;
+
+            {
+				var w = 100;
+				let q = 100;
+			}
+			document.getElementById("texto7").innerHTML = w;
+		</script>
+
+	</body>
+
+</html>
+				

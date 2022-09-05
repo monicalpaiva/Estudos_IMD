@@ -1,0 +1,36 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Programação Estruturada - Aula 01</title>
+	</head>
+
+	<body>
+		<noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+		<h1>O que JavaScript pode fazer?</h1>
+
+		<h2>01 - JavaScript pode alterar conteúdo HTML</h2>
+
+		<!--			<p id="meu_texto">Conteúdo inicial</p>	-->
+		<p id='meu_texto'>Conteúdo inicial</p>
+		<button type="button" onclick='document.getElementById("meu_texto").innerHTML = "Alterei o conteúdo"'>Clique
+		aqui</button>
+		</br>
+		<button onclick="document.getElementById('minha_img').src='https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/janela_fechada.jpg'">Feche a Janela</button>
+
+		<img id="minha_img" src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/janela_fechada.jpg" style="width:100px">
+		
+		<button onclick="document.getElementById('minha_img').src='https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/janela_aberta.jpg'">Abra a Janela</button>
+		
+	</br>
+	<p id="meu_texto_2" style="display:none">Este é o meu texto</p>
+
+<button type="button" onclick="document.getElementById('meu_texto_2').style.display='block'">Exibir texto</button>
+<button type="button" onclick="document.getElementById('meu_texto_2').style.display='none'">Esconder texto</button>
+
+
+	</body>
+
+</html>
+					

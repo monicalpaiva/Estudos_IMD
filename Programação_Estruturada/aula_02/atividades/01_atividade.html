@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 02 - Atividade 01</title>
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+		<h1>Atividade 01</h1>
+
+		<p>Utilizando o arquivo Atividade_02-1.html como base, insira, na área reservada para 
+            o código JavaScript, um código que declare cinco variáveis e atribua os valores de 5,
+            4, 3, 2 e 1 a elas. Esse código também deve declarar outras duas variáveis e atribuir 
+            a elas os textos "Aprendi" e "JavaScript". O código JavaScript deverá escrever no 
+            campo de texto minhaResposta do html o texto "5, 4, 3, 2, 1... Aprendi JavaScript!!!".
+            Note que foram inseridos espaços em branco no texto resultante. Portanto, 
+            a página html final deverá ter a seguinte exibição:</p>
+            
+        <p>Atividade 02-1</p>
+        <p>5, 4, 3, 2, 1... Aprendi JavaScript!!!</p>
+
+        <h2>Atividade 02-1</h2>
+
+        <p id="minhaResposta"></p>
+
+        <script>
+            var vari01 = "5";
+            var vari02 = "4";
+            var vari03 = "3";
+            var vari04 = "2";
+            var vari05 = "1";
+            var vari06 = "Aprendi ";
+            var vari07 = "JavaScript!!!";
+
+            var resposta =  vari01 + ", " + vari02 + ", " + vari03 + ", " + vari04 + ", " + vari05 + "... " + vari06 + " " + vari07;    
+            document.getElementById("minhaResposta").innerHTML = resposta;
+        </script>
+    </body>
+</html>

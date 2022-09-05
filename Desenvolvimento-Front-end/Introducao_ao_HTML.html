@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desenvolvimento Front-end I</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 47);
+        }
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+    <h1>Aula 01 - Introdução ao HTML</h1>
+    <ul>
+        <ol>
+            <li><strong>Conhecer o HTML e sua história</strong></li>
+            <p>O HTML é uma linguagem de marcação utilizada na construção de páginas na web. Ou seja, o HTML não é uma linguagem de programação em que o programador 
+                tem liberdade de programar comportamentos a partir da entrada de dados. Em vez disso, as linguagens de marcação descrevem informações de apresentação 
+                para que possam ser apresentadas aos usuários. O HTML é hoje utilizado por todo e qualquer site na internet para a criação e estruturação do seu conteúdo.
+            </p>
+            <p>O HTML foi criado por um pesquisador do CERN, Tim Berners-Lee em 1991, com o objetivo de facilitar o compartilhamento de pesquisas entre ele e seu grupo de 
+                colegas.</p>
+            <p>O primeiro navegador foi criado pelo próprio Tim e ficou conhecido como World Wide Web. Em 1993 nasce o primeiro navegador gráfico, o Mosaic.</p>
+            <p> <a href="https://gs.statcounter.com/browser-market-share#monthly-200901-202011" target="_blank">Gerra dos navegadores</a></p>
+            <li><strong>Conhecer os principais editores de texto</strong></li>
+            <p>O <a href="https://www.sublimetext.com/" target="_blank"> Sublime</a> é um editor de texto leve e fácil de usar. Para o uso é necessário adquirir uma 
+                licença.</p>
+            <p>O <a href="https://atom.io/" target="_blank">Atom</a> é um editor de texto e código-fonte gratuito compatível com macOS, Linux e Microsoft Windows com 
+                suporte para plug-ins escritos em Javascript, desenvolvido pelo GitHub.</p>
+            <p>O <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>, ou somente VSCode, é um editor de texto gratuito, de código aberto, 
+                desenvolvido pela Microsoft compatível com sistema operacional Windows, Linux e macOS.</p>
+            <li><strong>Conhecer a estrutura básica de um documento HTML!</strong></li>
+            <p>A primeira linha indica a versão do documento HTML, o conteúdo deve ser <code>&lt;!DOCTYPE html"&gt;</code>.</p>
+            <p>Em seguida, dá-se início à estruturação do HTML. Para isso, os demais elementos HTML, devem ficar entre os elementos <code>&lt;html&gt;</code> e
+                 <code>&lt;/html&gt;</code>.</p>
+            <p>Para incluir informações de cabeçalho como, por exemplo, o título e os metadados, deve-se informar esses dados entre os elementos <code>&lt;head&gt;</code> e
+                 <code>&lt;/head&gt;</code>.</p>    
+            <p>Por fim, o conteúdo a ser mostrado pelo navegador ao usuário, deve ficar delimitado entre os elementos <code>&lt;body&gt;</code> e <code>&lt;/body&gt;</code>.</p>    
+            
+        </ol>
+    </ul>
+    <h1>Aula 02 - Introdução ao CSS</h1>
+    <ul>
+        <ol>
+            <li><strong>Entender o CSS e sua aplicação</strong></li>
+            <p>O CSS (Cascade Style Sheets) é uma linguagem que auxilia a estilização de páginas HTML. Enquanto o HTML se preocupa com a organização e estruturação do conteúdo, o CSS se preocupa com a aparência desse conteúdo.</p>
+            <p><strong>O CSS pode ser incluído no documento HTML de várias formas:</strong></p>
+            <ul style="list-style-type:circle">
+                <li>A mais simples é escrever o código CSS no cabeçalho do documento HTML dentro das tags style e /style</li>
+                <li>É possível importar um arquivo CSS de um arquivo externo. Para importar um arquivo CSS em uma página HTML, utilize a tag link </li>
+                <li>Outra forma é indicar um código CSS diretamente na tag HTML em que se deseja aplicar o estilo. O CSS foi definido através da propriedade 
+                    style (EX.: style="background-color: #FF0000")</li>
+            </ul>
+            <li><strong>Entender como as cores são representadas</strong></li>
+            <p>Atualmente existem 140 cores que podem ser definidas pelos seus respectivos nomes. Para a lista completa das cores disponíveis, 
+                consulte <a href="https://www.w3schools.com/cssref/css_colors.asp" target="_blank">css_colors</a></p>
+            <p><strong>Representações:</strong></p>
+            <ul style="list-style-type:disc">
+                <li>background-color: "green";</li>
+                <li>background-color: rgb(0, 255, 0);</li>
+                <li>background-color: #00FF00;</li>
+            </ul>
+        </ol>
+    </ul>
+    <h1>Aula 03 - Títulos, Parágrafos, Links e Imagens</h1>
+    <ul>
+        <ol>
+            <li>Conhecer como adicionar títulos e parágrafos em HTML</li>
+            <p>Os títulos no HTML são utilizados para dividir o documento HTML em seções. O HTML permite organizar o conteúdo em até seis níveis. (h1 a h6).</p>
+            <p><strong>É importante utilizar os títulos de forma semanticamente correta. Ou seja, o título principal do seu site deve estar na tag h1. 
+                Caso deseje alterar a aparência como, por exemplo, por um título menor, utilize o CSS. Com isso, você manterá a consistência da informação, 
+                fazendo com que seu site seja corretamente interpretado por sistemas externos.</strong></p>
+            <p>Para criar um parágrafo em HTML, deve-se utilizar a tag "p".</p>
+            <li>Conhecer como adicionar links e como estilizá-los</li>
+            <p>Os links no HTML são utilizados para permitir acessar outros documentos através de um simples clique. Graças aos links, podemos ter uma melhor
+                 interação com os sistemas web.</p>
+            <p>Usamos a tag "a" para criar links no HTML</p>
+            <p><strong>Valores do atributo “target”:</strong></p>
+            <ul>
+                <li><strong class="destaque">_blank:</strong> Abre o link em uma nova janela (ou aba)</li>
+                <li><strong class="destaque">_self:</strong> Abre o link na mesma janela que foi clicado (comportamento padrão)</li>
+                <li><strong class="destaque">_parent:</strong> Abre o link no frame "pai"</li>
+                <li><strong class="destaque">_top:</strong> Abre o link no topo da hierarquia de frames</li>
+                <li><strong class="destaque">framename:</strong> Abre o link no iframe cujo nome coincida com o desse parâmetro</li>
+            </ul><br>
+            <p> a href="www.link.com" target="_blank" </p>
+            <p><strong>Estados dos links:</strong></p>
+            <ul>
+                <li><strong class="destaque">link:</strong> Link que ainda não foi visitado</li>
+                <li><strong class="destaque">visited:</strong> Link que já foi visitado</li>
+                <li><strong class="destaque">hover:</strong> Ativo quando o usuário está com o mouse sobre o link</li>
+                <li><strong class="destaque">active:</strong> Ativo quando o usuário clica no link</li>
+            </ul><br>
+            <p>A definição "a:hover" deve vir após a definição "a:link" e "a:visited" para ser efetiva! Similarmente, a definição "a:active" deve vir depois da a:hover para ser efetiva.</p>
+            <li>Conhecer como adicionar imagens e como estilizá-las</li>
+            <p>Para adicionar imagens em um documento HTML, utilize a tag <code>&lt;img&gt;</code>.</p>
+            <p><u>Especificando o caminho para a imagem</u> através do atributo <strong>"src"</strong></p>
+            <code>&lt;img src="img/html-css.jpg"&gt;</code>
+            <p>Indicamos <u>um texto alternativo para imagem</u>, que será exibido quando a imagem não puder ser exibida, através do atributo <strong>"alt"</strong>. Esse atributo
+                 permite deixar sua página mais acessível, pois pode ser lido por sistemas de leitura de telas, comumente utilizados por pessoas com alguma limitação visual.</p>
+            <code>&lt;img src="img/html-css.jpg"  alt="Livro de HTML & CSS"&gt;</code>
+            <ul>
+                <p>OBS: Além da definição de tamanho absoluto, é possível definir a largura ou a altura através de valores relativos. Nesse caso, a imagem ocupará uma parte da área disponível.</p>
+                <li>Atributos de dimensão</li>
+                <p>Para definir a largura utilize o atributo "width" e para definir a altura, utilize o atributo <strong class="destaque">"height".</strong></p>
+                <li>Atributos de posição</li>
+                <p>Para posicionar a imagem à esquerda ou à direita, de forma flutuante, através do atributo <strong class="destaque">"float".</strong></p>
+                <li>Atributos de espaçamento</li>
+                <p>Para adicionar margem às imagens e adicionar espaçamento do conteúdo em relação à imagem, utiliza-se o atributo <strong class="destaque">"margin"</strong>. Para editar apenas algum dos lados podem ser usados também os atributos: "margin-top", "margin-right", "margin-bottom" e "margin-left".</p>
+            </ul>
+        </ol>
+    </ul>
+    <h1>Aula 04 - Formatação em HTML e Listas</h1>
+</section>
+<footer>
+    <p>By Monica Lima de Paiva</p>
+</footer>
+</body>
+</html>

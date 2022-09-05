@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset='UTF-8' />
+		<title>Programação Estruturada - Aula 01</title>
+	</head>
+	<body>
+		<noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+		<h1>Instruções JavaScript</h1>
+
+		<h2>Sequência de Instruções</h2>
+		<p id='meu_texto_1'></p>
+
+        <h2>Bloco de Instruções</h2>
+		<button type="button" onclick="minhaFuncao()">Clique Aqui</button>
+		<p id='meu_texto_3'></p>
+		<p id='meu_texto_4'></p>
+
+        <h2>Ignorando espaços em branco</h2>
+		<p id='meu_texto_2'>Conteúdo inicial</p>
+
+        <h2>Fornecendo Valores para o JavaScript</h2>
+
+		Entrada: <input type="text" id="meuTexto" value="">
+		<button onclick="minhaOutraFuncao()">Clique Aqui</button>
+		<p id="meu_texto_6"></p>
+
+		<script>
+			var x,y,z;
+			x = 10;
+			y = 20;
+			z = x + y;
+			<!-- var x,y,z; x = 10; y = 20; z = x + y; -->
+			document.getElementById("meu_texto_1").innerHTML = z;
+            var nome                      =                          "Monica";
+			document.getElementById("meu_texto_2").innerHTML = nome;
+
+            // Comentário de uma linha
+			/*
+			Comentário de várias linhas
+			*/
+			//document.getElementById("meu_texto_5").innerHTML = 10;
+
+            function minhaOutraFuncao() {
+			    var x = document.getElementById("meuTexto").value;
+			    document.getElementById("meu_texto_6").innerHTML = x;
+		    }   
+            function minhaFuncao() {
+			    document.getElementById("meu_texto_3").innerHTML = "Olá Aluno!";
+			    document.getElementById("meu_texto_4").innerHTML = "Está gostando da aula?";
+		    }
+		</script>
+	</body>
+</html>
+					

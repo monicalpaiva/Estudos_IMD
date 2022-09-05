@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta charset='UTF-8' />
+		<title>Programação Estruturada - Aula 01</title>
+	</head>
+	<body>
+		<noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript> <!--- observação -->
+
+		<h1>Onde colocar o código JavaScript?</h1>
+
+		<h2>02 - no corpo</h2>
+		<p id='meu_texto_2'>Conteúdo inicial</p>
+		<button type='button' onclick='funcaoNoBody()'>Clique aqui</button>
+
+		<!-- Colocar scripts na parte inferior do elemento <body> melhora a velocidade de exibição,
+				porque a interpretação do script diminui a velocidade de exibição. -->
+		<script>
+			function funcaoNoBody() {
+				document.getElementById("meu_texto_2").innerHTML = "Alterei o conteúdo";
+			}
+		</script>
+	</body>
+</html>
+					
+					

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset='UTF-8' />
+		<title>Programação Estruturada - Aula 01 - atividade 01</title>
+	</head>
+	<body>
+		<noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+		<h1>Atividade 01</h1>
+
+		<h2>Utilizando o arquivo atividade01.html, insira o código JavaScript que escreve no campo minha resposta a soma dos números 
+            dados como entrada. </h2>
+
+        Primeiro número: <input type="text" id="num1" value="">
+        Segundo número: <input type="text" id="num2" value="">
+            <button onclick="minhaFuncao()">Clique Aqui</button>
+        </br>
+		<p id="resultado"></p>
+        <script>
+            function minhaFuncao() {
+                var num1,num2,soma;
+			    var num1 = Number(document.getElementById("num1").value);
+                var num2 = Number(document.getElementById("num2").value);
+                soma = num1 + num2;
+			    document.getElementById("resultado").innerHTML = soma;
+		    }
+		</script>
+</body>
+</html>
