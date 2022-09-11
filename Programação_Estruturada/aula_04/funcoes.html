@@ -1,0 +1,95 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada - Aula 04</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+        <h3>Aula 04 - Funções</h3>
+        <h6>Modularização</h6>
+        <p>A melhor maneira de desenvolver um grande programa é construí-lo a partir de pequenas partes, as quais chamaremos de módulos.
+             Essa técnica é chamada de “dividir para conquistar”, estratégia utilizada há muitos anos em ambientes de guerra. Uma grande
+              vantagem dessa técnica é que a nossa atenção será focada em dividir um problema grande e complexo em problemas menores e 
+              mais simples, e depois resolver cada um deles separadamente. No final, ao resolvermos todos os problemas menores, 
+              combinamos as pequenas soluções em uma solução maior que resolve o problema originalmente grande e complexo.</p>
+        <p>Usando esse conceito, teríamos uma única cópia desses trechos de código em módulos e os programas fariam, de alguma
+             maneira, uso de tais módulos.</p>
+        <p><strong>modularização permite que cada módulo do programa seja escrito, testado e revisado individualmente, sem alterar o funcionamento
+             do programa como um todo.</strong></p>
+        <h6>Modularização em JavaScript</h6>
+        <p>Em JavaScript, a modularização é feita geralmente através da criação e do uso de funções, as quais são consideradas a essência da Programação
+             Estruturada, pois são estruturas de código que permitem que o usuário organize seus programas em partes menores e mais 
+             simples.</p>
+        <p>Também é necessário compreendermos que a maioria das linguagens de programação disponibiliza um conjunto de módulos prontos 
+            aos programadores, úteis por reunirem de uma maneira organizada e concisa funções testadas de uso mais comum 
+            (como funções matemáticas, por exemplo). Esses módulos são as chamadas <strong>bibliotecas</strong>.</p>
+        <h6>Estrutura das Declarações de Funções</h6>
+        <p>De uma maneira geral, uma função JavaScript é definida usando a palavra-chave <strong>function</strong>, seguida por um
+             <u>nome e parênteses</u>. As funções podem, opcionalmente, receber valores, que chamamos de parâmetros, e podem, 
+             também opcionalmente, retornar um valor, o qual chamamos de retorno da função.</p>
+        <p><Strong>As regras para os nomes das funções são as mesmas que temos para os nomes das variáveis</Strong></p>
+        <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a04_f07.png" alt="Imagem da estrutura da função em javaScritp" style="border:1px solid black">
+        <p></p>
+        <p>Os <strong>parâmetros da função</strong>, ou seja, os valores que a função pode receber como entrada, têm seus nomes listados 
+            dentro dos parênteses. Os nomes dos parâmetros são separados por vírgulas e caso não tenha parâmetro os parenteses ficam vazios.</p>
+        <p>O <strong>corpo da função</strong> é colocado dentro das chaves, abrindo e fechando o bloco da função, este os parâmetros funcionam como variáveis locais. Podemos declarar outras variáveis, 
+            mas essas variáveis locais somente podem ter seus valores acessados dentro da função em que foram declaradas.</p>
+        <p>Uma função pode ser chamada no HTML e também no código JavaScript, podendo ser chamada quantas vezes forem necessárias. Ex:</p>
+        <code>&lt;button onclick="funcao()"&gtOK&lt;/button&gt</code>
+        <p></p>
+        <p>Os <strong>argumentos</strong> são os valores desses parâmetros</p>
+        <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a04_f14.png" alt="argumentos" style="border:1px solid black">
+        <p></p>
+        <p><strong>Parâmetro é o nome da variável usada na declaração da função, e argumento é o valor utilizado na chamada da função.</strong></p>
+        <h3>Exemplo</h3>
+        <h6>Média de Temperaturas (Genérico)</h6>
+        N1: <input type="number" id="N1" value="">
+        N2: <input type="number" id="N2" value="">
+        N3: <input type="number" id="N3" value="">
+        N4: <input type="number" id="N4" value="">
+        <button onclick="calcular(['N1', 'N2', 'N3','N4'], 'resultado')">OK</button>
+        <p id="resultado"></p>
+       
+        <h6>Situação do Aluno</h6>
+        Nota1:	<input type="number" id="Nota1" value="">
+		Nota2: <input type="number" id="Nota2" value="">
+		<button onclick="situacao('Nota1', 'Nota2', 'resultado2')">OK</button>
+		<p>Resultado:<strong id="resultado2" style="background-color: aqua;"></strong></p>
+        <p></p>
+        <strong><p>NUNCA QUEBRE LINHA EM UMA DECLARAÇÃO DE RETORNO</p></strong>
+		<script src="script.js"></script>
+    </section>
+    <script>
+        var total;
+        var contador;    
+
+        function calcular(entradas, saida) {
+            total = 0;
+            contador = 0;
+            entradas.forEach(soma);
+
+            var m = media();
+
+            document.getElementById(saida).innerHTML = m[0] + m[1];
+        }
+        function soma(value) {
+            total = total + Number(document.getElementById(value).value);
+            contador++; 
+        }
+        function media() {
+            return ["A temperatura media é ", total / contador];
+        }
+    </script>
+    <footer>
+        <strong>By Monica Lima de Paiva</strong>
+    </footer>
+</body>
+</html>
+					
