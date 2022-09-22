@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada - Aula 04</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+        <h3>Aula 05 - Entendendo o seu Código: depuração</h3>
+        <h6>Modularização</h6>
+        <p>Os erros mais comuns são os erros de sintaxe e os erros lógicos.</p>
+        <p>Existem diversos tipos de erro de programação que podem causar erros lógicos. Infelizmente, muitos desses
+             erros são difíceis de encontrar. Pior ainda, muitas vezes em JavaScript, quando o código contém erros, 
+             nada acontece, não há mensagens de erro e você não obterá indicações de onde procurá-los. Precisamos ter 
+             uma maneira de encontrar erros e esse processo de testar, localizar e remover os erros em programas de 
+             computador chama-se <strong>depuração</strong> (debugging).</p>
+             <p>Para sabermos o que está acontecendo com o programa, podemos usar os métodos de saída da linguagem de 
+                programação ou uma ferramenta de depuração. Em JavaScript, temos pelo menos três formas de escrever 
+                saídas do programa:</p>
+            <ul>
+                <ol>
+                    <li>Escrever em um elemento HTML usando o innerHTML</li>
+                    <li>Escrever na saída do HTML usando o método document.write()</li>
+                    <li>Escrever em uma caixa de alerta usando o método window.alert()</li>
+                </ol>
+            </ul>
+            <p><strong>Exemplos:</strong></p>
+                N1:	<input type="number" id="N1" value="">
+                N2: <input type="number" id="N2" value="">
+                <button onclick='situacao()'>OK</button>
+                <p id="resultado"></p>
+                
+                <p id="depuracao1"></p>
+                <p id="depuracao2"></p>
+            <h6>Usando o Console da Ferramenta de Depuração</h6>
+            <p>Utilizarando a ferramenta de depuração do Chrome temos a tecla F12, que funciona como um atalho 
+                para acessar a ferramenta de depuração. Essa tecla também tem essa mesma função nos principais
+                 navegadores. Caso preferir pode acessar com o mouse direito e clicando em "inspecionar".</p>
+            <h6>Conceitos de Depuração</h6>
+            <p>Os principais conceitos de depuração, os quais estão presentes em todas as suas ferramentas:</p>
+            <ul>
+                <ol>
+                    <li>Breakpoint</li>
+                    <p>Ao executar um programa e ativar a ferramenta de depuração, o usuário poderá definir em que pontos
+                         ele deseja que a execução do programa pare para que possa analisar melhor os vários aspectos do
+                          programa naquele ponto, como, por exemplo, o valor das variáveis.</p>
+                    <li>Resume</li>
+                    <li>Step</li>
+                    <li>Step into</li>
+                    <li>Step out</li>
+                    <li>Step over</li>
+                    <li>Scope</li>
+                    <li>Watch List</li>
+                    <li>Call Stack</li>
+                </ol>
+            </ul>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        
+    </script>
+    <footer>
+        <strong>By Monica Lima de Paiva</strong>
+    </footer>
+</body>
+</html>
+					

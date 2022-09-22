@@ -3,7 +3,7 @@
         <meta charset="UTF-8" />
         <title>Programação Estruturada - Aula 04</title>
         <link rel="stylesheet" href="estilo.css">
-        <!-- CSS only -->
+        <!-- CSS only --> 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     </head>
     <body>
@@ -12,13 +12,23 @@
         <h1>Exercício</h1>
 
         <h2>Atividade 04-3</h2>
+        <p>Você já aprendeu o Teorema de Pitágoras? Ele diz que em qualquer triângulo retângulo, o quadrado da hipotenusa é igual à soma do quadrado dos catetos.</p>
+        
+        <p>Neste exercício, vamos desenvolver uma página que recebe os valores da hipotenusa e dos dois catetos e escrever "true" quando o triângulo for retângulo, ou seja, se o quadrado da hipotenusa é igual à soma do quadrado dos catetos. Caso contrário, escreveremos "false" na página. Veja um exemplo abaixo:</p>
+        
+        <p>Para isso, siga os passos indicados no arquivo Atividade_04_4.js:
 
-        Hipotenusa: <input type="number" id="hipotenusa" value=""><br><br>
-        Cateto: <input type="number" id="cateto1" value=""><br><br>
-        Cateto: <input type="number" id="cateto2" value=""><br><br>
-        <button onclick="pitagoras()">OK</button><br>
+            <br>Defina a função ler_entrada, que recebe o nome de um campo numérico e retorna o valor lido desse campo.
+            <br>Defina a função escrever_saida, que recebe o nome de um campo e um valor e escreve no campo recebido como argumento o valor, também recebido como argumento.
+            <br>Defina a função quadrado, que recebe um número x e retorna x2 (lembre-se que x2 = x).
+            <br>Usando as funções acima, escreva o campo da função pitagoras, a fim de concluir o exercício.</p>
+        
+            <br>Hipotenusa: <input type="number" id="hipotenusa" value=""><br><br>
+            <br>Cateto: <input type="number" id="cateto1" value=""><br><br>
+            <br>Cateto: <input type="number" id="cateto2" value=""><br><br>
+        <button onclick="pitagoras(cateto1,cateto2,hipotenusa)">OK</button><br>
         <p id="saida"></p>
         </section>
-        <script src="Atividade_04_4_resposta.js"></script>
+        <script src="Atividade_04_4.js"></script>
     </body>
 </html>
