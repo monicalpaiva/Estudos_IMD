@@ -51,12 +51,25 @@
                          ele deseja que a execução do programa pare para que possa analisar melhor os vários aspectos do
                           programa naquele ponto, como, por exemplo, o valor das variáveis.</p>
                     <li>Resume</li>
+                    <p>Dar andamento após os Breakpoint. Continuando até o próximo, se tiver, Breakpoint ou até o final 
+                        do programa se não tiver mais o Breakpoint.</p>
                     <li>Step</li>
+                    <p>Corresponde a dar um passo na execução do programa. Na prática, essa operação executa a linha 
+                        atual e pausa novamente a execução do programa. O step automaticamente entra nas funções 
+                        definidas caso próxima linha de execução do programa solicite.</p>
                     <li>Step into</li>
+                    <p>Tem o comportamento bastante similar ao Step, a única diferença entre Step e Step into, é que o 
+                        Step não entra em funções assíncronas e o Step into faz isso. </p>
                     <li>Step out</li>
+                    <p>Executa todo o resto do código da função em um só passo, retornando para o ponto seguinte à chamada
+                         da função.</p>
                     <li>Step over</li>
+                    <p>Caso não deseje que entre na função usar o Step over.</p>
+                    <h6>Por fim, temos os conceitos de escopo, lista de observação e pilha de chamadas, os quais se 
+                        aplicam a determinados momentos da execução de um programa. </h6>
                     <li>Scope</li>
-                    <li>Watch List</li>
+                    <p>Inclui todas as variáveis e funções que estão no escopo da linha na qual a execução está pausada.</p>
+                    <li>Watch List(lista de observação)</li>
                     <li>Call Stack</li>
                 </ol>
             </ul>
