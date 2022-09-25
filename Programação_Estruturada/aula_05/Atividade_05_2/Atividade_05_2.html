@@ -1,0 +1,56 @@
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 05</title>
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+        <h1>Exercício</h1>
+ 
+        <h2>Atividade 05-2</h2>
+        <p>Utilizando o Visual Studio Code para erros de sintaxe e a ferramenta de depuração do Chrome, identifique o 
+            erro no arquivo Atividade_05_2.js, de maneira que a função positivo escreva, no parágrafo de identificador,
+             “saída”, o valor “true” se os dois valores passados como entrada forem maiores que zero, ou “false”, se 
+             pelo menos um dos dois valores passados como entrada for menor ou igual a zero.</p>
+        <p>Execute os seguintes testes:</p>
+        <table border="1">
+            <tr>
+                <td>x</td>
+                <td>y</td>
+                <td>Saída Correta</td>
+            </tr>
+            <tr>
+                <td>-1</td>
+                <td>-1</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>true</td>
+            </tr>
+        </table>
+        <p>x: <input type="number" id="entrada1" value=""></p>
+        <p>y: <input type="number" id="entrada2" value=""></p>
+        <button onclick="positivos()">OK</button>
+        <p id="saida"></p>
+
+        <script src="Atividade_05_2.js"></script>
+    </body>
+</html>

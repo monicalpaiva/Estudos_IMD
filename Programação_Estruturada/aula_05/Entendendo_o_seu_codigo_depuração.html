@@ -31,8 +31,8 @@
                 </ol>
             </ul>
             <p><strong>Exemplos:</strong></p>
-                N1:	<input type="number" id="N1" value="">
-                N2: <input type="number" id="N2" value="">
+                <p>N1:	<input type="number" id="N1" value=""></p>
+                <p>N2: <input type="number" id="N2" value=""></p>
                 <button onclick='situacao()'>OK</button>
                 <p id="resultado"></p>
                 
@@ -65,14 +65,40 @@
                          da função.</p>
                     <li>Step over</li>
                     <p>Caso não deseje que entre na função usar o Step over.</p>
-                    <h6>Por fim, temos os conceitos de escopo, lista de observação e pilha de chamadas, os quais se 
-                        aplicam a determinados momentos da execução de um programa. </h6>
-                    <li>Scope</li>
+                    <p><strong>Por fim, temos os conceitos de escopo, lista de observação e pilha de chamadas, os quais se 
+                        aplicam a determinados momentos da execução de um programa. </strong></p>
+                    <li>Scope(escopo)</li>
                     <p>Inclui todas as variáveis e funções que estão no escopo da linha na qual a execução está pausada.</p>
                     <li>Watch List(lista de observação)</li>
-                    <li>Call Stack</li>
+                    <p>Inclui expressões definidas pelo programador e apresenta o valor atual daquela expressão.</p>
+                    <li>Call Stack(pilha de chamadas)</li>
+                    <p>É uma pilha que apresenta a ordem de chamadas de função que levou o programa até àquele ponto. A primeira
+                         chamada está na base da pilha e a última está no topo da pilha.</p>
                 </ol>
             </ul>
+            <h6>Depuração no Google Chrome</h6>
+                <p><strong>Situação do Aluno</strong></p>
+                <p>Nota01:	<input type="number" id="Nota01" value=""></p>
+                <p>Nota02: <input type="number" id="Nota02" value=""></p>
+                <button onclick='condicao()'>OK</button>
+                <p id="resultado01"></p>
+            <p>Explicação:</p>
+            <p>Apertando em F12 vamos abrir s ferramenta de depuração do Chrome e agora, ao invés de usar o console para escrever
+                 as saídas, iremos usar os <strong>sources</strong></p>
+            <p>No sources temos o arquivo js. A primeira coisa que a gente precisa fazer é criar breakpoints, então se clicarmos
+                no número da linha que desejamos examinar, criamos um <strong>breakpoint</strong> na linha, e isso é indicado 
+                por essa essa seta azul cobrindo o número da linha.</p>
+            <p>Recarregamos a página e teremos como examinar cada função/variáveis.</p>
+            <p>Na janela do <strong>Watch</strong> podemos adicionar valores, note que eu posso escrever expressões clicando no
+                 +, eu posso escrever, por exemplo: typeof x, ele me mostrará o tipo de x que, por ser um 5, ele é um número. 
+                 Ou eu posso buscar o resultado de (x + y) / 2, então qualquer expressão que eu escrever aí ele vai mostrar.</p>
+            <p>Então, o que eu posso fazer aqui é dar um <strong>step over</strong>, com isso podemos analisar o valor da linha seguinte.</p>
+            <p>Podemos dar um <strong>resume</strong> (paused in debugger), aqui em cima do HTML, e ele termina a execução da 
+                minha página HTML. Aí eu posso, sem nenhum problema, reiniciar essa execução simplesmente clicando em OK.</p>
+            <p>Para passar por cima da chamada dessa função, vamos dar um <strong>step into</strong>, essa função não é assíncrona, por isso
+                se comportará como um <strong>step</strong>.</p>
+            <p>Temos também o espaço do <strong>call stack</strong>, a pilha de chamadas que tem ao clicarmos na página HTML. Essa função
+                fica na parte da "ferramenta de depuração"</p>
     </section>
     <script src="script.js"></script>
     <script>
