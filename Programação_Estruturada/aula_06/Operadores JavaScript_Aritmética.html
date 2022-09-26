@@ -41,9 +41,194 @@
             flutuante de precisão dupla de 64 bits, seguindo o padrão internacional IEEE 754.  Em JavaScript, os números 
             são precisos até 15 dígitos. Além disso, o número máximo de casas decimais é 17, mas a aritmética de ponto 
             flutuante não é 100% precisa.</p>
+        <p> entradas: <br>
+            var x = 999999999999999;<br>
+		    var y = 9999999999999999;<br>
+            var z = 0.2 + 0.1;<br>
+            var w = (0.2*10 + 0.1*10) / 10;<br>
+
+        </p>
+        <p>=> document.getElementById("texto1").innerHTML = "x = " + x + "br" + "y = " + y;</p>
         <p id="texto1"></p>
+        <p>=> document.getElementById("texto2").innerHTML = "0.2 + 0.1 = " + z;</p>
 		<p id="texto2"></p>
+        <p>=> document.getElementById("texto3").innerHTML = "0.2 + 0.1 = " + w;    </p>
 		<p id="texto3"></p>
+
+        <p><strong>É importante lembrar que o símbolo "+" apenas representará a operação aritmética de adição se os dois
+             operandos forem números. Caso um dos operandos seja uma string, o símbolo + será interpretado como a 
+             operação de concatenação de string.</strong></p>
+        <h6>Convertendo strings em números</h6>
+
+        <p>Exemplos:
+            divisão = "100" / "20";<br>
+            multiplicação = "100" * "20";<br>
+            subtração = "100" - "20";<br>
+            porcentagem = "100" % "20";<br>
+
+            //a = 100;<br>
+            //isNaN(a); <br>
+
+            //a = NaN + 10 ;<br>
+            //a = NaN + "10" ;<br>
+
+            a = typeof NaN; <br>
+
+            document.getElementById("texto4").innerHTML = a;</p>
+		<p id="texto4"></p>
+
+        <p>Outros dois valores numéricos especiais de JavaScript são o <strong>Infinity</strong> e o <strong>-Infinity</strong>. 
+            Ambos são do tipo number e são retornados caso algum número calculado esteja fora do intervalo permitido para
+             números JavaScript. </p>
+
+        <p id="texto5"></p>
+        <p>-infinity</p>
+        <p id="texto6"></p>
+
+        <h6>Métodos de Number</h6>
+        <ul> Métodos
+            <ol>
+                <li><strong>toString()</strong>: retorna um número como uma String</li>
+                <li><strong>Number()</strong>: retorna um número convertido de seu argumento</li>
+                <li><strong>parseInt()</strong>: analisa seu argumento e retorna um número inteiro</li>
+                <li><strong>parseFloat()</strong>: analisa seu argumento e retorna um número de ponto flutuante</li>
+                <li><strong>toExponential()</strong>: retorna uma String, com um número arredondado e escrito 
+                    usando notação exponencial. Um parâmetro opcional define o número de caracteres atrás do ponto decimal.</li>
+                <li><strong>toFixed()</strong>: retorna uma string, com o número escrito com um número especificado de casas decimais.</li>
+                <li><strong>toPrecision()</strong>: retorna uma string, com um número escrito com um comprimento especificado.</li>
+            </ol>
+        </ul>
+        <ul>Propriedades
+            <ol>
+                <li><strong>MAX_VALUE</strong>: representa o maior número possível em JavaScript</li>
+                <li><strong>MIN_VALUE</strong>: representa o menor número possível em JavaScript</li>
+                <li><strong>POSITIVE_INFINITY</strong>: representa o infinito positivo</li>
+                <li><strong>NEGATIVE_INFINITY</strong>: representa o infinito negativo</li>
+                <li><strong>NaN</strong>: representa um valor especificado como "Não é um número"</li>
+            </ol>
+        </ul>
+        <p>Exemplo:<br>
+            <strong>Método parseInt()</strong><br>
+            numero1 = parseInt("3 14 PI");<br>
+            numero2 = parseInt("PI 3 14");<br>
+            document.getElementById("texto7").innerHTML = numero1;<br>
+            document.getElementById("texto8").innerHTML = numero2;</p>
+
+        <p id="texto7"></p>
+        <p id="texto8"></p>
+
+        <p><strong>Método parseFloat()</strong><br>
+            numero3 = parseFloat("3.14159265359");<br>
+            numero4 = parseFloat("3 14");<br>
+            numero5 = parseFloat("3 14 PI");<br>
+            numero6 = parseFloat("PI 3 14");<br>
+            document.getElementById("texto9").innerHTML = "numero3: " + numero3;<br>
+            document.getElementById("texto10").innerHTML = "numero4: " + numero4;<br>
+            document.getElementById("texto11").innerHTML = "numero5: " + numero5;<br>
+            document.getElementById("texto12").innerHTML = "numero6: " + numero6;</p>
+
+        <p id="texto9"></p>
+        <p id="texto10"></p>
+        <p id="texto11"></p>
+        <p id="texto12"></p>
+
+        <p><strong>Método toExponential()</strong><br>
+            numero7 = parseFloat("3.14159265359");<br>
+            numero8 = numero7.toExponential(2);<br>
+            document.getElementById("texto13").innerHTML = "numero8: " + numero8  + " tem tipo "+ (typeof numero8);<br>
+            numero9 = numero7.toExponential(4);<br>
+            document.getElementById("texto14").innerHTML = "numero9: " + numero9 + " tem tipo "+ (typeof numero9);<br>
+        </p>
+        <p id="texto13"></p>
+        <p id="texto14"></p>
+
+        <p><strong>Método toFixed()</strong><br>
+            numero10 = parseFloat("3.14159265359");<br>
+            numero11 = numero10.toFixed(2);<br>
+            document.getElementById("texto15").innerHTML = "Valor " + numero11 + " tem tipo "+ (typeof numero11);<br>
+            numero12 = numero10.toFixed(4);<br>
+            document.getElementById("texto16").innerHTML = "Valor " + numero12 + " tem tipo "+ (typeof numero12);<br>
+        </p>
+        <p id="texto15"></p>
+        <p id="texto16"></p>
+
+        <p><strong>Propriedades de Number</strong><br>
+            numero13 = Number.MAX_VALUE;<br>
+            numero14 = Number.MIN_VALUE;<br>
+            numero15 = Number.POSITIVE_INFINITY;<br>
+            numero16 = Number.NEGATIVE_INFINITY;<br>
+            numero17 = Number.NaN;<br>
+            numero18 = NaN;<br>
+            document.getElementById("texto17").innerHTML = numero13;<br>
+            document.getElementById("texto18").innerHTML = numero14;<br>
+            document.getElementById("texto19").innerHTML = numero15;<br>
+            document.getElementById("texto20").innerHTML = numero16;<br>
+            document.getElementById("texto21").innerHTML = numero17;<br>
+            document.getElementById("texto22").innerHTML = numero18;</p>
+        <p id="texto17"></p>
+        <p id="texto18"></p>
+        <p id="texto19"></p>
+        <p id="texto20"></p>
+        <p id="texto21"></p>
+        <p id="texto22"></p>
+
+        <h6>Métodos do objeto Math</h6>
+        <ul>
+            <ol>
+                <li><strong>ceil(x)</strong> retorna x, arredondado para cima para o número inteiro mais próximo</li>
+                <li><strong>floor(x)</strong> retorna x, arredondado para baixo para o número inteiro mais próximo</li>
+                <li><strong>trunc(x)</strong>: retorna a parte inteira de um número x</li>
+                <li><strong>round(x)</strong>: arredonda x para o número inteiro mais próximo</li>
+                <li><strong>pow(x, y)</strong>: retorna o valor de x<sup>y</sup></li>
+                <li><strong>exp(x)</strong>: retorna o valor de E<sup>x</sup></li>
+                <li><strong>sqrt(x)</strong> retorna a raiz quadrada de x</li>
+                <li><strong>cbrt(x)</strong>: retorna a raiz cúbica de x</li>
+                <li><strong>abs(x)</strong>: retorna o valor absoluto de x</li>
+                <li><strong>min(x, y, z, ..., n)</strong> retorna o número com o valor mais baixo</li>
+                <li><strong>max(x, y, z, ..., n)</strong> retorna o número com o valor mais alto</li>
+                <li><strong>random()</strong>: retorna um número aleatório entre 0 e 1. Esse intervalo é fechado em 0 e aberto em 1, ou seja, 
+                    ele contém números maiores ou iguais a zero e menores que um. Por esse motivo, esse método pode retornar 
+                    o número 0, mas nunca retornará o número 1.</li>
+            </ol>
+        </ul>
+        <p>Além desses métodos, o objeto Math tem vários outros métodos, como log(x), que retorna o logaritmo natural, 
+            isto é, na base E, de x, e métodos da trigonometria, como seno, cosseno, tangente e outros. O objeto Math também 
+            possui oito constantes matemáticas, são elas:</p>
+        <ul>
+            <ol>
+                <li><strong>Math.E</strong> constante igual ao número de Euler</li>
+                <li><strong>Math.PI</strong>: constante Pi</li>
+                <li><strong>Math.SQRT2</strong> raiz quadrada de 2</li>
+                <li><strong>Math.SQRT1_2</strong>: raiz quadrada de 1/2</li>
+                <li><strong>Math.LN2</strong>: logaritmo natural de 2</li>
+                <li><strong>Math.LN10</strong> logaritmo natural de 10</li>
+                <li><strong>Math.LOG2E</strong>: logaritmo base 2 de E</li>
+                <li><strong>Math.LOG10E</strong>: logaritmo base 10 de E</li>
+            </ol>
+        </ul>
+        <p>Exemplos: <br>
+        var numero19 = Math.PI;<br>
+
+        valor1 = Math.ceil(numero19);<br>
+        valor2 = Math.floor(numero19);<br>
+        valor3 = Math.trunc(numero19);<br>
+        valor4 = Math.round(numero19);<br>
+        valor5 = Math.round(3.49);<br>
+        valor6 = Math.round(3.5);<br>
+
+        document.getElementById("resultado1").innerHTML = "resultado1: " + valor1;<br>
+        document.getElementById("resultado2").innerHTML = "resultado2: " + valor2;<br>
+        document.getElementById("resultado3").innerHTML = "resultado3: " + valor3;<br>
+        document.getElementById("resultado4").innerHTML = "resultado4: " + valor4;<br>
+        document.getElementById("resultado5").innerHTML = "resultado5: " + valor5;<br>
+        document.getElementById("resultado6").innerHTML = "resultado6: " + valor6;</p>
+        <p id="resultado1"></p>
+        <p id="resultado2"></p>
+        <p id="resultado3"></p>
+        <p id="resultado4"></p>
+        <p id="resultado5"></p>
+        <p id="resultado6"></p>
+
     </section>
     <script src="script.js"></script>
     <script>
