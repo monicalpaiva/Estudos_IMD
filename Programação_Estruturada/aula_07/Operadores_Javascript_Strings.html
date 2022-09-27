@@ -27,7 +27,10 @@
         <code>"Um exemplo de string com \"aspas internas\".";</code>
         <p>Lembrando que se usarmos apenas uma barra invertida ela não irá aparecer na string, é necessário utilizar duas.</p>
         <code>"Temos uma \\ dentro da string.";</code>
-        <p>Para quebramos a linha na organização do código, podemos colocar uma \ para que o texto seja quebrado corretamente.</p>
+        <br><br>
+        <p>Para quebrar a linha em uma organização de código, é recomendado quebra-la após o atribuidor (=), ao quebrar a linha
+             colococando uma \ não é recomendado, pois alguns navegadores podem não reconhecer. Podemos então quebra-la fazendo
+              concatenação (+) de strings.</p>
         <code>"Este texto está ficando demasiadamente \
             grande para esta linha."</code>
             <br><br>
@@ -72,13 +75,117 @@
             var resultado12 = texto.search("MUNDO");   <br>          
             var resultado13 = texto.lastIndexOf("MUNDO"); <br>            
             var patt = /[uo]/i; <br>
-            var resultado14 = texto.search(patt);</p>
+            var resultado14 = texto.search(patt);// O que estamos procurando são as letras "u" ou "o" e não considerando se é maiúscula ou minúscula.<br>
+            var resultado15 = texto.lenght(texto);</p>
         <p><strong>Saídas</strong></p>
         <p id="saida10"></p>
         <p id="saida11"></p>
         <p id="saida12"></p>
         <p id="saida13"></p>
         <p id="saida14"></p>
+        <p id="saida15"></p>
+        <p><strong>Extração de partes da string</strong></p>
+        <p>O <strong>método slice()</strong> recebe dois parâmetros, a <u>posição inicial e a posição final</u>, e retorna uma nova string resultante de
+             extrair a parte da string que começa na posição inicial e termina antes da posição final. Se um parâmetro for negativo, a posição será 
+             contada a partir do final da string. Esse método também pode ser usado com apenas um parâmetro. Nesse caso, ele retorna uma nova string
+              resultante de extrair a parte da string que começa na posição passada, caso o parâmetro seja negativo, a posição será contada a partir 
+              do final da string.</p>
+        <p>O <strong>método subString()</strong> é praticamente idêntico ao método slice(). A única diferença é que parâmetros negativos são interpretados como 0</p>
+        <p>O <strong>método substr()</strong> também é muito similar ao slice(), a diferença é que o segundo parâmetro especifica o comprimento da parte extraída.
+             Além disso, assim como no método subString(), parâmetros negativos são interpretados como 0. Se você omitir o segundo parâmetro, substr(), cortará o 
+             restante da string. Por isso, da mesma maneira que o método slice() e o método subString()</p>
+        <p>O <strong>método charAt()</strong> retorna apenas um caractere naquela parêmetro passado.</p>
+        <p>O <strong>método split()</strong> usado para separar os elementos de uma string usando um caractere separador.</p>
+        <p>OBS: Em JavaScript strings são imutáveis, ou seja, elas não podem ser alteradas, apenas substituídas. </p>
+        <p>Exemplos: <br>
+            var texto = "ALÔ MUNDO LINDO";   <br>          
+            <br>
+            var resultado = texto.slice(4,11);<br>
+            //var resultado = texto.slice(-11, -4);<br>
+            //var resultado = texto.slice(4);<br>
+            //var resultado = texto.slice(-11);<br>
+            <br>
+            //var resultado = texto.substring(4,11);<br>
+            //var resultado = texto.substring(4);<br>
+            //var resultado = texto.substring(-1, -10);<br>
+            <br>
+            //var resultado = texto.substr(4,7);<br>
+            //var resultado = texto.substr(4);<br>
+            //var resultado = texto.substr(-1, -10);<br>
+            <br>
+            //var resultado = texto.charAt(4);<br>
+            var resultado = texto.charAt(100);</p>
+        <p><strong>Saídas</strong></p>
+
+        <p id="saida16"></p>
+        <p id="saida17"></p>
+        <p id="saida18"></p>
+        <p id="saida19"></p>
+        <p id="saida20"></p>
+        <p id="saida21"></p>
+        <p id="saida22"></p>
+        <p id="saida23"></p>
+        <p id="saida24"></p>
+        <p id="saida25"></p>
+        <p id="saida26"></p>
+        <p id="saida27"></p>
+        <h6>Transformando Strings</h6>
+        <p>O <strong>método replace()</strong> substitui a primeira ocorrência da string passada como primeiro parâmetro pela 
+            string passada como segundo parâmetro. Assim como nos métodos de extração de strings que vimos, o método replace()
+             não altera a string à qual ele está sendo aplicado, mas retorna uma nova string como resultado. Esse método diferencia 
+             letras maiúsculas e letras minúsculas.</p>
+        <p>Exemplo:<br>
+            var texto3 = "ALÔ MUNDO LINDO"; <br>            
+            var resultado28 = texto3.replace("LINDO","BELO");<br>
+            <br>
+            var resultado29 = texto;<br>
+            <br>
+            // Substituição apenas da primeira ocorrência  <br>  
+            var texto4 = "ALÔ MUNDO LINDO LINDO";       <br>      
+            var resultado30 = texto4.replace("LINDO","BELO");<br>
+            <br>
+            // Método é case sensitive    <br>
+            var texto5 = "ALÔ MUNDO LINDO";   <br>          
+            var resultado31 = texto5.replace("lindo","belo");<br>
+            <br>
+            // Expressões regulares para case insensitive<br>
+            var texto6 = "ALÔ MUNDO LINDO"; <br>            
+            var resultado32 = texto6.replace(/lindo/i,"belo");<br>
+            <br>
+            // Expressões regulares para substituir todas as ocorrências<br>
+            var texto7 = "ALÔ MUNDO LINDO LINDO";             <br>
+            var resultado33 = texto7.replace(/LINDO/g,"BELO");<br>
+            var resultado34 = texto7.replace(/lindo/ig,"belo");</p>
+        <p><strong>Saída</strong></p>
+        <p>"ALÔ MUNDO LINDO"</p>
+        <p id="saida28"></p>
+        <p id="saida29"></p>
+        <p>"ALÔ MUNDO LINDO LINDO"</p>
+        <p id="saida30"></p>
+        <p>"ALÔ MUNDO LINDO";</p>
+        <p id="saida31"></p>
+        <p>"ALÔ MUNDO LINDO"</p>
+        <p id="saida32"></p>
+        <p>ALÔ MUNDO LINDO LINDO"</p>
+        <p id="saida33"></p>
+        <p id="saida34"></p>
+        <p>Observamos nos exemplos temos que o <strong>i</strong> ignora os casos de minúsculo e maiúsculos e o <strong>g</strong>
+             faz a alteração de ambas as palavras no texto.</p>
+        <p>O <strong>método trim()</strong> faz a remoção dos espaços em branco no início e no final da string. Infelizmente, 
+            não é suportado no Internet Explorer 8 ou em versões anteriores. Se você precisar oferecer de suporte ao Internet 
+            Explorer 8 e versões anteriores, poderá usar replace() com uma expressão regular.</p>
+        <p>var string_1 = "  IMD Teste   "; <br>            
+            <br>
+            // O código abaixo só é necessário para IE 8 ou anteriores<br>
+            if (!String.prototype.trim) {<br>
+                String.prototype.trim = function () {<br>
+                return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');<br>
+                };<br>
+            }<br>
+            <br>
+            var resultado = string_1.trim();<br>
+            document.getElementById("saida").innerHTML = "#"+ resultado+"#";</p>
+        
     </section>
     <script src="script.js"></script>
     <script>
