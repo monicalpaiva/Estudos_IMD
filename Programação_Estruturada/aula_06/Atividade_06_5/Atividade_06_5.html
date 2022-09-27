@@ -1,0 +1,54 @@
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 06</title>
+        <style>
+            table, th, td {
+               border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+        <h1>Exercício</h1>
+
+        <h2>Atividade 06-5</h2>
+
+        <p>Complete o corpo da função integer do arquivo Atividade_06_5.js, de modo que essa função escreva "true" no parágrafo de identificador 
+            "saida" se, e somente se, o valor dado como entrada for um número inteiro. Execute os seguintes testes:</p>
+        
+        <table>
+            <tr>
+                <th>Entrada</th>
+                <th>Saída esperada</th>
+            </tr>
+            <tr>
+                <th>32</th>
+                <th>true</th>
+            </tr>
+            <tr>
+                <th>5e3</th>
+                <th>true</th>
+            </tr>
+            <tr>
+                <th>NaN</th>
+                <th>false</th>
+            </tr>
+            <tr>
+                <th>3.1415</th>
+                <th>false</th>
+            </tr>
+            <tr>
+                <th>-32</th>
+                <th>true</th>
+            </tr>
+        </table>
+
+        Valor: <input type="text" id="valor" value=""><br><br>
+        <button onclick="inteiro()">OK</button><br>
+        <p id="saida"></p>
+
+        <script src="Atividade_06_5.js"></script>
+    </body>
+</html>

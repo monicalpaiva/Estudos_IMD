@@ -1,0 +1,46 @@
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 06</title>
+        <style>
+            table, th, td {
+               border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+        <h1>Exercício</h1>
+
+        <h2>Atividade 06-5</h2>
+
+        <p>Complete o corpo da função pitagoras do arquivo Atividade_06_6.js, de forma que essa função escreva no parágrafo de identificador 
+            "saida" o valor do comprimento da hipotenusa de um triângulo retângulo que tenha os comprimentos dados como entrada para os catetos. 
+            O valor exibido deverá ter uma precisão de duas casas decimais. Execute os seguintes testes:</p>
+
+        <table>
+            <tr>
+                <td>Cateto 1</td>
+                <td>Cateto 2</td>
+                <td>Saída Esperada</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>4</td>
+                <td>4.47</td>
+            </tr>
+        </table>
+        Cateto 1: <input type="number" id="cateto1" value=""><br><br>
+        Cateto 2: <input type="number" id="cateto2" value=""><br><br>
+        <button onclick="pitagoras()">OK</button><br>
+        <p id="saida"></p>
+
+        <script src="Atividade_06_6.js"></script>
+    </body>
+</html>

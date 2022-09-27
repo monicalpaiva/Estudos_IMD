@@ -113,3 +113,15 @@ document.getElementById("resultado4").innerHTML = "resultado4: " + valor4;
 document.getElementById("resultado5").innerHTML = "resultado5: " + valor5;
 document.getElementById("resultado6").innerHTML = "resultado6: " + valor6;
 
+// Math
+
+var numero20 = Math.PI;
+
+numero20 = Math.random();
+    
+function randomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}   
+numero20 = randomInteger(0,100);        
+
+document.getElementById("texto23").innerHTML = "número sorteado: " + numero20;
