@@ -14,8 +14,71 @@
     <section>
         <h3>Aula 07 - Operadores Javascript: Strings</h3>
         <h6>Definindo Strings</h6>
-        
-
+        <p>JavaScript possui diversas outras funções sobre strings, por exemplo:<br>
+            => funções que retornam o tamanho de uma string;<br>
+            => para encontrar partes específicas dentro de uma string;<br>
+            => para extrair partes de uma string<br>
+            => para transformar strings<br>
+        </p>
+        <p>Para caracterizar uma string é necessário inseri-las dentro de aspas simples ou aspas duplas. 
+            Quando em uma string for necessário usar aspas para alguma palavra, deve-se usar as aspas simples
+            na string e aspas duplas onde deseja colocar, ou vice-versa. JavaScript também permite o uso da 
+            barra invertida para esse uso.</p>
+        <code>"Um exemplo de string com \"aspas internas\".";</code>
+        <p>Lembrando que se usarmos apenas uma barra invertida ela não irá aparecer na string, é necessário utilizar duas.</p>
+        <code>"Temos uma \\ dentro da string.";</code>
+        <p>Para quebramos a linha na organização do código, podemos colocar uma \ para que o texto seja quebrado corretamente.</p>
+        <code>"Este texto está ficando demasiadamente \
+            grande para esta linha."</code>
+            <br><br>
+        <p>Em JavaScript, a comparação de strings é <strong>sensível a letras maiúsculas e minúsculas</strong>.</p>
+        <p>Para efetuar a comparação ignorando se estão em maiúsculas e minúsculas, podemos usar as <strong>funções toUpperCase() ou toLowerCase()</strong>.</p>
+        <p><strong>concat()</strong> tem a mesma função do +.</p>
+        <p>Exemplos:</p>
+        <p><strong>Strings como Objetos</strong><br>
+            var string_1 = "IMD"<br>
+            var string_2 = "I" + "M".concat("D"); // "IMD"<br>
+            var string_3 = "I".concat("M","d");   // "IMd"  <br>        
+            <br>
+            var objeto_1 = new String("IMD");<br>
+            var objeto_2 = new String("IMD");</p>
+            
+            <p id="saida1"></p>
+            <p id="saida2"></p>
+            <p id="saida3"></p>
+            <p id="saida4"></p>
+            <p id="saida5"></p>
+            <p id="saida6"></p>
+            <p id="saida7"></p>
+            <p id="saida8"></p>
+            <p id="saida9"></p>
+        <p>OBS: De uma forma geral, sempre trate números, strings e booleanos, como valores primitivos, não como objetos. Isso porque declarar esses tipos
+             como objetos diminui a velocidade de execução e produz os efeitos colaterais desagradáveis.</p>
+        <h6>Procurando e Extraindo Strings</h6>
+        <p>Para descobrir a quantidade de <strong>caracteres</strong>/comprimento de uma string vamos usar a propriedade length</p>
+        <p>O primeiro método que podemos usar em uma string, o <strong>indexOf()</strong>, recebe uma string como parâmetro e retorna a posição da 
+            primeira ocorrência dessa string na string em que chamamos o método. O método <strong>search()</strong> também apresenta o mesmo comportamento. </p>
+        <p>OBS: É importante destacar o fato de que JavaScript conta posições a partir do zero.</p>
+        <p>o <strong>lastIndexOf()</strong>, retorna o índice da última ocorrência de um texto especificado em uma string. </p>
+        <p>Uma característica importante do retorno dos três métodos, indexOf(), search() e lastIndexOf(), é que, se a string não possuir o valor passado como parâmetro, todos eles <strong>retornam -1</strong>.</p>
+        <p>Apenas o método indexOf() pode ser chamado usando um segundo parâmetro que indica a partir de que posição a busca deve começar. 
+            Além disso, apenas o método search() pode ser chamado usando uma expressão regular como parâmetro. De maneira bastante resumida, uma expressão 
+            regular é um objeto que descreve um padrão de caracteres e que pode ser usado para fazer o que chamamos de casamento de padrão ou para 
+            "pesquisar e substituir" no texto.</p>
+        <p>Exemplos: <br>
+            var texto = "ALÔ MUNDO MUNDO";<br>
+            var resultado10 = texto.indexOf("MUNDO", 5);<br>
+            var resultado11 = texto.indexOf("MUNDO", 4); <br>           
+            var resultado12 = texto.search("MUNDO");   <br>          
+            var resultado13 = texto.lastIndexOf("MUNDO"); <br>            
+            var patt = /[uo]/i; <br>
+            var resultado14 = texto.search(patt);</p>
+        <p><strong>Saídas</strong></p>
+        <p id="saida10"></p>
+        <p id="saida11"></p>
+        <p id="saida12"></p>
+        <p id="saida13"></p>
+        <p id="saida14"></p>
     </section>
     <script src="script.js"></script>
     <script>

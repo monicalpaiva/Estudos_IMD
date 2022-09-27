@@ -1,127 +1,45 @@
-var x = 999999999999999;
-var y = 9999999999999999;
-document.getElementById("texto1").innerHTML = "x = " + x + "<br>" + "y = " + y;
+var string_1 = "IMD"
+var string_2 = "I" + "M".concat("D"); // "IMD"
+var string_3 = "I".concat("M","d");   // "IMd"          
 
-var z = 0.2 + 0.1;
-document.getElementById("texto2").innerHTML = "0.2 + 0.1 = " + z;
+var objeto_1 = new String("IMD");
+var objeto_2 = new String("IMD");
 
-var w = (0.2*10 + 0.1*10) / 10;
-document.getElementById("texto3").innerHTML = "0.2 + 0.1 = " + w;
+var resultado1 = (string_1 == string_2);  // true porque têm o mesmo valor   
+var resultado2 = (string_1 == string_3);  // false porque não têm o mesmo valor   
+var resultado3 = (string_1.toUpperCase() == string_3.toUpperCase());  // true porque não têm o mesmo valor   
+var resultado4 = (string_1.toLowerCase() == string_3.toLowerCase());  // true porque não têm o mesmo valor   
+var resultado5 = (string_1 == string_3);  // false porque não têm o mesmo valor   
 
-// segundo exemplo, conversão de float em número
+var resultado6 = (string_1 == objeto_1);  // true porque têm o mesmo valor   
+var resultado7 = (string_1 === objeto_1); // falso porque têm tipos diferentes   
+var resultado8 = (objeto_1 == objeto_2);  // falso porque são objetos diferentes   
+var resultado9 = (objeto_1 === objeto_2); // falso porque são objetos diferentes   
 
-divisão = "100" / "20";
-multiplicação = "100" * "20";
-subtração = "100" - "20";
-porcentagem = "100" % "20";
+document.getElementById("saida1").innerHTML = "resultado para string_1 == string_2: " + "<strong>" + resultado1 + "</strong>"; 
+document.getElementById("saida2").innerHTML = "resultado para string_1 == string_3: " + "<strong>" + resultado2 + "</strong>"; 
+document.getElementById("saida3").innerHTML = "resultado para string_1.toUpperCase() == string_3.toUpperCase(): " + "<strong>" + resultado3 + "</strong>"; 
+document.getElementById("saida4").innerHTML = "resultado para string_1.toLowerCase() == string_3.toLowerCase(): " + "<strong>" + resultado4 + "</strong>"; 
+document.getElementById("saida5").innerHTML = "resultado para string_1 == string_3: " + "<strong>" + resultado5 + "</strong>"; 
+document.getElementById("saida6").innerHTML = "resultado para string_1 == objeto_1: " + "<strong>" + resultado6 + "</strong>"; 
+document.getElementById("saida7").innerHTML = "resultado para string_1 === objeto_1: " + "<strong>" + resultado7 + "</strong>"; 
+document.getElementById("saida8").innerHTML = "resultado para objeto_1 == objeto_2: " + "<strong>" + resultado8 + "</strong>"; 
+document.getElementById("saida9").innerHTML = "resultado para objeto_1 === objeto_2: " + "<strong>" + resultado9 + "</strong>"; 
 
-//a = 100;
-//isNaN(a); 
+// metodos de busca de strings
+var texto = "ALÔ MUNDO MUNDO";
 
-//a = NaN + 10 ;
-//a = NaN + "10" ;
+var resultado10 = texto.indexOf("MUNDO", 5);
+var resultado11 = texto.indexOf("MUNDO", 4);            
+var resultado12 = texto.search("MUNDO");             
+var resultado13 = texto.lastIndexOf("MUNDO");             
 
-a = typeof NaN; 
+var patt = /[uo]/i; 
+var resultado14 = texto.search(patt);           
 
-document.getElementById("texto4").innerHTML = a;
+document.getElementById("saida10").innerHTML = "Saida para texto.indexOf(\"MUNDO\", 5): " + resultado10;  
+document.getElementById("saida11").innerHTML = "Saida para texto.indexOf(\"MUNDO\", 4): " + resultado11;  
+document.getElementById("saida12").innerHTML = "Saida para texto.search(\"MUNDO\"): " + resultado12;  
+document.getElementById("saida13").innerHTML = "Saida para texto.lastIndexOf(\"MUNDO\"): " + resultado13;  
+document.getElementById("saida14").innerHTML = "Saida para texto.search(patt): " + resultado14; 
 
-//infinity
-
-var texto5 = "";
-var b = 10; 
-var texto5 = b + "<br>";
-
-b = b ** b;
-texto5 = texto5 + b + "<br>";
-b = b ** b;
-texto5 = texto5 + b + "<br><br>";
-
-var texto6 = "";
-var c =  2 / 0; 
-texto6 = texto6 + "2 / 0 = " + c + "<br>";
-var d =  -2 / 0; 
-texto6 = texto6 + "-2 / 0 = " + d + "<br><br>";
-
-texto5 = texto5 + "typeof Infinity = " + typeof Infinity;
-
-document.getElementById("texto5").innerHTML = texto5;
-
-document.getElementById("texto6").innerHTML = texto6;
-
-// metodos e propriedades
-
-// Método parseInt()
-numero1 = parseInt("3 14 PI");
-numero2 = parseInt("PI 3 14");
-document.getElementById("texto7").innerHTML = "numero1: " + numero1;
-document.getElementById("texto8").innerHTML = "numero2: " + numero2;
-
-// Método parseFloat()
-numero3 = parseFloat("3.14159265359");
-numero4 = parseFloat("3 14");
-numero5 = parseFloat("3 14 PI");
-numero6 = parseFloat("PI 3 14");
-document.getElementById("texto9").innerHTML = "numero3: " + numero3;
-document.getElementById("texto10").innerHTML = "numero4: " + numero4;
-document.getElementById("texto11").innerHTML = "numero5: " + numero5;
-document.getElementById("texto12").innerHTML = "numero6: " + numero6;
-
-// Método toExponential()
-numero7 = parseFloat("3.14159265359");
-numero8 = numero7.toExponential(2);
-document.getElementById("texto13").innerHTML = "numero8: " + numero8 + " tem tipo "+ (typeof numero8);
-numero9 = numero7.toExponential(4);
-document.getElementById("texto14").innerHTML = "numero9: " + numero9 + " tem tipo "+ (typeof numero9);
-
-// Método toFixed() & toPrecision()
-numero10 = parseFloat("3.14159265359");
-numero11 = numero10.toFixed(2);
-document.getElementById("texto15").innerHTML = "Valor " + numero11 + " tem tipo "+ (typeof numero11);
-numero12 = numero10.toPrecision(4);
-document.getElementById("texto16").innerHTML = "Valor " + numero12 + " tem tipo "+ (typeof numero12);
-
-// Propriedades de Number
-numero13 = Number.MAX_VALUE;
-numero14 = Number.MIN_VALUE;
-numero15 = Number.POSITIVE_INFINITY;
-numero16 = Number.NEGATIVE_INFINITY;
-numero17 = Number.NaN;
-numero18 = NaN;
-document.getElementById("texto17").innerHTML = "numero13: " + numero13;
-document.getElementById("texto18").innerHTML = "numero14: " + numero14;
-document.getElementById("texto19").innerHTML = "numero15: " + numero15;
-document.getElementById("texto20").innerHTML = "numero16: " + numero16;
-document.getElementById("texto21").innerHTML = "numero17: " + numero17;
-document.getElementById("texto22").innerHTML = "numero18: " + numero18;
-
-// Objeto Math
-var numero19 = Math.PI;
-
-// Arredondamentos
-
-valor1 = Math.ceil(numero19);
-valor2 = Math.pow(5,2);
-valor3 = Math.sqrt(Math.pow(5,2));
-valor4 = Math.E**3;
-valor5 = Math.round(3.49);
-valor6 = Math.round(3.5);
-
-document.getElementById("resultado1").innerHTML = "resultado1: " + valor1;
-document.getElementById("resultado2").innerHTML = "resultado2: " + valor2;
-document.getElementById("resultado3").innerHTML = "resultado3: " + valor3;
-document.getElementById("resultado4").innerHTML = "resultado4: " + valor4;
-document.getElementById("resultado5").innerHTML = "resultado5: " + valor5;
-document.getElementById("resultado6").innerHTML = "resultado6: " + valor6;
-
-// Math
-
-var numero20 = Math.PI;
-
-numero20 = Math.random();
-    
-function randomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-}   
-numero20 = randomInteger(0,100);        
-
-document.getElementById("texto23").innerHTML = "número sorteado: " + numero20;
