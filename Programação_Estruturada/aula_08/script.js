@@ -105,7 +105,7 @@ var texto21 = data;
 var antes = new Date(1969, 06, 20, 23, 56, 15, 960);
 var depois = new Date(1969, 06, 20, 23, 56, 15, 961);
 var texto22 = (depois > antes);
-/**
+
 document.getElementById("saida27").innerHTML = "getFullYear: " + texto4;
 document.getElementById("saida28").innerHTML = "getMonth: " + texto5;
 document.getElementById("saida29").innerHTML = "getDate: " + texto6;
@@ -121,11 +121,12 @@ document.getElementById("saida38").innerHTML = "getUTCDate: " + texto15;
 document.getElementById("saida39").innerHTML = "getUTCHours: " + texto16;
 document.getElementById("saida40").innerHTML = "getUTCMinutes: " + texto17;
 document.getElementById("saida41").innerHTML = "getUTCSeconds: " + texto18;
-document.getElementById("saida52").innerHTML = "getUTCMilliseconds: " + texto19;
+
+document.getElementById("saida42").innerHTML = "getUTCMilliseconds: " + texto19;
 document.getElementById("saida43").innerHTML = "getUTCDay: " + texto20;
-document.getElementById("saida44").innerHTML = "getFullYear: " + texto21;
-document.getElementById("saida45").innerHTML = "getFullYear: " + texto22;
-**/
+document.getElementById("saida44").innerHTML = "data.setDate(data.getDate() + 60);: " + texto21;
+document.getElementById("saida45").innerHTML = "depois > antes: " + texto22;
+
 var hoje = new Date(1571954585072);
 var tipo = typeof hoje;
 document.getElementById("resultado").innerHTML = tipo;

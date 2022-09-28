@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+ <h1>Exercício 3</h1>
+ <p>Implemente um programa que apresenta qual o dia da semana (segunda, terça, quarta...) para
+  uma data específica informada pelo usuário. Por exemplo, se for informado ao algoritmo dia 11,
+  mês 10 e ano 2021, o algoritmo apresentará Mon (abreviação para segunda-feira, em inglês)
+  Obs.: O seu algoritmo, ao utilizar o objeto Date vai retornar o dia da semana em inglês, isso não
+  é um problema.</p>
+  Dia: <input id="dia" value=""><br />
+  Mês: <input id="mes" value=""><br />
+  Ano: <input id="ano" value=""><br />
+  <button onclick='diaDaSemana()'>OK</button>
+ <p id="resultado"></p>
+
+<script>
+  function diaDaSemana(dia, mes, ano) {
+    var dia = Number(document.getElementById('dia').value);
+    var mes = Number(document.getElementById('mes').value);
+    var ano = Number(document.getElementById('ano').value);
+
+    var data = new Date(ano, mes, dia);
+    
+    var r = data.getDay();
+ document.getElementById('resultado').innerHTML = r;
+ }
+
+ </script>
+</body>
+</html>
+

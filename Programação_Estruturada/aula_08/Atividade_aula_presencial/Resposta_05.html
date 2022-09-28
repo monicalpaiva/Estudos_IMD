@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+ <h1>Exercício 5</h1>
+ <p>Data a seguinte constante abaixo, crie um algoritmo que irá receber um nome e irá imprimir a
+  mensagem personalizada substituindo o trecho {USUARIO}pelo nome informado.<br>
+  const texto = "Olá {USUARIO}, seja bem-vindo(a) ao sistema aulas do
+  Instituto Metrópole Digital.";</p>
+
+  Usuário: <input id="usuario" value=""><br />
+  
+  <button onclick="saudacao('usuario')">OK</button>
+ <p id="resultado"></p>
+
+<script>
+  function saudacao(usuario) {
+    const texto = "Olá USUARIO, seja bem-vindo(a) ao sistema aulas do Instituto Metrópole Digital.";
+
+    var textoFinal = texto.replace("USUARIO", usuario);
+
+ document.getElementById('resultado').innerHTML = textoFinal;
+ }
+
+ </script>
+</body>
+</html>
+

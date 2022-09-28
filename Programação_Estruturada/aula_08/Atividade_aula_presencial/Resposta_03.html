@@ -5,18 +5,25 @@
 </head>
 <body>
  <h1>Exercício 3</h1>
+ <p>Construa um programa que recebe a sua data de nascimento e calcula a sua idade com base na
+  data atual gerada pelo new Date().</p>
+ <!-- ajustar a entrada do aniversário-->
  <p id="resultado"></p>
 
 <script>
-    var data = new Date(ms);
-    var hoje = data.getTime();
-    var aniversário = new Data(1985,08,30);
-
-   
-
+   var data = new Date();
+   var dia = data.getDay();
+   var mes = data.getMonth();
+   var ano = data.getFullYear();
+   var aniversario = new Date(1985,08,30);
+   var anoFinal = ano - (aniversario.getFullYear());
+   //var mesFinal = mes - (aniversario.getMonth());
+   //var diaFinal = dia - (aniversario.getDay());
  
- document.getElementById('resultado').innerHTML = hoje;
+ document.getElementById('resultado').innerHTML = anoFinal + "anos";
+ // + mesFinal + "meses, " + diaFinal + " dias.";
 
  </script>
 </body>
 </html>
+

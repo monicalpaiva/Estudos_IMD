@@ -1,7 +1,7 @@
 function pitagoras() {
-    var h = ler__entrada("hipotenusa");
-    var c1 = ler__entrada("cateto1");
-    var c2 = ler__entrada("cateto2");
+    var h = ler_entrada("hipotenusa");
+    var c1 = ler_entrada("cateto1");
+    var c2 = ler_entrada("cateto2");
 
     var sq_h = quadrado(h));
     var sq_c1 = quadrado(c1);
