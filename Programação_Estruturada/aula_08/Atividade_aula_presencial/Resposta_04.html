@@ -19,12 +19,13 @@
 <script>
   function diaDaSemana(dia, mes, ano) {
     var dia = Number(document.getElementById('dia').value);
-    var mes = Number(document.getElementById('mes').value);
+    var mes = Number(document.getElementById('mes').value) - 1;
     var ano = Number(document.getElementById('ano').value);
 
-    var data = new Date(ano, mes, dia);
+    var data = String(new Date(ano, mes, dia));
     
-    var r = data.getDay();
+    var r = data.slice(0,3);
+
  document.getElementById('resultado').innerHTML = r;
  }
 

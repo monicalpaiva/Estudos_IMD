@@ -18,8 +18,8 @@
 <script>
   function saudacao(usuario) {
     const texto = "Olá USUARIO, seja bem-vindo(a) ao sistema aulas do Instituto Metrópole Digital.";
-
-    var textoFinal = texto.replace("USUARIO", usuario);
+    var nome = usuario;
+    var textoFinal = texto.replace("USUARIO", nome);
 
  document.getElementById('resultado').innerHTML = textoFinal;
  }
