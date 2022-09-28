@@ -59,3 +59,8 @@ footer {
   text-align: center;
   color: white;
 }
+
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}

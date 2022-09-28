@@ -15,13 +15,235 @@
         <h3>Aula 08 - Operadores Javascript: Datas</h3>
         <h6>Definindo datas</h6>
         <p>Em JavaScript, datas são objetos. A data é composta por ano, mês, dia, hora, minutos, segundos e milissegundos. Para
-             criar objetos do tipo Data, temos que usar o construtor Date(). Além disso, como estamos criando um objeto, 
-             temos que usar a palavra-chave new antes do construtor.</p>
-       <code>var agora = new Date();</code>
-        <p id="data"></p>
-        <br>
+                criar objetos do tipo Data, temos que usar o construtor Date(). Além disso, como estamos criando um objeto, 
+                temos que usar a palavra-chave new antes do construtor.</p>
+        <p><code>var agora = new Date();</code></p>
         <p id="saida"></p>
+        <p>Para cada um desses argumentos, temos um intervalo de valores possíveis. No ano, espera-se que sejam usados quatro
+            dígitos. No entanto, se você usar um ou dois dígitos, isto será interpretado como nos anos 1900. Na definição do ,
+            mês, temos um fato muito importante: os meses são números de 0 a 11. Por fim, os dias podem variar de 1 a 31, as 
+            horas podem variar de 0 a 23, os minutos e segundos podem variar de 0 a 59 e os milissegundos, de 0 a 999.</p>
+        <table>
+            <tr>
+                <th>ARGUMENTO</th>
+                <th>DESCRIÇÃO</th>
+                <th>OBRIGATÓRIO</th>
+                <th>INTERVALO</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ano</td>
+                <td>Sim</td>
+                <td>4 Dígitos</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mês</td>
+                <td>Sim</td>
+                <td>0(Janeiro) a 11(Dezembro)</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Dia</td>
+                <td>Não</td>
+                <td>1 a 31</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Horas</td>
+                <td>Não</td>
+                <td>0 a 23</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Minutos</td>
+                <td>Não</td>
+                <td>0 a 59</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Segundos</td>
+                <td>Não</td>
+                <td>0 a 59</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Milissegundos</td>
+                <td>Não</td>
+                <td>0 a 999</td>
+            </tr>
+        </table>
+        <p>Apenas por curiosidade, se você usar o 12 para o mês, a data será interpretada como uma data com um ano a mais do que
+             aquele que você passou para o construtor e o mês será janeiro. Por exemplo, o comando new Date(1969, 12), criará 
+             uma data que corresponde a janeiro de 1970. Isto acontece também para dia do mês. É importante também dizer que ,
+             informações sobre anos bissextos também são tratadas automaticamente pelo interpretador JavaScript.</p>
 
+        <p> Exemplos <br>
+            // Sun Jul 20 1969 23:56:15    <br>
+            <br>
+            var data = new Date(1969, 06, 20, 23, 56, 15, 960); // Observe que Julho é 06<br>
+            var data = new Date(1969, 06, 20, 23, 56, 15);<br>
+            var data = new Date(1969, 06, 20, 23, 56);<br>
+            var data = new Date(1969, 06, 20, 23);<br>
+            var data = new Date(1969, 06, 20);<br>
+            var data = new Date(1969, 06);<br>
+            var data = new Date(69, 06); // Usando apenas 2 dígitos<br>
+            var data = new Date(1969, 12); // Usando o comportamento cíclico dos intervalos<br>
+            var data = new Date(1969, 05, 31); // Usando o comportamento cíclico dos intervalos<br>
+            var data = new Date(1969); // Com apenas um dígito temos uma data antes de 1970<br>
+            var data11 = new Date(0); // época inicial UNIX<br>
+            var data = new Date(10800000);<br>
+            var texto1 = data.toUTCString();  // Padrão UTC<br>
+            var texto2 = data.toDateString(); // Formato mais legível, mas americano<br>
+            var texto3 = data.toTimeString(); // Formato mais legível, mas americano
+            </p>
+        <p><strong>Saidas</strong></p>
+        <p id="saida1"></p>
+        <p id="saida2"></p>
+        <p id="saida3"></p>
+        <p id="saida4"></p>
+        <p id="saida5"></p>
+        <p id="saida6"></p>
+        <p id="saida7"></p>
+        <p id="saida8"></p>
+        <p id="saida9"></p>
+        <p id="saida10"></p>
+        <p id="saida11"></p>
+        <p id="saida12"></p>
+        <p id="saida13"></p>
+        <p id="saida14"></p>
+        <h6>Formatos de datas</h6>
+        <p> De uma maneira geral, temos três formatos textuais de data que podem ser usados como entrada: <strong>Formato ISO</strong>,
+            <strong>Data Curta</strong> e <strong>Data Longa</strong>.</p>
+        <p>O ISO 8601 é o padrão internacional para a representação de datas e tempos. A sintaxe ISO 8601 é o formato de datas 
+            favorito em JavaScript. Nele, temos quatro dígitos para o ano, seguido de um hífen, seguido de dois dígitos para o 
+            mês, seguido de outro hífen e, por fim, dois dígitos representando os dias</p>
+        <p>Formatos ISO</p>
+        <p><strong>AAAA-MM-DD</strong></p>
+        <p><strong>AAAA-MM</strong></p>
+        <p><strong>AAAA</strong></p>
+        <p>Formatos ISO com Fuso Horário</p>
+        <p><strong>AAAA-MM-DDTHH:MM:SSZ</strong></p>
+        <p>Datas Longas</p>
+        <p><strong>MMM DD AAAA</strong></p>
+        <p>// Formatos ISO    <br>
+            var data12 = new Date("1969-07-20"); <br>
+            var data13 = new Date("1969-07"); <br>
+            var data14 = new Date("1969"); <br>
+            var data15 = new Date("1969-07-20T23:56:15Z"); <br>
+            var data16 = new Date("1969-07-20T23:56:15-03:00"); <br>
+            <br>
+            // Data Curta<br>
+            var data17 = new Date("07/20/1969"); <br>
+            <br>
+            // Data Longa<br>
+            var data18 = new Date("Jul 20 1969"); <br>
+            var data19 = new Date("20 Jul 1969"); <br>
+            var data20 = new Date("20 July 1969"); <br>
+            var data21 = new Date("20 JULY 1969"); <br>
+            var data22 = new Date("20 JULY, 1969"); <br>
+            <br>
+            // Date.parse()<br>
+            var ms = Date.parse("Jul 20 1969"); <br>
+            var data23 = new Date(ms); 
+        </p>
+        <p><strong>Saidas</strong></p>
+        <p id="saida15"></p>
+        <p id="saida16"></p>
+        <p id="saida17"></p>
+        <p id="saida18"></p>
+        <p id="saida19"></p>
+        <p id="saida20"></p>
+        <p id="saida21"></p>
+        <p id="saida22"></p>
+        <p id="saida23"></p>
+        <p id="saida24"></p>
+        <p id="saida25"></p>
+        <p id="saida26"></p>
+        <h6>Métodos de datas</h6>
+        <p>Os métodos <strong>getFullYear()</strong>, <strong>getMonth()</strong>, <strong>getDate()</strong>, retornam, 
+            respectivamente, o ano com quatro dígitos, o mês e o dia da data. Temos também os métodos
+             <strong>getHours()</strong>, <strong>getMinutes()</strong>, <strong>getSeconds()</strong> e 
+             <strong>getMilliseconds()</strong>, que retornam, respectivamente, as horas, os minutos, os segundos e os 
+             milissegundos do objeto. O método <strong>getDay()</strong>, que retorna um número entre 0 e 6 e representa 
+             o dia da semana da data.  Em JavaScript, o 0 corresponderá ao domingo, o 1 corresponderá à segunda-feira, 
+             e assim por diante, até o 6, que corresponderá ao sábado. O método <strong>getTime()</strong>, que retorna o 
+             número de milissegundos desde a época Unix, ou seja, desde a hora zero, GMT, de 01 de janeiro de 1970. </p>
+            <p>JavaScript também oferece métodos que podem ser usados para trabalhar com datas UTC. Eles começam com o 
+                prefixo getUTC. Esses métodos retornam a mesma informação dos métodos do slide anterior, porém, no fuso 
+                horário UTC, ou, como sabemos, também chamado de GMT. Usando a mesma data do slide anterior como exemplo, 
+                e considerando que estamos no horário padrão de Brasília, ou seja, GMT-3, o que corresponde a três horas 
+                a menos que o horário padrão de Londres, o método getUTCYear() e getUTCMonth() também retorna 1969 e 6, 
+                porém, o método getUTCDate() retorna 21, e não 20, como usado na criação do objeto.</p>
+            <p>Em JavaScript, também podemos definir os valores de uma data usando métodos do objeto de data. 
+                Eles começam com o prefixo set. São eles: <strong>setFullYear(), setMonth(), setDate(), setHours(), setMinutes(), 
+                setSeconds(), setMilliseconds() e setTime()</strong>, os quais, usando os valores recebidos, alteram, 
+                respectivamente, o ano, o mês, o dia do mês, as horas, os minutos, os segundos, os milissegundos, 
+                e o número de milissegundos, desde a época Unix. Opcionalmente, o método pode receber também o mês e o dia
+                 do mês.</p>
+        <p>// metodos de data<br>
+
+            var data = new Date();<br>
+            
+            //Métodos get<br>
+            var texto4 = data.getFullYear();   <br> 
+            var texto5 = data.getMonth();   <br> 
+            var texto6 = data.getDate();  <br>  
+            var texto7 = data.getHours();   <br> 
+            var texto8 = data.getMinutes();   <br> 
+            var texto9 = data.getSeconds();   <br> 
+            var texto10 = data.getMilliseconds();  <br>  
+            var texto11 = data.getDay();    <br>
+            var texto12 = data.getTime();    <br>
+            <br>
+            // Métodos getUTC<br>
+            var texto13 = data.getUTCFullYear();    <br>
+            var texto14 = data.getUTCMonth();  <br>  
+            var texto15 = data.getUTCDate();    <br>
+            var texto16 = data.getUTCHours();    <br>
+            var texto17 = data.getUTCMinutes();    <br>
+            var texto18 = data.getUTCSeconds();    <br>
+            var texto19 = data.getUTCMilliseconds();  <br>  
+            var texto20 = data.getUTCDay(); <br>
+            <br>
+            // Métodos set<br>
+            var data = new Date();<br>
+            data.setFullYear(2020, 10, 30);<br>
+            data.setDate(data.getDate() + 60);<br>
+            var texto21 = data;    <br>
+            <br>
+            // Comparando Datas<br>
+            var antes = new Date(1969, 06, 20, 23, 56, 15, 960);<br>
+            var depois = new Date(1969, 06, 20, 23, 56, 15, 961);<br>
+            var texto22 = (depois > antes);</p>
+        <p><strong>Saidas</strong></p>
+        <p id="saida27"></p>
+        <p id="saida28"></p>
+        <p id="saida29"></p>
+        <p id="saida30"></p>
+        <p id="saida31"></p>
+        <p id="saida32"></p>
+        <p id="saida33"></p>
+        <p id="saida34"></p>
+        <p id="saida35"></p>
+        <p id="saida36"></p>
+        <p id="saida37"></p>
+        <p id="saida38"></p>
+        <p id="saida39"></p>
+        <p id="saida40"></p>
+        <p id="saida41"></p>
+        <p id="saida42"></p>
+        <p id="saida43"></p>
+        <p id="saida44"></p>
+        <p id="saida45"></p>
+
+        <h6>ATIVIDADE</h6>
+        
+        <p id="resultado"></p>
+        <p id="resultado2"></p>
+        <p id="resultado3"></p>
+        <p id="resultado4"></p>
+        
     </section>
     <script src="script.js"></script>
     <script>

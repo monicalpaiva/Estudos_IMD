@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+ <h1>Exercício 2</h1>
+ <p id="resultado"></p>
+ <p><strong>Falta colocar o mes por extenso</strong></p>
+ <script>
+    var data = new Date();
+    var texto0 = data;
+    var texto1 = "Data: dia de mês de ano";
+    var texto2 = "Hora: horahminuto";
+    var dia = data.getDate();
+    var mes = data.getMonth();
+    var ano = data.getFullYear();
+    var hora = data.getHours();
+    var minuto = data.getMinutes();
+    
+    var resultado = texto1.replace("dia",dia);
+    resultado = resultado.replace("mês",mes);
+    resultado = resultado.replace("ano",ano);
+    var resultado1 = texto2.replace("hora",hora);
+    resultado1 = resultado1.replace("minuto",minuto);
+   
+
+
+ document.getElementById('resultado').innerHTML = resultado + "<br>" + resultado1;
+
+ </script>
+</body>
+</html>
