@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <p>Construa um programa que recebe dois números e apresenta a soma de todos os números
+            pares e de todos os números ímpares entre os números fornecidos.
+            Exemplo: o programa recebe os números 36 e 78. A saída apresentada pelo programa será:
+            <br>Soma dos números pares: 1254
+            <br>Soma dos números ímpares: 1197
+            <br>Apresente duas respostas de solução: uma utilizando o for e a outra o while.</p>
+        <h1>Entrada do Programa</h1>
+        N1: <input type="number" id="a" value=""><br />
+        N2: <input type="number" id="b" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="teste1"></p>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                
+                var num = a;
+                var pares = 0;
+                var impares = 0;
+/**
+                for(i=a;i<=b;i++){
+                    if (i % 2 == 0){
+                        pares = pares + i;
+                    } 
+                    if (i % 2 != 0){
+                        impares = impares + i;
+                    }
+                }
+**/
+                
+                while (num <= b){
+                    if (num % 2 == 0){
+                        pares = pares + num;
+                    } 
+                    if (num % 2 != 0){
+                        impares = impares + num;
+                    }
+                    num++;
+                }
+
+
+                document.getElementById('resultado').innerHTML = "Soma dos números pares: " + pares + "<br>" + "Soma dos números ímpares: " + impares;
+            }   
+        </script>
+    </body>
+</html>

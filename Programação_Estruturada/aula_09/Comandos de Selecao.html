@@ -14,12 +14,67 @@
     <section>
         <h3>Aula 09 - Comandos de Seleção</h3>
         <h6>if-else</h6>
-       
+        <p>O comando if é o mais básico de todos os comandos de seleção e deve ser usado com as duas letras minúsculas. Ele 
+            determina que o programa deve executar um certo comando ou seção de código apenas se uma certa condição for verdadeira.</p>
+            <p style="text-align: center;">Comando de Seleção if</p>
+            <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f01.png" alt="Comando de Seleção if" width="500" height="250">       
+        <p><strong>Exemplo 1 (script):</strong><br>
+            function situacao(entrada1, entrada2, saida) {<br>
+                var x = Number(document.getElementById(entrada1).value);<br>
+                var y = Number(document.getElementById(entrada2).value);<br>
+                var media = (x + y)/2;<br>
+                <br>
+                document.getElementById(saida).innerHTML = "O resultado é " + resultado(media);<br>
+            }<br>
+            <br>
+            function resultado(m) {<br>
+                var resultado;<br>
+                if (m >= 7) {<br>
+                    resultado = resultado + ". Parabéns!!!";<br>
+                }<br>
+                if (m < 7){ <br>
+                    resultado = "Reprovado";<br>
+                    resultado = resultado;<br>
+                }<br>
+                return resultado;<br>
+            }<br>
+        </p>
+        N1: <input type="number" id="N1" value=""><br>
+        N2: <input type="number" id="N2" value=""><br>
+        <button onclick="situacao1('N1', 'N2', 'resultado')">OK</button>
+        <p id="resultado"></p>
+        <p style="text-align: center;">Comando de Seleção if</p>
+        <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f06.png" alt="Comando de seleção if-else" width="500" height="250">
+        <p>Comando de Seleção if-else Encadeado</p>
+        <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f08.png" alt="Comando de Seleção if-else Encadeado" width="500" height="250">
+        <p>É importante ressaltar que não existe um limite para o encadeamento de condições.</p>
+        <p><strong>Exemplo 2(script):</strong><br>
+        function situacao2(entrada1, entrada2, saida) { <br>
+            var x = Number(document.getElementById(entrada1).value);<br>
+            var y = Number(document.getElementById(entrada2).value);<br>
+            var media = (x + y)/2;    <br>
+            document.getElementById(saida2).innerHTML = "O resultado é " + resultado(media);<br>
+        }<br>
+        <br>
+        function resultado(m) {<br>
+            var resultado;<br>
+            if (m >= 7) {<br>
+                resultado = "Aprovado";<br>
+            } else if (m >=5) {<br>
+                resultado = "Recuperação";<br>
+            } else {<br>
+                resultado = "Reprovado";<br>
+            }<br>
+            return resultado;<br>
+        } </p> 
+        
+        N1: <input type="number" id="N3" value=""><br>
+        N2: <input type="number" id="N4" value=""><br>
+        <button onclick="situacao2('N3', 'N4', 'resultado1')">OK</button>
+        <p id="resultado1"></p>
+
     </section>
     <script src="script.js"></script>
-    <script>
-        
-    </script>
     <footer>
         <strong>By Monica Lima de Paiva</strong>
     </footer>

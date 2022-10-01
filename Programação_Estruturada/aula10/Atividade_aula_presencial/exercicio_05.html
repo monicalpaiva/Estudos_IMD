@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <p>Construa um programa que receberá um número e que apresentará todos os seus divisores a
+            partir do número 1. Os números devem estar um ao lado do outro.
+            Exemplo: se o número fornecido for 10, o programa imprimirá os números: 1, 2 e 5.</p>
+        <h1>Entrada do Programa</h1>
+        N1: <input type="number" id="a" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                
+                var r = ""; 
+
+                for (i=1;i<a;i++){
+                    if ((10%i) == 0){
+                        r = r + i + " ";
+                    }
+                }
+
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+    </body>
+</html>

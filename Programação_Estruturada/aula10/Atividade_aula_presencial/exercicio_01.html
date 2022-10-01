@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <p>Construa um programa que recebe um número e verifica se ele é positivo ou negativo. Caso o
+            número seja zero o seu programa retorna a mensagem “o valor é zero”.</p>
+        <h1>Entrada do Programa</h1>
+        N1: <input type="number" id="a" value=""><br />
+        <button onclick='executarExercicio1()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio1() {
+            var a = Number(document.getElementById('a').value);
+            var r = 0; 
+            if (a<0){
+                r= "Número negativo";
+            } else if (a>0){
+                r= "Número positivo";
+            } else {
+                r="O valor é zero";
+            }
+            document.getElementById('resultado').innerHTML = r;
+        }
+        </script>
+    </body>
+</html>
