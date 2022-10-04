@@ -11,13 +11,13 @@
     <header>
         <h1 style="color:beige;">Curso de web IMD</h1>
     </header>
-    <section>
+    <section id="conteudo">
         <h3>Aula 09 - Comandos de Seleção</h3>
         <h6>if-else</h6>
         <p>O comando if é o mais básico de todos os comandos de seleção e deve ser usado com as duas letras minúsculas. Ele 
             determina que o programa deve executar um certo comando ou seção de código apenas se uma certa condição for verdadeira.</p>
             <p style="text-align: center;">Comando de Seleção if</p>
-            <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f01.png" alt="Comando de Seleção if" width="500" height="250">       
+            <img class="explicacao" src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f01.png" alt="Comando de Seleção if">       
         <p><strong>Exemplo 1 (script):</strong><br>
             function situacao(entrada1, entrada2, saida) {<br>
                 var x = Number(document.getElementById(entrada1).value);<br>
@@ -44,9 +44,9 @@
         <button onclick="situacao1('N1', 'N2', 'resultado')">OK</button>
         <p id="resultado"></p>
         <p style="text-align: center;">Comando de Seleção if</p>
-        <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f06.png" alt="Comando de seleção if-else" width="500" height="250">
+        <img class="explicacao" src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f06.png" alt="Comando de seleção if-else">
         <p>Comando de Seleção if-else Encadeado</p>
-        <img src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f08.png" alt="Comando de Seleção if-else Encadeado" width="500" height="250">
+        <img class="explicacao" src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f08.png" alt="Comando de Seleção if-else Encadeado">
         <p>É importante ressaltar que não existe um limite para o encadeamento de condições.</p>
         <p><strong>Exemplo 2(script):</strong><br>
         function situacao2(entrada1, entrada2, saida) { <br>
@@ -72,6 +72,57 @@
         N2: <input type="number" id="N4" value=""><br>
         <button onclick="situacao2('N3', 'N4', 'resultado1')">OK</button>
         <p id="resultado1"></p>
+        <p>Temos também o formato utilizado com condição "? expressão1:expressão2". Esse operador retorna a primeira expressão, 
+            caso a condição seja verdadeira; caso contrário, retorna a segunda expressão.</p>
+        <p>Exemplo 3(scrip):<br>
+            function resultado(m) { <br>
+                <strong>var resultado = (m >= 7) ? "Aprovado":"Reprovado";</strong>
+                return resultado;<br>
+            }</p> 
+    
+        N1: <input type="number" id="N5" value=""><br>
+        N2: <input type="number" id="N6" value=""><br>
+        <button onclick="situacao3('N5', 'N6', 'resultado2')">OK</button><br>
+        <p id="resultado2"></p>
+        <h6>Valores Booleanos e Condições</h6>
+        <p>Os valores booleanos podem ser definidos como objetos com a palavra-chave <strong>new</strong>. Não recomendo que você 
+            utilize esse recurso, pois isso diminui a velocidade de execução e complica o código, na maioria das vezes, de maneira 
+            desnecessária.</p>
+        <p>Os operadores básicos de comparação são:</p>
+        <ul>
+            <ol>
+                <li><strong>e1 == e2</strong> retorna true apenas se o valor da expressão e1 for igual ao valor da expressão e2</li>
+                <li><strong>e1 === e2</strong> também chamada de igualdade estrita, que retorna true apenas se o valor e o tipo da expressão e1 e e2 forem iguais</li>
+                <li><strong>e1 != e2</strong> que retorna true apenas se o valor da expressão e1 for diferente do valor da expressão e2</li>
+                <li><strong>e1 !== e2</strong> também chamada de desigualdade estrita, que retorna true apenas se o valor da expressão e1 for diferente do valor da expressão e2 ou se o tipo da expressão e1 for diferente do tipo da expressão e2</li>
+                <li><strong>e1 > e2</strong> que retorna true apenas se o valor da expressão e1 for maior que valor da expressão e2</li>
+                <li><strong>e1 < e2</strong> que retorna true apenas se o valor da expressão e1 for menor que valor da expressão e2</li>
+                <li><strong>e1 >= e2</strong> que retorna true apenas se o valor da expressão e1 for maior ou igual ao valor da expressão e2</li>
+                <li><strong>e1 <= e2</strong> que retorna true apenas se o valor da expressão e1 for menor ou igual ao valor da expressão e2</li>
+            </ol>
+        </ul>
+        <p>Podemos combinar expressões que usam esses operadores básicos por meio dos operadores lógicos. São eles e, ou e não.</p>
+        <ul>
+            <ol>
+                <li><strong>c1 && c2</strong>: obter o valor de c1 e c2</li> 
+                <li><strong>c1 || c2</strong>: obter o valor de c1 ou c2</li> 
+                <li><strong>!c1</strong>: obter o valor de não c1</li> 
+            </ol>
+        </ul>
+        <p style="text-align: center;">Operadores lógicos</p>
+        <img class="explicacao" src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a09_f12.png" alt="Operadores lógicos">
+        <p>A <strong>coerção de tipos</strong> tem efeitos interessantes. Isso porque todo valor em JavaScript pode ser tratado como verdadeiro ou 
+            falso. Basicamente, JavaScript considera tudo que tem valor como true e tudo que não tem um valor como false. Outra 
+            característica interessante é que também são considerados como verdadeiros objetos cujos valores são diferentes de 
+            null.</p>
+        <p>Dito de maneira bem simples, se a variável tem um valor, ela é true, caso contrário, ela é false.</p>
+        <p>Valores Verdadeiros e Falsos</p>
+        Palavra: <input type="text" id="palavra" value=""><br>
+        <p>corrigir ainda</p>
+        <button onclick="situacao4('palavra')">OK</button><br>
+        <h6>Comandos de Seleção</h6>
+        
+
 
     </section>
     <script src="script.js"></script>

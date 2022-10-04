@@ -20,7 +20,7 @@
         <h1 style="color:beige;">Curso de web IMD</h1>
     </header>
     <section>
-    <h1>Aula 01 - Introdução ao HTML</h1>
+    <h3>Aula 01 - Introdução ao HTML</h3>
     <ul>
         <ol>
             <li><strong>Conhecer o HTML e sua história</strong></li>
@@ -49,7 +49,7 @@
             
         </ol>
     </ul>
-    <h1>Aula 02 - Introdução ao CSS</h1>
+    <h3>Aula 02 - Introdução ao CSS</h3>
     <ul>
         <ol>
             <li><strong>Entender o CSS e sua aplicação</strong></li>
@@ -72,12 +72,12 @@
             </ul>
         </ol>
     </ul>
-    <h1>Aula 03 - Títulos, Parágrafos, Links e Imagens</h1>
+    <h3>Aula 03 - Títulos, Parágrafos, Links e Imagens</h3>
     <ul>
         <ol>
             <li>Conhecer como adicionar títulos e parágrafos em HTML</li>
-            <p>Os títulos no HTML são utilizados para dividir o documento HTML em seções. O HTML permite organizar o conteúdo em até seis níveis. (h1 a h6).</p>
-            <p><strong>É importante utilizar os títulos de forma semanticamente correta. Ou seja, o título principal do seu site deve estar na tag h1. 
+            <p>Os títulos no HTML são utilizados para dividir o documento HTML em seções. O HTML permite organizar o conteúdo em até seis níveis. (h6 a h6).</p>
+            <p><strong>É importante utilizar os títulos de forma semanticamente correta. Ou seja, o título principal do seu site deve estar na tag h6. 
                 Caso deseje alterar a aparência como, por exemplo, por um título menor, utilize o CSS. Com isso, você manterá a consistência da informação, 
                 fazendo com que seu site seja corretamente interpretado por sistemas externos.</strong></p>
             <p>Para criar um parágrafo em HTML, deve-se utilizar a tag "p".</p>
@@ -120,10 +120,63 @@
             </ul>
         </ol>
     </ul>
-    <h1>Aula 04 - Formatação em HTML e Listas</h1>
+    <h3>Aula 04 - Formatação em HTML e Listas</h3>
+    <p><strong>Negrito</strong></p>
+    <p>Tags <code>&lt;b&gt;</code> ou <code>&lt;strong&gt;</code></p>
+    <p> Texto normal <b>texto em negrito</b> </p>
+    <p> Texto normal <strong>texto em negrito</strong> </p>
+    <p><strong>Itálico</strong></p>
+    <p>Tags <code>&lt;i&gt;</code> ou <code>&lt;em&gt;&lt;/em&gt;</code></p>
+    <p> Texto normal <i>texto em italico</i> </p>
+    <p> Texto normal <em>texto em itálico</em> </p>
+    <p><strong>Destacado</strong></p>
+    <p>Tag <code>&lt;mark&gt;</code></p>
+    <p> Texto normal <mark>texto em marcado</mark> </p>
+    <p><strong>Diminuto</strong></p>
+    <p>Tag <code>&lt;small&gt;&lt;/small&gt;</code></p>
+    <p> Texto normal <small>texto menor</small> </p>
+    <p><strong>Tachado</strong></p>
+    <p>Tag <code>&lt;del&gt;&lt;/del&gt;</code></p>
+    <p>Texto normal <del>texto tachado</del> </p>
+    <p><strong>Sobrescrito ou subscrito</strong></p>
+    <p>Tags <code>&lt;sup&gt;</code> para sobrescrito e <code>&lt;sub&gt;</code> para subscrito.</p>
+    <p> Texto normal <sup>texto sobrescrito</sup> e <sub>texto subscrito</sub> </p>
+    <h6>Listas</h6>
+    <p>Utilizam-se as tags <code>&lt;ul&gt;</code> para listas não ordenadas e a tag <code>&lt;ol&gt;</code>
+         para listas ordenadas. As tags <code>&lt;li&gt;</code> para cada elemento.</p>
+    <code>&lt;ol type="A"&gt;</code><br>
+    <code>&lt;li&gt;</code>Café<code>&lt;/li&gt;</code><br>
+    <code>&lt;li&gt;</code>Chá<code>&lt;/li&gt;</code><br>
+    <code>&lt;li&gt;</code>Leite<code>&lt;/li&gt;</code><br>
+    <code>&lt;/ol&gt;</code><br>
+    <ol>Atributos das listas numéricas no HTML
+        <li>Os itens serão numerados por algarismos arábicos (1)</li>
+        <li>Os itens serão numerados pelas letras maiúsculas do alfabeto (A)</li>
+        <li>Os itens serão numerados pelas letras minúsculas do alfabeto (a)</li>
+        <li>Os itens serão numerados por algarismos romanos maiúsculos (I)</li>
+        <li>Os itens serão numerados por algarismos romanos minúsculos (i)</li>
+    </ol>
+    <h6>Estilizando as listas</h6>
+    <p>A estilização das listas segue a mesma forma das demais estilizações. É possível aplicar através do CSS 
+    um estilo para todas as listas, ou apenas para seus itens. </p>
+    ul {<br>
+        list-style-type: <strong>disc</strong>;<br>
+      }<br>
+    <ul>Valores para a aparência dos marcadores
+        <li>Os marcadores serão discos sólidos (aparência padrão) - <strong>disc</strong></li>
+        <li>Os marcadores serão quadrados sólidos - <strong>square</strong></li>
+        <li>Os marcadores serão círculos vazados - <strong>circle</strong></li>
+        <li>Nenhum marcador será utilizado - <strong>none</strong></li>
+    </ul>
+    <h3>Aula 05 - Identificando e Estilizando elementos</h3>
+    <p>Seletores de classes</p>
+    <code>&lt;ul class="list-1"&gt;</code>
+    <p>ul.list-1 {<br>
+        list-style-type: disc;<br>
+    }</p>
 </section>
 <footer>
-    <p>By Monica Lima de Paiva</p>
+    <p><strong>By Monica Lima de Paiva</strong></p>
 </footer>
 </body>
 </html>

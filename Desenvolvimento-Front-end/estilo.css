@@ -52,3 +52,7 @@ a:hover {
 a:active {
   color: yellow;
 }
+
+footer{
+  text-align: center;
+}

@@ -30,6 +30,15 @@ section {
     padding: 2px 10px 2px 50px;
 }
 
+#conteudo{
+  width: 90%;
+  margin: auto;
+}
+
+.explicacao{
+  width: 80%;
+}
+
 .destaque{
   color: red;
 }
