@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desenvolvimento Front-end I</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS on-line -->
+    
+</head>
+<body>
+    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+        <h2>Aula 06 - Tabelas</h2>
+        <p>Para criar uma tabela, deve-se utilizar a tag <strong><code>&lt;table&gt;</code></strong>.</p>
+        <p> Para cada linha deve-se utilizar a tag <strong><code>&lt;tr&gt;</code></strong> e, para cada coluna, 
+            deve-se utilizar a tag <strong><code>&lt;td&gt;</code></strong>.</p>
+        <p>Para indicar que o dado é um cabeçalho, deve-se utilizar a tag <strong><code>&lt;th&gt;</code></strong>, 
+            em vez de  <strong><code>&lt;td&gt;</code></strong></p>
+        <h3>Mesclando linhas e colunas</h3>
+        <p><strong>Mesclando colunas</strong></p>
+        <p>Para mesclar duas ou mais colunas, utilize o atributo <strong>"colspan"</strong> da tag <code>&lt;td&gt;</code> 
+            ou <strong><code>&lt;th&gt;</code></strong>, indicando o número de colunas que devem ser mescladas. </p>
+        <code>&lt;th colspan="2"&gt;Telefone&lt;/th&gt;</code><br>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th colspan="2">Telefone</th>
+            </tr>
+            <tr>
+              <td>Bill Gates</td>
+              <td>55577854</td>
+              <td>55577855</td>
+            </tr>
+        </table>
+        <p><strong>Mesclando linhas</strong></p>
+        <p>Para mesclar duas ou mais linhas, utilize o atributo <strong>"rowspan"</strong> na tag <code>&lt;td&gt;</code>
+             ou <code>&lt;th&gt;</code>, indicando o número de linhas que devem ser mescladas.</p>
+        <code>&lt;th rowspan="2"&gt;Telefone&lt;/th&gt;</code><br>
+        <table>
+            <tr>
+              <th>Name</th>
+              <td>Bill Gates</td>
+            </tr>
+            <tr>
+              <th rowspan="2">Telefone</th>
+              <td>55577854</td>
+            </tr>
+            <tr>
+              <td>55577855</td>
+            </tr>
+          </table>
+        <h3>Aplicando estilo em uma Tabela</h3>
+        <p><strong>Espaçamento</strong></p>
+        <p>É possível utilizar a propriedade "padding" para controlar o espaçamento entre a borda e o conteúdo da tabela. 
+            Para que isso fique visível, é importante que a borda não esteja invisível. </p>
+        <p><strong>Alinhamento de texto</strong></p>
+        <p>Para controlar o alinhamento do texto na célula da tabela, utilize a propriedade <strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-align" target="_blank">text-align</a></strong> para alinhamento
+             horizontal e <strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/vertical-align/" target="_blank">vertical-align</a></strong> para vertical.</p>
+        <p><strong>Borda</strong></p>
+        <p>Algo importante a analisar é se as bordas das tabelas ficarão condensadas ou separadas através da propriedade "<a href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/border-collapse" target="_blank"><strong>border-collapse</strong></a>". </p>
+        <p><strong>Cor de fundo</strong></p>
+        <p>A cor de fundo da tabela é controlada pela mesma propriedade utilizada para outros elementos: "background-color".</p>
+        <p>É possível aplicar estilos diferentes para linhas pares e linhas ímpares, obtendo-se uma melhor separação entre as linhas.</p>
+        <p>/* par */<br>
+        tr:nth-child(even) { <br>
+             background-color: #eee;<br>
+        }<br>
+        /* ímpar */<br>
+        tr:nth-child(odd) {<br>
+            background-color: lightblue;<br>
+        }</p>
+        <p>Este tipo de seletor avançado se chama seletor de pseudoclasse.</p>
+        <p>Assim como os links, pode-se definir o estilo para as tabelas a depender do estado.</p>
+        <p>
+            tr:hover {<br>
+                background-color: blue;<br>
+            }<br>
+        </p>
+        <p><strong>Melhor explicação de cada tag para tabelas:</strong></p>
+        <p><code>&lt;table&gt;</code> Define uma tabela</p>
+        <p><code>&lt;th&gt;</code> Define uma célula de cabeçalho em uma tabela</p>
+        <p><code>&lt;tr&gt;</code> Define uma linha em uma tabela</p>
+        <p><code>&lt;td&gt;</code> Define uma célula em uma tabela</p>
+        <p><code>&lt;caption&gt;</code> Define uma legenda de tabela</p>
+        <p><code>&lt;colgroup&gt;</code> Especifica um grupo de uma ou mais colunas em uma tabela para formatação</p>
+        <p><code>&lt;col&gt;</code> Especifica as propriedades da coluna para cada coluna dentro de um elemento</p>
+        <p><code>&lt;thead&gt;</code> Agrupa o conteúdo do cabeçalho em uma tabela</p>
+        <p><code>&lt;tbody&gt;</code> Agrupa o conteúdo do corpo em uma tabela</p>
+        <p><code>&lt;tfoot&gt;</code> Agrupa o conteúdo do rodapé em uma tabela</p>
+    </section>
+<footer>
+    <p><strong>By Monica Lima de Paiva</strong></p>
+</footer>
+</body>
+</html>

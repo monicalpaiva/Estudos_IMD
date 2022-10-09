@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desenvolvimento Front-end I</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS on-line -->
+    
+</head>
+<body>
+    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+        <h2>Aula 05 - Identificando e Estilizando elementos</h2>
+        <p><strong>Seletores de classes</strong></p>
+        <code>&lt;ul class="list-1"&gt;</code>
+        <p>ul class="importante" {<br>
+            list-style-type: disc;<br>
+        }</p>
+        <p>Estilizando a class no CSS:</p>
+        <p>.importante{<br>
+            font-size: 30px;<br>
+        }</p>
+        <p><strong>Seletores de Identificadores</strong></p>
+        <code>&lth1 id="secao1"&gt;</code>
+        <p>Estilizando o identificador</p>
+        <p>#secao1{<br>
+            font-size: 10px;<br>
+        }</p>
+        <p><strong>Importante:</strong>O id deve ser utilizado quando se deseja selecionar um elemento em específico. 
+            Os ids são identificadores únicos dos elementos no documento HTML e por isso não é uma boa prática possuir 
+            vários elementos com o mesmo identificador.</p>
+        <h3>Plano de fundo com CSS</h3>
+        <p>Para aplicar uma imagem de fundo em toda página, pode-se utilizar a propriedade "background-image"
+             do elemento HTML "body". <strong>background-image: url('imgs/bg-gradient.jpg');</strong></p>
+        <p>Por padrão, a imagem é replicada em todos os sentidos. No entanto, é possível controlar como se
+             dará a repetição através da propriedade "background-repeat". <strong>background-repeat: repeat-x;</strong></p>
+        <table>
+            <caption>Valores da propriedade background-repeat</caption>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <th>no-repeat</th>
+                <th>A imagem não será repetida</th>
+            </tr>
+            <tr>
+                <th>repeat</th>
+                <th>Repete a imagem em ambas as direções <strong>(padrão)</strong></th>
+            </tr>
+            <tr>
+                <th>repeat-x</th>
+                <th>Repete a imagem apenas na horizontal</th>
+            </tr>
+            <tr>
+                <th>repeat-y</th>
+                <th>Repete a imagem apenas na vertical</th>
+            </tr>
+            <tr>
+                <th>space</th>
+                <th>As imagens são repetidas de forma a não haver cortes.<br>
+                     Um espaço entre as imagens é adicionado no espaço excedente.</th>
+            </tr>
+            <tr>
+                <th>round</th>
+                <th>As imagens são repetidas de forma a não haver cortes. <br>
+                    As imagens são redimensionadas de forma a preencher todos os espaços.</th>
+            </tr>
+        </table>
+        <p>É possível controlar a posição da imagem de fundo. Para isso, 
+            utiliza-se a propriedade "background-position". <strong> background-position: right top;</strong>. 
+            Você pode utilizar as opções <strong>"left", "center" e "right" </strong>para controlar a posição no eixo horizontal
+             e as opções <strong>"top", "center" e "bottom"</strong> para controlar a posição no eixo vertical. <strong>background-position: right top;</strong></p>
+        <p>Por padrão, as imagens de fundo rolam com o conteúdo da página. Caso deseje controlar o comportamento da imagem
+             de fundo durante a rolagem da página, utilize a propriedade "background-attachment". <strong>background-attachment: fixed;</strong></p>
+        <h3>Bordas</h3>
+        <table>
+            <caption>Valores para os estilos de borda</caption>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <th>dotted</th>
+                <th>Borda pontilhada</th>
+            </tr>
+            <tr>
+                <th>dashed</th>
+                <th>Borda tracejada</th>
+            </tr>
+            <tr>
+                <th>solid</th>
+                <th>Borda sólida</th>
+            </tr>
+            <tr>
+                <th>double</th>
+                <th>Borda dupla</th>
+            </tr>
+            <tr>
+                <th>groove</th>
+                <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+            </tr>
+            <tr>
+                <th>ridge</th>
+                <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+            </tr>
+            <tr>
+                <th>inset</th>
+                <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+            </tr>
+            <tr>
+                <th>outset</th>
+                <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+            </tr>
+            <tr>
+                <th>none</th>
+                <th>Sem borda</th>
+            </tr>
+            <tr>
+                <th>hidden</th>
+                <th>Borda invisível</th>
+            </tr>
+        </table>
+        <p>Para controlar a espessura da <strong>borda</strong> deve-se utilizar a propriedade "border-width". 
+            Para controlar a <strong>cor</strong>, deve-se utilizar a propriedade "border-color". 
+            Caso deseje <strong>arredondar a borda nos cantos</strong>, utilize a propriedade "border-radius", definida em pixels. </p>
+        <p>
+            border-style: solid;<br>
+            border-width: 6px;<br>
+            border-color: aqua;<br>
+            border-radius: 4px;<br>
+        </p>
+        <p>Além disso, é possível especificar estilos diferentes para lados diferentes da borda. Para isso, utilize os sufixos 
+            ("-top", "-right", "-left" e "-bottom") nas propriedades que deseja alterar. <strong>border-top: 5px solid red;</strong></p>
+        <p>Além dessa forma, é possível especificar mais de um valor (separados por espaço) em uma propriedade da borda. Nesse caso, 
+            cada valor estará relacionado a um dos lados da borda, seguindo a seguinte ordem: <strong>cima, direita, baixo e esquerda</strong>. </p>
+        <p> border-style: solid dashed none double;</p>
+    </section>
+<footer>
+    <p><strong>By Monica Lima de Paiva</strong></p>
+</footer>
+</body>
+</html>

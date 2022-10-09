@@ -56,3 +56,9 @@ a:active {
 footer{
   text-align: center;
 }
+
+table, th, tr {
+  border: 1px solid black;
+  text-align: left;
+  border-collapse: collapse;
+}

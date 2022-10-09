@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desenvolvimento Front-end I</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 47);
+        }
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+    <h3>Aula 03 - Títulos, Parágrafos, Links e Imagens</h3>
+    <ul>
+        <ol>
+            <li>Conhecer como adicionar títulos e parágrafos em HTML</li>
+            <p>Os títulos no HTML são utilizados para dividir o documento HTML em seções. O HTML permite organizar o conteúdo em até seis níveis. (h6 a h6).</p>
+            <p><strong>É importante utilizar os títulos de forma semanticamente correta. Ou seja, o título principal do seu site deve estar na tag h6. 
+                Caso deseje alterar a aparência como, por exemplo, por um título menor, utilize o CSS. Com isso, você manterá a consistência da informação, 
+                fazendo com que seu site seja corretamente interpretado por sistemas externos.</strong></p>
+            <p>Para criar um parágrafo em HTML, deve-se utilizar a tag "p".</p>
+            <li>Conhecer como adicionar links e como estilizá-los</li>
+            <p>Os links no HTML são utilizados para permitir acessar outros documentos através de um simples clique. Graças aos links, podemos ter uma melhor
+                 interação com os sistemas web.</p>
+            <p>Usamos a tag "a" para criar links no HTML</p>
+            <p><strong>Valores do atributo “target”:</strong></p>
+            <ul>
+                <li><strong class="destaque">_blank:</strong> Abre o link em uma nova janela (ou aba)</li>
+                <li><strong class="destaque">_self:</strong> Abre o link na mesma janela que foi clicado (comportamento padrão)</li>
+                <li><strong class="destaque">_parent:</strong> Abre o link no frame "pai"</li>
+                <li><strong class="destaque">_top:</strong> Abre o link no topo da hierarquia de frames</li>
+                <li><strong class="destaque">framename:</strong> Abre o link no iframe cujo nome coincida com o desse parâmetro</li>
+            </ul><br>
+            <p> a href="www.link.com" target="_blank" </p>
+            <p><strong>Estados dos links:</strong></p>
+            <ul>
+                <li><strong class="destaque">link:</strong> Link que ainda não foi visitado</li>
+                <li><strong class="destaque">visited:</strong> Link que já foi visitado</li>
+                <li><strong class="destaque">hover:</strong> Ativo quando o usuário está com o mouse sobre o link</li>
+                <li><strong class="destaque">active:</strong> Ativo quando o usuário clica no link</li>
+            </ul><br>
+            <p>A definição "a:hover" deve vir após a definição "a:link" e "a:visited" para ser efetiva! Similarmente, a definição "a:active" deve vir depois da a:hover para ser efetiva.</p>
+            <li>Conhecer como adicionar imagens e como estilizá-las</li>
+            <p>Para adicionar imagens em um documento HTML, utilize a tag <code>&lt;img&gt;</code>.</p>
+            <p><u>Especificando o caminho para a imagem</u> através do atributo <strong>"src"</strong></p>
+            <code>&lt;img src="img/html-css.jpg"&gt;</code>
+            <p>Indicamos <u>um texto alternativo para imagem</u>, que será exibido quando a imagem não puder ser exibida, através do atributo <strong>"alt"</strong>. Esse atributo
+                 permite deixar sua página mais acessível, pois pode ser lido por sistemas de leitura de telas, comumente utilizados por pessoas com alguma limitação visual.</p>
+            <code>&lt;img src="img/html-css.jpg"  alt="Livro de HTML & CSS"&gt;</code>
+            <ul>
+                <p>OBS: Além da definição de tamanho absoluto, é possível definir a largura ou a altura através de valores relativos. Nesse caso, a imagem ocupará uma parte da área disponível.</p>
+                <li>Atributos de dimensão</li>
+                <p>Para definir a largura utilize o atributo "width" e para definir a altura, utilize o atributo <strong class="destaque">"height".</strong></p>
+                <li>Atributos de posição</li>
+                <p>Para posicionar a imagem à esquerda ou à direita, de forma flutuante, através do atributo <strong class="destaque">"float".</strong></p>
+                <li>Atributos de espaçamento</li>
+                <p>Para adicionar margem às imagens e adicionar espaçamento do conteúdo em relação à imagem, utiliza-se o atributo <strong class="destaque">"margin"</strong>. Para editar apenas algum dos lados podem ser usados também os atributos: "margin-top", "margin-right", "margin-bottom" e "margin-left".</p>
+            </ul>
+        </ol>
+    </ul>
+    </section>
+<footer>
+    <p><strong>By Monica Lima de Paiva</strong></p>
+</footer>
+</body>
+</html>
