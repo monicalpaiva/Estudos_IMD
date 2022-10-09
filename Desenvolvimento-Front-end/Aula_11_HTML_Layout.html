@@ -16,8 +16,210 @@
     </header>
     <section>
         <h2>Aula 11 - HTML Layout</h2>
-        
-    </section>
+        <h3>Elementos de Layout do HTML 5</h3>
+        <p>A estruturação semântica é importante, pois fica possível entender melhor o que cada parte do código HTML contém 
+            e significa. Dessa forma, outros sistemas podem entender melhor seu documento a partir da análise do código. 
+            Além disso, a estruturação semântica permite reaproveitar melhor estilos CSSs, uma vez que as tags são 
+            padronizadas.</p>
+        <p><strong>header</strong></p>
+        <p>A tag <code>&lt;header&gt;</code> foi criada para conter conteúdo introdutório do seu documento HTML. Nela, 
+            normalmente ficam informações gerais como logomarca e navegação.</p>
+        <p><strong>OBS:</strong> Você pode ter vários elementos <code>&lt;header&gt;</code> em um documento HTML. No entanto,
+            <code>&lt;header&gt;</code> não pode ser colocado em um  <code>&lt;footer&gt;</code>,  
+            <code>&lt;address&gt;</code> ou outro elemento <code>&lt;header&gt;</code>.</p>
+        <p><strong>nav</strong></p>
+        <p>A tag <code>&lt;nav&gt;</code> foi criada para conter as informações de navegação do documento HTML. É nessa tag 
+            que deve conter os links para outras páginas do seu site/sistema.</p>
+        <p><strong>section</strong></p>
+        <p>A tag <code>&lt;section&gt;</code> define uma seção de um documento HTML.</p>
+        <p><strong>article</strong></p>
+        <p>A tag <code>&lt;article&gt;</code> foi criada para indicar o conteúdo principal do documento HTML. O conteúdo do
+             <code>&lt;article&gt;</code> deve ser distribuído independentemente do restante do site.</p>
+        <p><strong>aside</strong></p>
+        <p>A tag <code>&lt;aside&gt;</code> define algum conteúdo complementar ao conteúdo principal. Caso não seja exibido,
+             não deve prejudicar o entendimento do conteúdo principal.</p>
+        <p><strong>OBS:</strong>O conteúdo <code>&lt;aside&gt;</code> geralmente é colocado como uma barra lateral em um 
+            documento.</p>
+        <p><strong>footer</strong></p>
+        <p>A tag <code>&lt;footer&gt;</code> tem o objetivo de indicar o rodapé do documento HTML.</p>
+        <p><a href="Aula_11_exemplo01.html" target="_blank">Página exemplo</a></p>
+        <h3>Utilizando CSS Flexbox (Flexbox contêiner)</h3>
+        <p>O flex é uma ferramenta do CSS que facilita a organização dos conteúdos de um contêiner. Para ativar o flex em 
+            determinado contêiner, basta utilizar na propriedade "display" o valor "flex".<strong>display: flex;</strong></p>
+        <p><strong>Flex-direction</strong></p>
+        <p>O "flex-direction" indica a direção de como os conteúdos de um contêiner com display flex, irão se distribuir. Veja algumas opções:</p>
+        <table>
+            <caption>Disponibilidade do display flex-direction</caption>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>row</td>
+                <td>Dispõe os elementos um ao lado do outro</td>
+            </tr>
+            <tr>
+                <td>row-reverse</td>
+                <td>Dispõe os elementos um ao lado do outro em ordem reversa (da direita para a esquerda)</td>
+            </tr>
+            <tr>
+                <td>column</td>
+                <td>Dispõe os elementos um abaixo do outro (começando de cima)</td>
+            </tr>
+            <tr>
+                <td>column-reverse</td>
+                <td>Dispõe os elementos um acima do outro (começando de baixo)</td>
+            </tr>
+        </table>
+        <p><strong>Flex-wrap</strong></p>
+        <p>Essa propriedade controla como se dará a quebra, quando não há espaço suficiente para mostrar todos os itens 
+            em uma mesma linha (ou coluna, para o caso da "flex-direction" ser "column"). </p>
+        <table>
+            <caption>Disponibilidade do display flex-wrap</caption>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>wrap</td>
+                <td>Quebra a linha posicionando os itens na linha seguinte (ou coluna)</td>
+            </tr>
+            <tr>
+                <td>wrap-reverse</td>
+                <td>Quebra a linha, posicionamento os itens na linha seguinte em ordem reversa</td>
+            </tr>
+            <tr>
+                <td>no-wrap</td>
+                <td>Não quebra a linha</td>
+            </tr>
+        </table>
+        <p><strong>Flex-flow</strong></p>	
+        <p>O "flex-flow" é uma propriedade que sumariza em uma única propriedade o comportamento da "flex-direction" 
+            a da "flew-wrap".<strong> flex-flow: row wrap;</strong></p>
+        <p><strong>Flex-justify</strong></p>
+        <p>O "flex-justify" é a propriedade responsável por controlar como os elementos serão distribuídos dentro 
+            do contêiner.</p>
+        <table>
+            <caption>Disponibilidade do "ﬂex-justify"</caption>
+            <tr>
+                <th>Valor</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>flex-start</td>
+                <td>Distribui os itens do início para o fim: da esquerda para a direita, em caso de linha, e, de cima para baixo, em caso de coluna.</td>
+            </tr>
+            <tr>
+                <td>flex-end</td>
+                <td>Distribui os itens do fim para o início: da direita para a esquerda, em caso de linha e, de baixo para cima, em caso de coluna.</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td>Distribui os itens a partir do centro</td>
+            </tr>
+            <tr>
+                <td>space-between</td>
+                <td>Os itens terão espaço entre eles</td>
+            </tr>
+            <tr>
+                <td>space-arround</td>
+                <td>Os itens terão espaço antes, depois e entre eles</td>
+            </tr>
+            <tr>
+                <td>space-evenly</td>
+                <td>Os itens terão espaço igual ao seu redor</td>
+            </tr>
+        </table>
+    <p><strong>Align-itens</strong></p>
+    <p>A propriedade "align-itens" controla o comportamento do alinhamento dos itens, com relação ao eixo vertical, 
+        no caso de linhas, e horizontal, no caso de colunas. </p>
+    <table>
+        <caption>Disponibilidade do "align-itens"</caption>
+        <tr>
+            <th>Valor</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>stretch</td>
+            <td>Força o item a ocupar todo o espaço disponível (padrão)</td>
+        </tr>
+        <tr>
+            <td>flex-start</td>
+            <td>Ocupa apenas o espaço necessário, alinhando de cima para baixo (no caso de linha).</td>
+        </tr>
+        <tr>
+            <td>flex-end</td>
+            <td>Ocupa apenas o espaço necessário, alinhando de baixo para cima (no caso de linha).</td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>Ocupa apenas o espaço necessário, alinhando pelo centro.</td>
+        </tr>
+        <tr>
+            <td>baseline</td>
+            <td>Ocupa apenas o espaço necessário, alinhando o conteúdo do contêiner.</td>
+        </tr>
+    </table>
+    <p><strong>Align-content</strong></p>   
+    <p>A propriedade "align-content" controla o comportamento de como as linhas/colunas estarão alinhadas entre si.</p>
+    <table>
+        <caption>Disponibilidade do "align-content"</caption>
+        <tr>
+            <th>Valor</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>stretch</td>
+            <td>Força as linhas/colunas a ocupar todo o espaço disponível (padrão)</td>
+        </tr>
+        <tr>
+            <td>flex-start</td>
+            <td>As linhas são compactadas em direção ao início do flex contêiner</td>
+        </tr>
+        <tr>
+            <td>flex-end</td>
+            <td>As linhas são compactadas em direção ao fim do flex contêiner</td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>As linhas são compactadas em direção ao centro do flex contêiner</td>
+        </tr>
+        <tr>
+            <td>space-between</td>
+            <td>As linhas são distribuídas uniformemente no flex contêiner</td>
+        </tr>
+        <tr>
+            <td>space-around</td>
+            <td>As linhas são distribuídas uniformemente no flex contêiner, com metade do espaço nas extremidades</td>
+        </tr>
+        <tr>
+            <td>space-evenly</td>
+            <td>As linhas são distribuídas uniformemente no flex contêiner, com espaço igual ao redor delas</td>
+        </tr>
+    </table>
+    <h3>Utilizando CSS Flexbox (Flex Itens)</h3>
+    <p><strong>flex-grow</strong></p>
+    <p>O "flex-grow" é uma propriedade que controla o tamanho dos itens e como se comportarão em relação ao tamanho da 
+        tela. Trata-se de um valor numérico em que o valor padrão é o 0. No caso de todos os itens possuírem "flex-grow" 
+        0, indica que ocuparão apenas a área suficiente para apresentar seu conteúdo. Se o valor diferir de 0, o espaço
+         total será dividido de forma a respeitar a proporção estabelecida por cada valor de "flex-grow".</p>
+    <p><strong>flex-shrink</strong></p>
+    <p>A propriedade "flex-shrink" especifica como o item será reduzido em relação ao restante dos itens flexíveis no
+         mesmo contêiner. Trata-se de um valor numérico que possui 1 como valor padrão.</p>
+    <p><strong>flex-basis</strong></p>
+    <p>A propriedade "flex-basis" especifica o comprimento inicial de um item flexível. Trata-se de um valor numérico 
+        que pode ser definido em pixels.</p>
+    <p><strong>flex</strong></p>
+    <p>O atributo "flex" é um atalho para todos os outros atributos vistos anteriormente.<strong>flex: 0 1 auto;</strong></p>
+    <p>A propriedade flex foi configurada com <strong>"flex-grow" com valor "0"</strong>, o <strong>"flex-shink" com 
+        valor "1"</strong> e o <strong>"flex-basis" com valor "auto"</strong>. Perceba que a ordem é fundamental.</p>
+    <p>Ainda é possível uma sintaxe ainda mais enxuta:<strong>flex: 1;</strong></p>
+    <p>Nesse caso, o <strong>"flex-grow" e o "flex-shink" ficam com valor "1" </strong>e o <strong>"flex-basis" com valor "0"</strong>.</p>
+    <p>Para praticar os conceitos,<a href="https://origamid.com/projetos/flexbox-guia-completo/" target="_blank">visite este site.</a></p>
+    <h3>Adaptando o layout antigo para o Flex</h3>
+    <p><a href="Aula_11_exemplo02.html" target="_blank">Página exemplo</a></p>
+    
+	</section>
 <footer>
     <p><strong>By Monica Lima de Paiva</strong></p>
 
