@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desenvolvimento Front-end I</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS on-line -->
+    
+</head>
+<body>
+    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+        <h2>Aula 10 - Multimídia</h2>
+        <h3>Vídeo no HTML 5</h3>
+        <p>Os vídeos podem ser adicionados ao documento HTML através da tag <code>&lt;video&gt;</code>. <br>
+            <strong><code>&lt;video src="multimidia/video.mp4"><code>&lt;/video&gt;</code></strong> </p>
+        <p><strong>Controles</strong></p>
+        <p>Por padrão, o vídeo é adicionado sem possibilitar ao usuário ter controle sobre como iniciar, pausar,
+             alterar volume etc. Para adicionar as opções de controle, deve-se utilizar o atributo "controls". <br>
+            <strong><code>&lt;video src="multimidia/video.mp4" controls&gt;</code><code>&lt;/video&gt;</code></strong></p>
+        <p><strong>Autoplay</strong></p>
+        <p>Você pode adicionar uma opção para que o vídeo inicie automaticamente após o carregamento da página. 
+            Para isso, utilize o atributo chamado de "autoplay". <br>
+            <strong><code>&lt;video src="multimidia/video.mp4" controls autoplay muted&gt;</code><code>&lt;/video&gt;</code></strong></p>
+        <p><strong>OBS:</strong> Perceba que, além do "autoplay", foi adicionada a opção "muted". Isso se faz necessário, pois os navegadores 
+            bloqueiam o autoplay de vídeos com áudio, por padrão.</p>
+        <p><strong>Loop</strong></p>
+        <p>A opção loop faz com que o vídeo volte ao início automaticamente após chegar ao fim. Para adicionar essa opção, basta utilizar
+             o atributo "loop".<br>
+            <strong><code>&lt;video src="multimidia/video.mp4" controls autoplay muted loop&gt;</code><code>&lt;/video&gt;</code></strong></p>
+        <p><strong>Dimensões</strong></p>
+        <p>É possível alterar as dimensões de um vídeo através dos atributos "width" e "height", da mesma forma que qualquer outro elemento
+             que permita redimensionamento.<br>
+             <strong><code>&lt;video width="800px" src="multimidia/video.mp4" controls autoplay muted loop&gt;</code><code>&lt;/video&gt;</code></strong></p>
+        <p><strong>Poster</strong></p>
+        <p>A opção poster permite ao programador escolher uma imagem para ficar de exibição no vídeo, quando este não estiver em reprodução.<br>
+            <strong><code>&lt;video width="800px" src="multimidia/video.mp4" poster="img/img_video.png" controls loop&gt;</code><code>&lt;/video&gt;</code></strong></p>
+        <p>Nem todos os navegadores suportam a tag <code>&lt;video&gt;</code> to HTML5. É possível adicionar um código alternativo: <br>
+            <strong><code>&lt;video width="800px" src="multimidia/video.mp4" poster="img/img_video.png" controls loop&gt;</code><br><code>&lt;p&gt;</code>
+                Navegador não suporta vídeos.<code>&lt;/p&gt;</code><br><code>&lt;/video&gt;</code></strong></p>
+        <p><strong>Formatos compatíveis</strong></p>
+        <img width="70%" height="70%" src="https://materiais.imd.ufrn.br/materialV2/assets/lib/upload/plugins/source/imagens/74/687/Captura%20de%20Tela%202021-01-07%20a%CC%80s%2010-37-31.png"/>
+        <h3>Áudio no HTML5</h3>
+        <p>Similarmente ao vídeo, para adicionar um áudio em um documento HTML5, utilize a tag <code>&lt;audio&gt;</code></p>
+        <p><strong>Controles</strong></p>
+        <p>Por padrão, assim como no vídeo, as opções de controle do áudio não aparecem para o usuário. Para adicionar essa opção, utilize o atributo "controls".<br>
+            <strong><code>&lt;audio src="multimidia/audio.mp3" controls><code>&lt;/audio&gt;</code></strong></p>
+        <p><strong>Loop</strong></p>
+        <p>Para que o áudio volte ao início após seu fim, utilize o atributo "loop".<br>
+            <strong><code>&lt;audio src="multimidia/audio.mp3"  controls loop><code>&lt;/audio&gt;</code></strong></p>
+        <p><strong>Compatibilidade</strong></p>
+        <p>É possível indicar mais de um formato para o áudio. Para isso, deve-se utilizar a tag <code>&lt;source&gt;</code>
+             dentro da tag <code>&lt;audio&gt;</code>. </p>
+        <p>
+            <code>&lt;audio controls loop&gt;</code><br>
+                <code>&lt;source src="multimidia/level-up.mp3" type="audio/mpeg"&gt;</code><br>
+                <code>&lt;source src="multimidia/level-up.ogg" type="audio/ogg"&gt;</code><br>
+            <code>&lt;/audio&gt;</code>
+        </p>
+        <p>Para contornar a incompatibilidade, assim como no vídeo, é possível adicionar um código HTML que só será
+             interpretado em caso de indisponibilidade da tag <code>&lt;audio&gt;</code>.</p>
+        <p>
+            <code>&lt;audio controls loop&gt;</code><br>
+                <code>&lt;source src="multimidia/level-up.mp3" type="audio/mpeg"<code>&lt;<br>
+                <code>&lt;source src="multimidia/level-up.ogg" type="audio/ogg"&gt;</code><br>
+                <code>&lt;p<code>&lt;Seu navegador não suporta áudio.<code>&lt;/p<code>&lt;
+            <code>&lt;/audio&gt;</code>
+        </p>
+
+        <table>
+            <caption><strong>Formato de áudio compatíveis para cada navegador</strong></caption>
+            <tr>
+                <th>Navegador</th>
+                <th>Mp3</th>
+                <th>WAV</th>
+                <th>OGG</th>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>SIM</td>
+                <td>SIM</td>
+                <td>SIM</td>
+            </tr>
+            <tr>
+                <td>Internet Explorer</td>
+                <td>SIM</td>
+                <td>NÃO</td>
+                <td>NÃO</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>SIM</td>
+                <td>SIM</td>
+                <td>SIM</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>SIM</td>
+                <td>SIM</td>
+                <td>NÃO</td>
+            </tr>
+            <tr>
+                <td>Opera</td>
+                <td>SIM</td>
+                <td>SIM</td>
+                <td>SIM</td>
+            </tr>
+        </table>
+        <h3>Animações e PDF</h3>	
+        <p><strong>Animações em Flash</strong></p>	
+        <p>O Flash é uma ferramenta da Adobe que encontra-se em descomissionamento. Muitos navegadores têm tirado
+             o suporte a essa ferramenta e seu uso atualmente deve ser cuidadosamente analisado.</p>
+        <p>Para adicionar uma animação em Flash, deve-se utilizar a tag <code>&lt;/object&gt;</code>.<br>
+            <strong><code>&lt;object width="600px" data="multimidia/flash.swf" type="application/x-shockwave-flash"&gt;</code>
+                <code>&lt;/object&gt;</code></strong> </p>
+        <p><strong>Incorporando arquivos PDFs</strong></p>
+        <p>Para adicionar um arquivo PDF, também deve-se utilizar a tag <code>&lt;/object&gt;</code>.<br>
+            <strong><code>&lt;object width="1000px" height="1000px" data="multimidia/arquivoPDF.pdf" type="application/pdf"&gt;</code>
+                <code>&lt;/object&gt;</code></strong> </p>
+    </section>
+<footer>
+    <p><strong>By Monica Lima de Paiva</strong></p>
+
+</footer>
+</body>
+</html>

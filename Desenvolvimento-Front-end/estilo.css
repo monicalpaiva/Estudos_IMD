@@ -4,10 +4,11 @@ h1 {
 }
 
 p {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-  }
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  text-align: justify;
+}
 
 code {
   font-size: 12px;
@@ -53,12 +54,15 @@ a:active {
   color: yellow;
 }
 
-footer{
+footer p{
   text-align: center;
+
 }
 
-table, th, tr {
+table, th, tr, td {
   border: 1px solid black;
   text-align: left;
   border-collapse: collapse;
+  padding: 4px;
+  margin: 2px;
 }
