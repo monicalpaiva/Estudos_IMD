@@ -11,8 +11,80 @@
     </header>
     <section id="conteudo">
         <h2>Aula 10 - Comandos de Iteração</h2>
+        <ul>
+            <li><strong>for:</strong> percorre um bloco de código várias vezes;</li>
+            <li><strong>for/in:</strong> percorre as propriedades de um objeto;</li>
+            <li><strong>for/of:</strong> percorre os valores de um objeto iterável;</li>
+            <li><strong>while:</strong> percorre um bloco de código enquanto uma condição especificada é verdadeira;</li>
+            <li><strong>do/while:</strong> também percorre um bloco de código enquanto uma condição especificada é verdadeira, 
+                mas executa esse bloco de código pelo menos uma vez.</li>
+        </ul>
         <h3>Comandos de Iteração e Laços For</h3>
-        <p><strong>Transcrição</strong></p>
+        <p><strong>for(Inicialização; Condição; Atualização)</strong></p>
+        <p>Comando for sem inicialização</p>
+        <p><strong>for(; i<=n; i++)</strong></p>
+        <p>Comando for com várias inicializações e atualizações</p>
+        <p><strong>for(i=1,j=n; i<=n; i++, j--)</strong></p>
+        <p>Comando for sem atualização</p>
+        <p>A declaração da condição do laço também é opcional. No entanto, se você omitir esta seção, deve utilizar o 
+            comando <strong>break</strong> dentro do laço a fim de parar a sua execução. Caso contrário, o laço nunca terminará.</p>
+        <p><strong>for(i=1; i<=n;)</strong></p>
+        <p>Comando for sem condição de parada</p>
+        <p><strong>for(i=1; ; i++)</strong></p>
+        <p><br>
+            &nbsp for (i = 1; i <= n; i++) {<br>
+                &nbsp &nbsp texto = texto + i ;<br>
+                &nbsp }<br>
+        </p>
+
+        N: <input type="number" id="N1" value="">
+        <button onclick="contagem('N1')">OK</button>
+        <p id="resultadofor1"></p>
+        <p id="resultadofor2"></p>
+        <p id="resultadofor3"></p>
+        <p id="resultadofor4"></p>
+        <p id="resultadofor5"></p>
+        <p id="resultadofor6"></p>
+        <h3>Sugestões de Uso dos Laços For</h3>
+        <p>Versões diferentes para o mesmo laço</p>
+        <p><br>
+            var n=Number(document.getElementById(entrada1).value);<br>
+            for (i=1; i<=n; i++){<br>
+                texto = texto + i;<br>
+            }</p>
+        <p><br>
+            for (i=1; i<= Number(document.getElementById(entrada1).value);i++){<br>
+                texto = texto + i;<br>
+            }</p>
+        <p>Check List:</p>
+        <ol>
+            <li>Primeiro, cria-se uma variável de controle, que poderá servir como uma espécie de contador, ou seja, para contar o 
+                número de vezes que o bloco de comandos será executado.</li>
+            <li>Depois, a variável recebe um valor inicial (chamamos esse processo de inicialização). No caso de um contador, 
+                geralmente, esse valor inicial é 0 (zero) ou 1 (um).</li>
+            <li>No terceiro passo uma condição determinada (por exemplo, se o valor final do contador foi atingido) é testada e, 
+                se for verdadeira, a lista de comandos que pertence ao laço é executada. É através dessa condição que é determinado 
+                o número de repetições do laço.</li>
+            <li>No quarto passo a variável de controle recebe a atualização.</li>
+            <li>Por fim, o programa voltará ao terceiro passo do laço para testar novamente a condição. Se a condição for falsa 
+                (ou seja, se o valor de término tiver sido atingido), o laço é interrompido. Caso contrário, o laço continuará com 
+                os passos 3 a 5.</li>
+        </ol>
+        <p><br>
+            &nbsp function quebraLinhas(entrada1) {<br>
+                &nbsp &nbspvar str = document.getElementById(entrada1).value;<br>
+                &nbsp &nbsp var texto = "Letras de "+str+":<code>&lt;br&gt;</code>";<br>
+                &nbsp &nbsp for (c of str) {
+                &nbsp &nbsp &nbsptexto = texto + c + "<code>&lt;br&gt;</code>";<br>
+                &nbsp }<br>
+                &nbsp document.getElementById("resultado").innerHTML = texto;<br>
+        }</p> 
+        <p>Exemplo: Laço For/Of</p>
+        Texto: <input type="texto" id="N1" value="">
+        <button onclick="quebraLinhas('N1')">OK</button>
+        <p id="resultadofor7"></p>
+
+
     </section>
     <script src="script.js"></script>
     <footer>

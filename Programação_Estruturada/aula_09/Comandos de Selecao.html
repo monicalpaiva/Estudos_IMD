@@ -127,7 +127,35 @@
             operadores. De qualquer maneira, existem diversas peculiaridades no uso desses operadores quando envolvemos a 
             coerção de tipos.</p>
 
+            <p><strong>Curto-circuito nos condicionais</strong></p>          
+            <p id="circuito1"></p>
 
+            <p><strong>Curto-circuito nas atribuições</strong></p> 
+            <p id="circuito2"></p>
+        <h6>Switch</h6>
+        <p>O switch é chamado de comando interno de seleção múltipla, ele compara o valor de uma expressão com uma lista de 
+            valores. A expressão passada para o comando é avaliada uma vez. Esse valor é comparado, em ordem, com os valores 
+            das constantes especificadas nos comandos case. Quando ocorrer uma condição em que a expressão é igual, a sequência 
+            de comandos associada ao case em questão será executada até chegar ao comando break, que para a execução do case em 
+            questão e salta para a próxima linha de código após o bloco do switch. O comando default será apenas executado se 
+            nenhum valor for igual ao valor da expressão passada para o comando. O comando default é opcional. Se ele não existir, 
+            nenhuma ação será realizada caso todos os testes falhem.</p>
+        <p><br>
+            switch(expressão){<br>
+                &nbsp case valor1:<br>
+                &nbsp &nbsp //bloco de código<br>
+                &nbsp break;<br>
+                &nbsp case valor2:<br>
+                &nbsp //bloco de código<br>
+                &nbsp break;<br>
+                &nbsp ...<br>
+                &nbsp default:<br>
+                &nbsp //bloco de código<br>
+            }
+        </p>
+        <p><strong>Exemplo de Switch</strong></p>
+        <p id="DiaDaSemana"></p>
+    
     </section>
     <script src="script.js"></script>
     <footer>
