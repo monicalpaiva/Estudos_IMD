@@ -19,7 +19,7 @@
             <li><strong>do/while:</strong> também percorre um bloco de código enquanto uma condição especificada é verdadeira, 
                 mas executa esse bloco de código pelo menos uma vez.</li>
         </ul>
-        <h3>Comandos de Iteração e Laços For</h3>
+        <h3>Comandos de Iteração e Laço For</h3>
         <p><strong>for(Inicialização; Condição; Atualização)</strong></p>
         <p>Comando for sem inicialização</p>
         <p><strong>for(; i<=n; i++)</strong></p>
@@ -70,6 +70,7 @@
                 (ou seja, se o valor de término tiver sido atingido), o laço é interrompido. Caso contrário, o laço continuará com 
                 os passos 3 a 5.</li>
         </ol>
+        <p>Exemplo: Laço For/Of</p>
         <p><br>
             &nbsp function quebraLinhas(entrada1) {<br>
                 &nbsp &nbspvar str = document.getElementById(entrada1).value;<br>
@@ -79,12 +80,51 @@
                 &nbsp }<br>
                 &nbsp document.getElementById("resultado").innerHTML = texto;<br>
         }</p> 
-        <p>Exemplo: Laço For/Of</p>
-        Texto: <input type="texto" id="N1" value="">
-        <button onclick="quebraLinhas('N1')">OK</button>
-        <p id="resultadofor7"></p>
+        Texto: <input type="texto" id="N2" value="">
+        <button onclick="quebraLinhas('N2')">OK</button>
+        <p id="resultado"></p>
+        <h3>Laço While</h3>
+        <p><br>
+            while (condição){<br>
+            &nbsp   //lista de comandos<br>
+            }<br>
+        </p>
+        <p><br>
+            var i = 1;<br>
+            while (i<=n){<br>
+                &nbsp   texto = texto + 1 + "<code>&lt;br&gt;</code>";<br>
+                &nbsp   i++;<br>
+            }<br>
+        </p>
+        <p>Apesar do while e do for poderem ser utilizados de forma alternativa, cada um é mais apropriado para determinadas 
+            situações. </p>
+        <p>Já o while é bastante interessante quando não se sabe inicialmente quantas vezes o laço será executado, pois a 
+            condição pode ser algo diferente de um contador e o código continuará a executar o laço enquanto essa condição
+             for verdade.</p>
 
+        <p><strong>Sorteio<p><strong>
+        <button onclick="sorteio()">INICIAR</button>
+        <p id="resultado8"></p>
 
+        <h3>Laço Do-while</h3>
+        <p>
+        do{<br>
+            &nbsp num = 10;<br>
+            &nbsp contagem++;<br>
+            }while(num!=n);<br>
+            &nbsp //lista de comandos<br>
+        }<br>
+        </p>
+        <p><strong>Sorteio</strong></p>
+        <button onclick="sorteio2()">INICIAR</button>
+        <p id="resultado9"></p>
+
+        <h3>Laços Encadeados</h3>
+
+        <p><strong>Tabuada<p><strong>
+
+		<button onclick="tabuada()">OK</button>
+        <p id="resultado10"></p>
     </section>
     <script src="script.js"></script>
     <footer>

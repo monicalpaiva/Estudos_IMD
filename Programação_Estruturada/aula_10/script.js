@@ -136,13 +136,63 @@ function contagem(entrada1) {
 }
                 
    // Laço_For_Of
-
-   function quebraLinhas(entrada3) {
+function quebraLinhas(entrada3) {
     var str = document.getElementById(entrada3).value;
 
     var texto7 = "Letras de "+str+":<br>";
     for (c of str) {
         texto7 = texto7 + c + "<br>";
     }
-    document.getElementById("resultadofor7").innerHTML = texto7;
+    document.getElementById("resultado").innerHTML = texto7;
 }
+
+// Laço while
+
+function sorteio() {
+    var n = Math.floor(Math.random() * 10) + 1;
+    var num;
+    var contagem = 1;
+    
+    num = prompt("Escolha um número entre 1 e 10?");
+    while (num != n) {
+        num = prompt("Escolha um número entre 1 e 10?");
+        contagem++;
+    }
+    document.getElementById("resultado8").innerHTML = 
+        "O número era " + n + ". Você acertou em "+contagem+" tentativas!!!";
+}
+
+// do-while
+
+function sorteio2() {
+    var n2 = Math.floor(Math.random() * 10) + 1;
+    var num2;
+    var contagem2 = 0;
+ 
+    do {
+        num2 = prompt("Escolha um número entre 1 e 10?");
+        contagem2++;
+    } while (num2 != n2);
+    document.getElementById("resultado9").innerHTML = 
+        "O número era " + n2 + ". Você acertou em "+contagem2+" tentativas!!!";
+}
+
+// laços
+
+function tabuada() {
+    var tex = "";
+    var i, j;
+
+    for (i = 1; i <= 10; i++) {
+        tex = tex + "-----------------------<br>"; 
+        tex = tex + "Tabuada de "+ i +"<br>"; 
+        tex = tex + "-----------------------<br>"; 
+        for (j = 1; j <= 10; j++) {
+            tex = tex + (i + " x ") +  (j + " = ") + (i*j) + "<br>";
+        }
+        tex = tex + "-----------------------<br>"; 
+    }
+
+    document.getElementById("resultado10").innerHTML = tex;
+}
+				
