@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / HTML Layout
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 11 - HTML Layout
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_11.png" alt="Computador">
+<!-- CONTEUDO -->
+<h3>Elementos de Layout do HTML 5</h3>
+<p>A estruturação semântica é importante, pois fica possível entender melhor o que cada parte do código HTML contém 
+    e significa. Dessa forma, outros sistemas podem entender melhor seu documento a partir da análise do código. 
+    Além disso, a estruturação semântica permite reaproveitar melhor estilos CSSs, uma vez que as tags são 
+    padronizadas.</p>
+<p><strong>header</strong></p>
+<p>A tag <code>&lt;header&gt;</code> foi criada para conter conteúdo introdutório do seu documento HTML. Nela, 
+    normalmente ficam informações gerais como logomarca e navegação.</p>
+<p><strong>OBS:</strong> Você pode ter vários elementos <code>&lt;header&gt;</code> em um documento HTML. No entanto,
+    <code>&lt;header&gt;</code> não pode ser colocado em um  <code>&lt;footer&gt;</code>,  
+    <code>&lt;address&gt;</code> ou outro elemento <code>&lt;header&gt;</code>.</p>
+<p><strong>nav</strong></p>
+<p>A tag <code>&lt;nav&gt;</code> foi criada para conter as informações de navegação do documento HTML. É nessa tag 
+    que deve conter os links para outras páginas do seu site/sistema.</p>
+<p><strong>section</strong></p>
+<p>A tag <code>&lt;section&gt;</code> define uma seção de um documento HTML.</p>
+<p><strong>article</strong></p>
+<p>A tag <code>&lt;article&gt;</code> foi criada para indicar o conteúdo principal do documento HTML. O conteúdo do
+     <code>&lt;article&gt;</code> deve ser distribuído independentemente do restante do site.</p>
+<p><strong>aside</strong></p>
+<p>A tag <code>&lt;aside&gt;</code> define algum conteúdo complementar ao conteúdo principal. Caso não seja exibido,
+     não deve prejudicar o entendimento do conteúdo principal.</p>
+<p><strong>OBS:</strong>O conteúdo <code>&lt;aside&gt;</code> geralmente é colocado como uma barra lateral em um 
+    documento.</p>
+<p><strong>footer</strong></p>
+<p>A tag <code>&lt;footer&gt;</code> tem o objetivo de indicar o rodapé do documento HTML.</p>
+<p><a href="Aula_11_HTML_Layout/Aula_11_exemplo01.html" target="_blank">Página exemplo</a></p>
+<h3>Utilizando CSS Flexbox (Flexbox contêiner)</h3>
+<p>O flex é uma ferramenta do CSS que facilita a organização dos conteúdos de um contêiner. Para ativar o flex em 
+    determinado contêiner, basta utilizar na propriedade "display" o valor "flex".<strong>display: flex;</strong></p>
+<p><strong>Flex-direction</strong></p>
+<p>O "flex-direction" indica a direção de como os conteúdos de um contêiner com display flex, irão se distribuir. Veja algumas opções:</p>
+<table>
+    <caption>Disponibilidade do display flex-direction</caption>
+    <tr>
+        <th>Valor</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>row</td>
+        <td>Dispõe os elementos um ao lado do outro</td>
+    </tr>
+    <tr>
+        <td>row-reverse</td>
+        <td>Dispõe os elementos um ao lado do outro em ordem reversa (da direita para a esquerda)</td>
+    </tr>
+    <tr>
+        <td>column</td>
+        <td>Dispõe os elementos um abaixo do outro (começando de cima)</td>
+    </tr>
+    <tr>
+        <td>column-reverse</td>
+        <td>Dispõe os elementos um acima do outro (começando de baixo)</td>
+    </tr>
+</table>
+<p><strong>Flex-wrap</strong></p>
+<p>Essa propriedade controla como se dará a quebra, quando não há espaço suficiente para mostrar todos os itens 
+    em uma mesma linha (ou coluna, para o caso da "flex-direction" ser "column"). </p>
+<table>
+    <caption>Disponibilidade do display flex-wrap</caption>
+    <tr>
+        <th>Valor</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>wrap</td>
+        <td>Quebra a linha posicionando os itens na linha seguinte (ou coluna)</td>
+    </tr>
+    <tr>
+        <td>wrap-reverse</td>
+        <td>Quebra a linha, posicionamento os itens na linha seguinte em ordem reversa</td>
+    </tr>
+    <tr>
+        <td>no-wrap</td>
+        <td>Não quebra a linha</td>
+    </tr>
+</table>
+<p><strong>Flex-flow</strong></p>	
+<p>O "flex-flow" é uma propriedade que sumariza em uma única propriedade o comportamento da "flex-direction" 
+    a da "flew-wrap".<strong> flex-flow: row wrap;</strong></p>
+<p><strong>Flex-justify</strong></p>
+<p>O "flex-justify" é a propriedade responsável por controlar como os elementos serão distribuídos dentro 
+    do contêiner.</p>
+<table>
+    <caption>Disponibilidade do "ﬂex-justify"</caption>
+    <tr>
+        <th>Valor</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>flex-start</td>
+        <td>Distribui os itens do início para o fim: da esquerda para a direita, em caso de linha, e, de cima para baixo, em caso de coluna.</td>
+    </tr>
+    <tr>
+        <td>flex-end</td>
+        <td>Distribui os itens do fim para o início: da direita para a esquerda, em caso de linha e, de baixo para cima, em caso de coluna.</td>
+    </tr>
+    <tr>
+        <td>center</td>
+        <td>Distribui os itens a partir do centro</td>
+    </tr>
+    <tr>
+        <td>space-between</td>
+        <td>Os itens terão espaço entre eles</td>
+    </tr>
+    <tr>
+        <td>space-arround</td>
+        <td>Os itens terão espaço antes, depois e entre eles</td>
+    </tr>
+    <tr>
+        <td>space-evenly</td>
+        <td>Os itens terão espaço igual ao seu redor</td>
+    </tr>
+</table>
+<p><strong>Align-itens</strong></p>
+<p>A propriedade "align-itens" controla o comportamento do alinhamento dos itens, com relação ao eixo vertical, 
+no caso de linhas, e horizontal, no caso de colunas. </p>
+<table>
+<caption>Disponibilidade do "align-itens"</caption>
+<tr>
+    <th>Valor</th>
+    <th>Descrição</th>
+</tr>
+<tr>
+    <td>stretch</td>
+    <td>Força o item a ocupar todo o espaço disponível (padrão)</td>
+</tr>
+<tr>
+    <td>flex-start</td>
+    <td>Ocupa apenas o espaço necessário, alinhando de cima para baixo (no caso de linha).</td>
+</tr>
+<tr>
+    <td>flex-end</td>
+    <td>Ocupa apenas o espaço necessário, alinhando de baixo para cima (no caso de linha).</td>
+</tr>
+<tr>
+    <td>center</td>
+    <td>Ocupa apenas o espaço necessário, alinhando pelo centro.</td>
+</tr>
+<tr>
+    <td>baseline</td>
+    <td>Ocupa apenas o espaço necessário, alinhando o conteúdo do contêiner.</td>
+</tr>
+</table>
+<p><strong>Align-content</strong></p>   
+<p>A propriedade "align-content" controla o comportamento de como as linhas/colunas estarão alinhadas entre si.</p>
+<table>
+<caption>Disponibilidade do "align-content"</caption>
+<tr>
+    <th>Valor</th>
+    <th>Descrição</th>
+</tr>
+<tr>
+    <td>stretch</td>
+    <td>Força as linhas/colunas a ocupar todo o espaço disponível (padrão)</td>
+</tr>
+<tr>
+    <td>flex-start</td>
+    <td>As linhas são compactadas em direção ao início do flex contêiner</td>
+</tr>
+<tr>
+    <td>flex-end</td>
+    <td>As linhas são compactadas em direção ao fim do flex contêiner</td>
+</tr>
+<tr>
+    <td>center</td>
+    <td>As linhas são compactadas em direção ao centro do flex contêiner</td>
+</tr>
+<tr>
+    <td>space-between</td>
+    <td>As linhas são distribuídas uniformemente no flex contêiner</td>
+</tr>
+<tr>
+    <td>space-around</td>
+    <td>As linhas são distribuídas uniformemente no flex contêiner, com metade do espaço nas extremidades</td>
+</tr>
+<tr>
+    <td>space-evenly</td>
+    <td>As linhas são distribuídas uniformemente no flex contêiner, com espaço igual ao redor delas</td>
+</tr>
+</table>
+<h3>Utilizando CSS Flexbox (Flex Itens)</h3>
+<p><strong>flex-grow</strong></p>
+<p>O "flex-grow" é uma propriedade que controla o tamanho dos itens e como se comportarão em relação ao tamanho da 
+tela. Trata-se de um valor numérico em que o valor padrão é o 0. No caso de todos os itens possuírem "flex-grow" 
+0, indica que ocuparão apenas a área suficiente para apresentar seu conteúdo. Se o valor diferir de 0, o espaço
+ total será dividido de forma a respeitar a proporção estabelecida por cada valor de "flex-grow".</p>
+<p><strong>flex-shrink</strong></p>
+<p>A propriedade "flex-shrink" especifica como o item será reduzido em relação ao restante dos itens flexíveis no
+ mesmo contêiner. Trata-se de um valor numérico que possui 1 como valor padrão.</p>
+<p><strong>flex-basis</strong></p>
+<p>A propriedade "flex-basis" especifica o comprimento inicial de um item flexível. Trata-se de um valor numérico 
+que pode ser definido em pixels.</p>
+<p><strong>flex</strong></p>
+<p>O atributo "flex" é um atalho para todos os outros atributos vistos anteriormente.<strong>flex: 0 1 auto;</strong></p>
+<p>A propriedade flex foi configurada com <strong>"flex-grow" com valor "0"</strong>, o <strong>"flex-shink" com 
+valor "1"</strong> e o <strong>"flex-basis" com valor "auto"</strong>. Perceba que a ordem é fundamental.</p>
+<p>Ainda é possível uma sintaxe ainda mais enxuta:<strong>flex: 1;</strong></p>
+<p>Nesse caso, o <strong>"flex-grow" e o "flex-shink" ficam com valor "1" </strong>e o <strong>"flex-basis" com valor "0"</strong>.</p>
+<p>Para praticar os conceitos,<a href="https://origamid.com/projetos/flexbox-guia-completo/" target="_blank">visite este site.</a></p>
+<h3>Adaptando o layout antigo para o Flex</h3>
+<p><a href="Aula_11_HTML_Layout/Aula_11_exemplo02.html" target="_blank">Página exemplo</a></p>
+        
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>

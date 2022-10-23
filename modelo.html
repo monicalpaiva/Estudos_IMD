@@ -40,7 +40,7 @@
 <!-- Trilha menu -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Seletores avançados, Pseudoclasses e Pseudoelementos
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Títulos, Parágrafos, Links e Imagens
       </li>
     </ol>
   </nav>
@@ -51,85 +51,61 @@
       <div class="col-md-8">
 
         <h1 class="mb-4">
-          Aula 13 - Seletores avançados, Pseudoclasses e Pseudoelementos
+          Aula 03 - Títulos, Parágrafos, Links e Imagens
         </h1>
         <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
         <hr>
         <p class="text-muted">postado em 23 de Outubro de 2022</p>
         <hr>
-        <img class="img-fluid rounded mb-4" src="Imagens/Aula_13.png" alt="Computador">
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
 <!-- CONTEUDO -->
-<h3>Seletores avançados</h3>
-<p><strong>Seletor global</strong></p>
-<p>O seletor global permite selecionar todos os elementos HTML. Veja a sintaxe:</p>
-<p class="codigo"><br>* {<br>
-    &nbsp &nbsp    margin: 0;<br>
-    &nbsp     }</p>
-<p>No exemplo acima, todos os elementos HTML da página terão sua margem alterada para zero.</p>
-<p><strong>Seletor descendente</strong></p>
-<p>Seleciona todos os elementos que estão no interior de outro elemento. Veja no exemplo:</p>
-<p class="codigo"><br>div p {<br>
-    &nbsp &nbsp color: rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que estão dentro de uma <code>&lt;div&gt;</code> serão
-     selecionado e terão a sua cor alterada.</p>
-<p><strong>Seletor descendente direto</strong></p>
-<p>Esse seletor seleciona todos os elementos que estão no interior de outro elemento diretamente.
-     Veja no exemplo:</p>
-<p class="codigo"><br>div > p {<br>
-    &nbsp &nbsp color:rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que possuem uma <code>&lt;div&gt;</code> como pai serão selecionados. Perceba que a
-diferença em relação ao anterior está relacionada a ser filho direto ou indireto do elemento pai.</p>
-<p><strong>Seletor de irmão</strong></p>
-<p>Esse seletor seleciona os elementos que são precedidos por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section ~ h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p> 
-<p>O exemplo acima seleciona todos os elementos <code>&lt;h2&gt;</code> que são precedidos
-     por um elemento <code>&lt;section&gt;</code>.</p>
-<p><strong>Seletor de irmão direto</strong></p>
-<p>Esse seletor seleciona elementos que são precedidos imediatamente por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section + h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p>
-<p>O exemplo acima seleciona o primeiro elemento <code>&lt;h2&gt;</code>, que é precedido imediatamente por um
-     elemento <code>&lt;section&gt;</code>.</p>
-<p><strong><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Mais seletores avançados.</a></strong></p>
-<h3>Pseudoclasses</h3>
-<p>As pseudoclasses devem ser definidas após o seletor e precedidas por ":".</p>
-<p><strong>:hover</strong></p>
-<p>A pseudoclasse hover(<strong>div:hover {</strong>) permite definir um estilo para quando o usuário está com o 
-    mouse sobre o elemento.</p>
-<p><strong>:first-child</strong></p>
-<p>A pseudoclasse first-child(<strong>p:first-child {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o primeiro filho de seus pais.</p>
-<p><strong>:last-child</strong></p>
-<p>A pseudoclasse last-child(<strong>p:last-child {</strong>) permite definir um estilo para qualquer elemento que
-    seja o último filho de seus pais.</p>
-<p><strong>:nth-child()</strong></p>
-<p>A pseudoclasse nth-child()(<strong>p:nth-child(2) {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o enésimo filho de seus pais. No exemplo, apenas o segundo elemento filho <code>&lt;p&gt;</code> será
-    selecionado.</p>
-<p>Além de permitir definir um número, pode-se utilizar algumas palavras-chaves como, por exemplo, "odd", para 
-    selecionar os ímpares e "even" para selecionar os pares. p:nth-child(<strong>even</strong>).</p>
-<h3>Pseudoelementos</h3>
-<p>Os pseudoelementos permitem fornecer estilo a uma parte específica do elemento selecionado. Os pseudoelementos
-    devem ser definidos após o seletor e após as pseudoclasses (se existir) e precedidos por "::".</p>
-<p><strong>::first-letter</strong></p>
-<p>O pseudoelemento ::first-letter(<strong>p::first-letter {</strong>) seleciona a primeira letra da primeira 
-    linha de um bloco. É possível combinar pseudoelementos com pseudoclasses para uma seleção ainda mais precisa.
-    (<strong>p:first-child::first-letter {</strong>)</p>
-<p><strong>::before</strong></p>
-<p>O pseudoelemento ::before(<strong>h2::before{</strong>) permite alterar conteúdo que precede o elemento 
-    selecionado.</p>
-<p><strong>::after</strong></p>
-<p>Similarmente ao pseudoelemento ::before, existe o pseudoelemento ::after(<strong>h2::after{</strong>), 
-    que permite alterar conteúdo após o elemento selecionado.</p>
-    <p><strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="_blank">Mais
-         pseudoelementos.</a></strong></p>
+    <ul>
+        <ol>
+            <li>Conhecer como adicionar títulos e parágrafos em HTML</li>
+            <p>Os títulos no HTML são utilizados para dividir o documento HTML em seções. O HTML permite organizar o conteúdo em até seis níveis. (h6 a h6).</p>
+            <p><strong>É importante utilizar os títulos de forma semanticamente correta. Ou seja, o título principal do seu site deve estar na tag h6. 
+                Caso deseje alterar a aparência como, por exemplo, por um título menor, utilize o CSS. Com isso, você manterá a consistência da informação, 
+                fazendo com que seu site seja corretamente interpretado por sistemas externos.</strong></p>
+            <p>Para criar um parágrafo em HTML, deve-se utilizar a tag "p".</p>
+            <li>Conhecer como adicionar links e como estilizá-los</li>
+            <p>Os links no HTML são utilizados para permitir acessar outros documentos através de um simples clique. Graças aos links, podemos ter uma melhor
+                 interação com os sistemas web.</p>
+            <p>Usamos a tag "a" para criar links no HTML</p>
+            <p><strong>Valores do atributo “target”:</strong></p>
+            <ul>
+                <li><strong class="destaque">_blank:</strong> Abre o link em uma nova janela (ou aba)</li>
+                <li><strong class="destaque">_self:</strong> Abre o link na mesma janela que foi clicado (comportamento padrão)</li>
+                <li><strong class="destaque">_parent:</strong> Abre o link no frame "pai"</li>
+                <li><strong class="destaque">_top:</strong> Abre o link no topo da hierarquia de frames</li>
+                <li><strong class="destaque">framename:</strong> Abre o link no iframe cujo nome coincida com o desse parâmetro</li>
+            </ul><br>
+            <p> a href="www.link.com" target="_blank" </p>
+            <p><strong>Estados dos links:</strong></p>
+            <ul>
+                <li><strong class="destaque">link:</strong> Link que ainda não foi visitado</li>
+                <li><strong class="destaque">visited:</strong> Link que já foi visitado</li>
+                <li><strong class="destaque">hover:</strong> Ativo quando o usuário está com o mouse sobre o link</li>
+                <li><strong class="destaque">active:</strong> Ativo quando o usuário clica no link</li>
+            </ul><br>
+            <p>A definição "a:hover" deve vir após a definição "a:link" e "a:visited" para ser efetiva! Similarmente, a definição "a:active" deve vir depois da a:hover para ser efetiva.</p>
+            <li>Conhecer como adicionar imagens e como estilizá-las</li>
+            <p>Para adicionar imagens em um documento HTML, utilize a tag <code>&lt;img&gt;</code>.</p>
+            <p><u>Especificando o caminho para a imagem</u> através do atributo <strong>"src"</strong></p>
+            <code>&lt;img src="img/html-css.jpg"&gt;</code>
+            <p>Indicamos <u>um texto alternativo para imagem</u>, que será exibido quando a imagem não puder ser exibida, através do atributo <strong>"alt"</strong>. Esse atributo
+                 permite deixar sua página mais acessível, pois pode ser lido por sistemas de leitura de telas, comumente utilizados por pessoas com alguma limitação visual.</p>
+            <code>&lt;img src="img/html-css.jpg"  alt="Livro de HTML & CSS"&gt;</code>
+            <ul>
+                <p>OBS: Além da definição de tamanho absoluto, é possível definir a largura ou a altura através de valores relativos. Nesse caso, a imagem ocupará uma parte da área disponível.</p>
+                <li>Atributos de dimensão</li>
+                <p>Para definir a largura utilize o atributo "width" e para definir a altura, utilize o atributo <strong class="destaque">"height".</strong></p>
+                <li>Atributos de posição</li>
+                <p>Para posicionar a imagem à esquerda ou à direita, de forma flutuante, através do atributo <strong class="destaque">"float".</strong></p>
+                <li>Atributos de espaçamento</li>
+                <p>Para adicionar margem às imagens e adicionar espaçamento do conteúdo em relação à imagem, utiliza-se o atributo <strong class="destaque">"margin"</strong>. Para editar apenas algum dos lados podem ser usados também os atributos: "margin-top", "margin-right", "margin-bottom" e "margin-left".</p>
+            </ul>
+        </ol>
+    </ul>
         
       </div>
       <!-- Conteúdo lateral -->

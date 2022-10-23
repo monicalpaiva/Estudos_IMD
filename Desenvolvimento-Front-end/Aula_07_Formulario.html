@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Formulários
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 07 - Formulários
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_07.png" alt="Computador">
+<!-- CONTEUDO -->
+<h3>Criando formulário</h3>
+<p>Os formulários são dispositivos que permitem receber entrada do usuário no HTML. Para criar um formulário,
+     deve-se utilizar a tag <code>&lt;form&gt;</code>.</p>
+<p><strong>Entrada de texto</strong></p>
+<p>Para adicionar um campo de entrada de texto no formulário, deve-se utilizar a tag <code>&lt;input&gt;</code> 
+    com atributo "type" igual a "text".</p>
+<p><strong>Rótulos</strong></p>
+<p>Os rótulos permitem informar aos usuários o que se espera que seja preenchido em determinado campo do formulário. 
+    Para adicionar um rótulo a um campo de entrada, utiliza-se a tag <code>&lt;label&gt;</code>, indicando no 
+    atributo "for" o identificador do campo de entrada associado.</p>
+<p><strong>Botão de submissão</strong></p>
+<p>Os botões de submissão permitem aos usuários enviar os dados do formulário. Para adicionar um botão de 
+    submissão, utilize a tag <code>&lt;input&gt;</code> com o atributo "type" igual a "submit".</p>
+<p><strong>Ação de submissão</strong></p>
+<p>A ação de submissão deve ser informado como o atributo "action" da tag <code>&lt;form&gt;</code>. Nesse campo 
+    deve ser informado o endereço do servidor que contém um programa responsável por capturar esses dados
+     e realizar alguma ação.</p>
+<p>
+<p><strong>Código Exemplo:</strong></p>
+<code>&lt;form action="https://autoria-form.herokuapp.com/" method="GET"&gt;</code><br>
+<code>&lt;label for="nome"&gt;</code>Nome:<code>&lt;/label&gt;</code><br>
+<code>&lt;input type="text" id="nome" name="nome"&gt;</code><br>
+<code>&lt;label for="sobrenome"&gt;</code>Sobrenome:<code>&lt;/label&gt;</code><br>
+<code>&lt;input type="text"  id="sobrenome" name="sobrenome"/&gt;</code><br>
+<code>&lt;input type="submit" value="Enviar dados"&gt;</code><br>
+<code>&lt;/form&gt;</code>
+</p>
+<p><strong>Saída do Exemplo:</strong></p>
+<form action="https://autoria-form.herokuapp.com/" method="GET">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome"><br>
+    <label for="sobrenome">Sobrenome:</label><br>
+    <input type="text"  id="sobrenome" name="sobrenome"/><br>
+    <input type="submit" value="Enviar dados"><br>
+</form> 
+<p>O método GET utiliza o próprio endereço (URL) para transferir os dados ao servidor. Além do método GET, existe o 
+    método POST, que envia os dados no corpo da requisição HTTP e que por isso não aparece na URL ao usuário.</p>
+<h3>Campos de entrada do usuário</h3>
+<p>Existe uma gama de campos de entrada que podem ser utilizados nos formulários. Cada um desses tipos possui diferentes opções.</p>
+<form action="">
+
+    <label for="i-text">Text:</label>
+    <input type="text" id="i-text" placeholder="Digite seu nome:" autofocus><br/><br/>
+    
+    <label for="i-text1">Somente leitura:</label>
+    <input type="text1" id="i-text1" value="Autoria web" readonly><br/><br/>
+    
+    <label for="i-text2">Desabilitado:</label>
+    <input type="text" id="i-text2" value="Autoria web" disabled><br/><br/>
+    
+    <label for="i-text3">Tamanho e quantidade caracteres:</label>
+    <input type="text" id="i-text3" size="40" maxlength="20"><br/><br/>
+    
+    <label for="i-pass">Password:</label>
+    <input type="password" id="i-pass"><br/><br/>
+    
+    <label for="i-submit">Submit:</label>
+    <input type="submit" value="Submit" id="i-submit"><br/><br/>
+    
+    <label for="i-reset">Reset:</label>
+    <input type="reset" id="i-reset"><br/><br/>
+    
+    <input type="radio" name="genero" value="masculino" checked> Masculino
+    <input type="radio" name="genero" value="feminino"> Feminino
+    <input type="radio" name="genero" value="outro"> Outros <br/><br/>
+    
+    <input type="checkbox" name="veiculo1" value="Bicicleta"> Eu tenho uma bicicleta.
+    <input type="checkbox" name="veiculo2" value="Carro"> Eu tenho um carro. <br/><br/>
+    
+    <label for="i-button">Button:</label>
+    <input type="button" id="i-button" onclick="alert('Olá Mundo!')" value="Clique me!"><br/><br/>
+    
+    <!-- HTML 5 Inputs -->
+    
+    <label for="i-button">Selecione sua cor favorita:</label>
+    <input type="color" name="favcolor" id="i-color"><br/><br/>
+    
+    <label for="i-date">Qual o dia do seu aniverário?</label>
+    <input type="date" name="bday" id="i-date" max="2019-05-20"><br/><br/>
+    
+    <label for="i-time">Qual horário de chegada?</label>
+    <input type="datetime-local" name="time" id="i-time"><br/><br/>
+    
+    <label for="i-email">E-mail</label>
+    <input type="email" name="email" id="i-email"><br><br>
+    
+    <label for="i-file">Selecione um arquivo:</label>
+    <input type="file" name="myFile" id="i-file"><br><br>
+    
+    <label for="i-month">Escolha o mês de seu aniversário</label>
+    <input type="month" name="bdaymonth" id="i-month"><br><br>
+    
+    <label for="i-number">number</label>
+    <input type="number" name="quantity" min="0" max="100" step="10" id="number"><br><br>
+    
+    <label for="i-range">range:</label>
+    <input type="range" name="points" min="0" max="10" id="i-range"><br><br>
+    
+    <label for="i-search">search:</label>
+    <input type="search" name="googlesearch" id="i-search"><br><br>
+    
+    <label for="i-tel">Telefone</label>
+    <input type="tel" name="phone" pattern="[0-9]{5}-[0-9]{4}" id="i-tel"><br><br>
+    
+    <label for="i-time">time:</label>
+    <input type="time" name="usr_time" id="i-time"><br><br>
+    
+    <label for="i-url">URL: </label>
+    <input type="url" name="homepage" id="url"><br><br>
+    
+    <label for="i-week">Selecione a semana</label>
+    <input type="week" name="week_year" id="i-week"><br><br>
+    
+    </form>
+    <p>Para mais informações acessar: <a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank">W3C</a> </p>
+    <h3>Select, Textarea e Datalist</h3>
+    <p><strong>Campo de seleção</strong></p>
+    <p>O campo de seleção (select) permite mostrar ao usuários uma lista de opções para que ele possa escolher uma ou mais opções. 
+        Para criar um campo select, utilize a tag <code>&lt;select&gt;</code>. Por padrão o campo de seleção permite selecionar apenas
+         uma opção. Caso queira mudar esse padrão para permitir selecionar múltiplos, basta adicionar o atributo ""multiple"".</p>
+         <select name="carros">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+         <br><br>
+         <select name="cars" size="3" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+    <p><strong>Área de texto</strong></p>
+    <p>O campo área de texto (textarea), permite que o usuário insira um texto longo de vários parágrafos. Para adicionar um campo
+         de área de texto, utilize a tag <code>&lt;textarea&gt;</code></p>
+         <p><code>&lt;textarea name="redacao" rows="10" cols="30"&gt;</code><code>&lt;/textarea&gt;</code></p>
+         <textarea name="redacao" rows="5" cols="15"></textarea>
+    <P><strong>Datalist</strong></P>
+    <p>O datalist é uma ferramenta que permite criar uma lista de opções de entrada para um campo de texto. Para criar um datalist,
+         utilize a tag <code>&lt;datalist&gt;</code> com cada opção descrita pela tag <code>&lt;option&gt;</code>. </p>
+         <input type=""text"" list="navegadores">
+         <datalist id="navegadores">
+           <option value="Internet Explorer">
+           <option value="Firefox">
+           <option value="Chrome">
+           <option value="Opera">
+           <option value="Safari">
+         </datalist>
+    <h3>Aplicando estilo aos formulários</h3>
+    <p>A estilização de formulários segue o mesmo principio dos demais componentes HTML. </p>
+    <form action="">
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome"><br>
+        <label for="sobrenome">Sobrenome:</label><br>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome"><br>
+        <label for="pais">País:</label><br>
+        <select id="pais" name="pais">
+          <option value="australis">Australia</option>
+          <option value="brasil">Brasil</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select><br>
+        <input type="submit" value="Enviar!">
+      </form> 
+    <p><strong>Dimensão</strong></p>
+    <p>Você pode controlar a largura/altura dos campos de formulário através dos atributos CSS "width" e "height". 
+        As medidas podem ser absolutas ou relativas.</p>
+    <p>O atributo "box-sizing" permite configurar como a propriedade de tamanho será aplicada ao componente. Por 
+        padrão, ao definir uma largura/altura, o CSS aplica esse tamanho ao componente sem considerar espaçamentos e 
+        borda. Para que o CSS considere a borda e os espaçamentos, deve-se utilizar o valor "<strong>border-box</strong>" para essa
+         propriedade. Para mais opções, veja este <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-sizing" target="_blank">link</a>.</p>
+    <p><strong>Alteração de fonte dos labels</strong></p>
+    <p>Para alterar as fontes do label, pode-se utilizar o seletor de tag e aplicar determinado estilo de fonte, assim como em qualquer outro componente.</p>
+    <p><strong>Seleção de tag e atributo</strong></p>
+    <p>O CSS permite selecionar todas as tags que possuem valor em uma propriedade. Essa funcionalidade é especialmente importante nos formulários, já que 
+        diferentes tipos de entradas de dados são indicados pelo atributo "type" do campo <input>.</p>
+    <p>
+        <strong>input[type=text]</strong> {<br>
+            padding: 12px;<br>
+            margin: 8px 0px;<br>
+            border: 1px solid lightgray;<br>
+            border-radius: 4px;<br>
+          }
+    </p>
+    <p>
+        <strong>input[type=submit]</strong> {<br>
+            width: 100%;<br>
+            background-color: #4CAF50;<br>
+            color: white;<br>
+            padding: 10px;<br>
+            border-radius: 4px;<br>
+            cursor: pointer;<br>
+          }
+    </p>
+    <p>A propriedade "cursor" permite controlar o cursor do mouse que será mostrado ao usuário. No exemplo acima, o 
+        cursor padrão foi alterado para o valor "pointer", indicado quando se deseja mostrar que um componente é clicável. 
+        Para mais opções de cursor, veja este <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/cursor" target="_blank">link</a>.</p>
+
+        
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>

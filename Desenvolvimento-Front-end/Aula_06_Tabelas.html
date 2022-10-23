@@ -1,100 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Desenvolvimento Front-end I</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- CSS on-line -->
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
-    <header>
-        <h1 style="color:beige;">Curso de web IMD</h1>
-    </header>
-    <section>
-        <h2>Aula 06 - Tabelas</h2>
-        <p>Para criar uma tabela, deve-se utilizar a tag <strong><code>&lt;table&gt;</code></strong>.</p>
-        <p> Para cada linha deve-se utilizar a tag <strong><code>&lt;tr&gt;</code></strong> e, para cada coluna, 
-            deve-se utilizar a tag <strong><code>&lt;td&gt;</code></strong>.</p>
-        <p>Para indicar que o dado é um cabeçalho, deve-se utilizar a tag <strong><code>&lt;th&gt;</code></strong>, 
-            em vez de  <strong><code>&lt;td&gt;</code></strong></p>
-        <h3>Mesclando linhas e colunas</h3>
-        <p><strong>Mesclando colunas</strong></p>
-        <p>Para mesclar duas ou mais colunas, utilize o atributo <strong>"colspan"</strong> da tag <code>&lt;td&gt;</code> 
-            ou <strong><code>&lt;th&gt;</code></strong>, indicando o número de colunas que devem ser mescladas. </p>
-        <code>&lt;th colspan="2"&gt;Telefone&lt;/th&gt;</code><br>
-        <table>
-            <tr>
-              <th>Name</th>
-              <th colspan="2">Telefone</th>
-            </tr>
-            <tr>
-              <td>Bill Gates</td>
-              <td>55577854</td>
-              <td>55577855</td>
-            </tr>
-        </table>
-        <p><strong>Mesclando linhas</strong></p>
-        <p>Para mesclar duas ou mais linhas, utilize o atributo <strong>"rowspan"</strong> na tag <code>&lt;td&gt;</code>
-             ou <code>&lt;th&gt;</code>, indicando o número de linhas que devem ser mescladas.</p>
-        <code>&lt;th rowspan="2"&gt;Telefone&lt;/th&gt;</code><br>
-        <table>
-            <tr>
-              <th>Name</th>
-              <td>Bill Gates</td>
-            </tr>
-            <tr>
-              <th rowspan="2">Telefone</th>
-              <td>55577854</td>
-            </tr>
-            <tr>
-              <td>55577855</td>
-            </tr>
-          </table>
-        <h3>Aplicando estilo em uma Tabela</h3>
-        <p><strong>Espaçamento</strong></p>
-        <p>É possível utilizar a propriedade "padding" para controlar o espaçamento entre a borda e o conteúdo da tabela. 
-            Para que isso fique visível, é importante que a borda não esteja invisível. </p>
-        <p><strong>Alinhamento de texto</strong></p>
-        <p>Para controlar o alinhamento do texto na célula da tabela, utilize a propriedade <strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-align" target="_blank">text-align</a></strong> para alinhamento
-             horizontal e <strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/vertical-align/" target="_blank">vertical-align</a></strong> para vertical.</p>
-        <p><strong>Borda</strong></p>
-        <p>Algo importante a analisar é se as bordas das tabelas ficarão condensadas ou separadas através da propriedade "<a href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/border-collapse" target="_blank"><strong>border-collapse</strong></a>". </p>
-        <p><strong>Cor de fundo</strong></p>
-        <p>A cor de fundo da tabela é controlada pela mesma propriedade utilizada para outros elementos: "background-color".</p>
-        <p>É possível aplicar estilos diferentes para linhas pares e linhas ímpares, obtendo-se uma melhor separação entre as linhas.</p>
-        <p>/* par */<br>
-        tr:nth-child(even) { <br>
-             background-color: #eee;<br>
-        }<br>
-        /* ímpar */<br>
-        tr:nth-child(odd) {<br>
-            background-color: lightblue;<br>
-        }</p>
-        <p>Este tipo de seletor avançado se chama seletor de pseudoclasse.</p>
-        <p>Assim como os links, pode-se definir o estilo para as tabelas a depender do estado.</p>
-        <p>
-            tr:hover {<br>
-                background-color: blue;<br>
-            }<br>
-        </p>
-        <p><strong>Melhor explicação de cada tag para tabelas:</strong></p>
-        <p><code>&lt;table&gt;</code> Define uma tabela</p>
-        <p><code>&lt;th&gt;</code> Define uma célula de cabeçalho em uma tabela</p>
-        <p><code>&lt;tr&gt;</code> Define uma linha em uma tabela</p>
-        <p><code>&lt;td&gt;</code> Define uma célula em uma tabela</p>
-        <p><code>&lt;caption&gt;</code> Define uma legenda de tabela</p>
-        <p><code>&lt;colgroup&gt;</code> Especifica um grupo de uma ou mais colunas em uma tabela para formatação</p>
-        <p><code>&lt;col&gt;</code> Especifica as propriedades da coluna para cada coluna dentro de um elemento</p>
-        <p><code>&lt;thead&gt;</code> Agrupa o conteúdo do cabeçalho em uma tabela</p>
-        <p><code>&lt;tbody&gt;</code> Agrupa o conteúdo do corpo em uma tabela</p>
-        <p><code>&lt;tfoot&gt;</code> Agrupa o conteúdo do rodapé em uma tabela</p>
-    </section>
-<footer>
-    <p><strong>By Monica Lima de Paiva</strong></p>
-</footer>
-</body>
-</html>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Tabelas
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 06 - Tabelas
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_06.png" alt="Computador">
+<!-- CONTEUDO -->
+<p>Para criar uma tabela, deve-se utilizar a tag <strong><code>&lt;table&gt;</code></strong>.</p>
+<p> Para cada linha deve-se utilizar a tag <strong><code>&lt;tr&gt;</code></strong> e, para cada coluna, 
+    deve-se utilizar a tag <strong><code>&lt;td&gt;</code></strong>.</p>
+<p>Para indicar que o dado é um cabeçalho, deve-se utilizar a tag <strong><code>&lt;th&gt;</code></strong>, 
+    em vez de  <strong><code>&lt;td&gt;</code></strong></p>
+<h3>Mesclando linhas e colunas</h3>
+<p><strong>Mesclando colunas</strong></p>
+<p>Para mesclar duas ou mais colunas, utilize o atributo <strong>"colspan"</strong> da tag <code>&lt;td&gt;</code> 
+    ou <strong><code>&lt;th&gt;</code></strong>, indicando o número de colunas que devem ser mescladas. </p>
+<code>&lt;th colspan="2"&gt;Telefone&lt;/th&gt;</code><br>
+<table>
+    <tr>
+      <th>Name</th>
+      <th colspan="2">Telefone</th>
+    </tr>
+    <tr>
+      <td>Bill Gates</td>
+      <td>55577854</td>
+      <td>55577855</td>
+    </tr>
+</table>
+<p><strong>Mesclando linhas</strong></p>
+<p>Para mesclar duas ou mais linhas, utilize o atributo <strong>"rowspan"</strong> na tag <code>&lt;td&gt;</code>
+     ou <code>&lt;th&gt;</code>, indicando o número de linhas que devem ser mescladas.</p>
+<code>&lt;th rowspan="2"&gt;Telefone&lt;/th&gt;</code><br>
+<table>
+    <tr>
+      <th>Name</th>
+      <td>Bill Gates</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Telefone</th>
+      <td>55577854</td>
+    </tr>
+    <tr>
+      <td>55577855</td>
+    </tr>
+  </table>
+<h3>Aplicando estilo em uma Tabela</h3>
+<p><strong>Espaçamento</strong></p>
+<p>É possível utilizar a propriedade "padding" para controlar o espaçamento entre a borda e o conteúdo da tabela. 
+    Para que isso fique visível, é importante que a borda não esteja invisível. </p>
+<p><strong>Alinhamento de texto</strong></p>
+<p>Para controlar o alinhamento do texto na célula da tabela, utilize a propriedade <strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-align" target="_blank">text-align</a></strong> para alinhamento
+     horizontal e <strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/vertical-align/" target="_blank">vertical-align</a></strong> para vertical.</p>
+<p><strong>Borda</strong></p>
+<p>Algo importante a analisar é se as bordas das tabelas ficarão condensadas ou separadas através da propriedade "<a href="https://developer.mozilla.org/pt-PT/docs/Web/CSS/border-collapse" target="_blank"><strong>border-collapse</strong></a>". </p>
+<p><strong>Cor de fundo</strong></p>
+<p>A cor de fundo da tabela é controlada pela mesma propriedade utilizada para outros elementos: "background-color".</p>
+<p>É possível aplicar estilos diferentes para linhas pares e linhas ímpares, obtendo-se uma melhor separação entre as linhas.</p>
+<p>/* par */<br>
+tr:nth-child(even) { <br>
+     background-color: #eee;<br>
+}<br>
+/* ímpar */<br>
+tr:nth-child(odd) {<br>
+    background-color: lightblue;<br>
+}</p>
+<p>Este tipo de seletor avançado se chama seletor de pseudoclasse.</p>
+<p>Assim como os links, pode-se definir o estilo para as tabelas a depender do estado.</p>
+<p>
+    tr:hover {<br>
+        background-color: blue;<br>
+    }<br>
+</p>
+<p><strong>Melhor explicação de cada tag para tabelas:</strong></p>
+<p><code>&lt;table&gt;</code> Define uma tabela</p>
+<p><code>&lt;th&gt;</code> Define uma célula de cabeçalho em uma tabela</p>
+<p><code>&lt;tr&gt;</code> Define uma linha em uma tabela</p>
+<p><code>&lt;td&gt;</code> Define uma célula em uma tabela</p>
+<p><code>&lt;caption&gt;</code> Define uma legenda de tabela</p>
+<p><code>&lt;colgroup&gt;</code> Especifica um grupo de uma ou mais colunas em uma tabela para formatação</p>
+<p><code>&lt;col&gt;</code> Especifica as propriedades da coluna para cada coluna dentro de um elemento</p>
+<p><code>&lt;thead&gt;</code> Agrupa o conteúdo do cabeçalho em uma tabela</p>
+<p><code>&lt;tbody&gt;</code> Agrupa o conteúdo do corpo em uma tabela</p>
+<p><code>&lt;tfoot&gt;</code> Agrupa o conteúdo do rodapé em uma tabela</p>
+
+        
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>

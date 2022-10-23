@@ -1,57 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Desenvolvimento Front-end I</title>
-    <style>
-        body {
-            background-color: rgb(0, 255, 47);
-        }
-    </style>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
     <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
-    <header>
-        <h1 style="color:beige;">Curso de web IMD</h1>
-    </header>
-    <section>
-    <h3>Aula 01 - Introdução ao HTML</h3>
-    <ul>
-        <ol>
-            <li><strong>Conhecer o HTML e sua história</strong></li>
-            <p>O HTML é uma linguagem de marcação utilizada na construção de páginas na web. Ou seja, o HTML não é uma linguagem de programação em que o programador 
-                tem liberdade de programar comportamentos a partir da entrada de dados. Em vez disso, as linguagens de marcação descrevem informações de apresentação 
-                para que possam ser apresentadas aos usuários. O HTML é hoje utilizado por todo e qualquer site na internet para a criação e estruturação do seu conteúdo.
-            </p>
-            <p>O HTML foi criado por um pesquisador do CERN, Tim Berners-Lee em 1991, com o objetivo de facilitar o compartilhamento de pesquisas entre ele e seu grupo de 
-                colegas.</p>
-            <p>O primeiro navegador foi criado pelo próprio Tim e ficou conhecido como World Wide Web. Em 1993 nasce o primeiro navegador gráfico, o Mosaic.</p>
-            <p> <a href="https://gs.statcounter.com/browser-market-share#monthly-200901-202011" target="_blank">Gerra dos navegadores</a></p>
-            <li><strong>Conhecer os principais editores de texto</strong></li>
-            <p>O <a href="https://www.sublimetext.com/" target="_blank"> Sublime</a> é um editor de texto leve e fácil de usar. Para o uso é necessário adquirir uma 
-                licença.</p>
-            <p>O <a href="https://atom.io/" target="_blank">Atom</a> é um editor de texto e código-fonte gratuito compatível com macOS, Linux e Microsoft Windows com 
-                suporte para plug-ins escritos em Javascript, desenvolvido pelo GitHub.</p>
-            <p>O <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>, ou somente VSCode, é um editor de texto gratuito, de código aberto, 
-                desenvolvido pela Microsoft compatível com sistema operacional Windows, Linux e macOS.</p>
-            <li><strong>Conhecer a estrutura básica de um documento HTML!</strong></li>
-            <p>A primeira linha indica a versão do documento HTML, o conteúdo deve ser <code>&lt;!DOCTYPE html"&gt;</code>.</p>
-            <p>Em seguida, dá-se início à estruturação do HTML. Para isso, os demais elementos HTML, devem ficar entre os elementos <code>&lt;html&gt;</code> e
-                 <code>&lt;/html&gt;</code>.</p>
-            <p>Para incluir informações de cabeçalho como, por exemplo, o título e os metadados, deve-se informar esses dados entre os elementos <code>&lt;head&gt;</code> e
-                 <code>&lt;/head&gt;</code>.</p>    
-            <p>Por fim, o conteúdo a ser mostrado pelo navegador ao usuário, deve ficar delimitado entre os elementos <code>&lt;body&gt;</code> e <code>&lt;/body&gt;</code>.</p>    
-            
-        </ol>
-    </ul>
-    </section>
-<footer>
-    <p><strong>By Monica Lima de Paiva</strong></p>
+    <!-- Menu superior -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Contato.html">Contanto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  <!-- Trilha menu -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Introdução ao HTML
+        </li>
+      </ol>
+    </nav>
+  <!-- Estrutura inicial da página -->
+    <div class="container">
+      <!-- Conteúdo principal -->
+      <div class="row">
+        <div class="col-md-8">
+  
+            <h1 class="mb-4">
+                Aula 01 - Introdução ao HTML
+            </h1>
+            <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+            <hr>
+            <p class="text-muted">postado em 23 de Outubro de 2022</p>
+            <hr>
+            <img class="img-fluid rounded mb-4" src="Imagens/Aula_01.png" alt="Computador">
+            <ul>
+                <ol>
+                    <li><strong>Conhecer o HTML e sua história</strong></li>
+                    <p>O HTML é uma linguagem de marcação utilizada na construção de páginas na web. Ou seja, o HTML não é uma linguagem de programação em que o programador 
+                        tem liberdade de programar comportamentos a partir da entrada de dados. Em vez disso, as linguagens de marcação descrevem informações de apresentação 
+                        para que possam ser apresentadas aos usuários. O HTML é hoje utilizado por todo e qualquer site na internet para a criação e estruturação do seu conteúdo.
+                    </p>
+                    <p>O HTML foi criado por um pesquisador do CERN, Tim Berners-Lee em 1991, com o objetivo de facilitar o compartilhamento de pesquisas entre ele e seu grupo de 
+                        colegas.</p>
+                    <p>O primeiro navegador foi criado pelo próprio Tim e ficou conhecido como World Wide Web. Em 1993 nasce o primeiro navegador gráfico, o Mosaic.</p>
+                    <p> <a href="https://gs.statcounter.com/browser-market-share#monthly-200901-202011" target="_blank">Gerra dos navegadores</a></p>
+                    <li><strong>Conhecer os principais editores de texto</strong></li>
+                    <p>O <a href="https://www.sublimetext.com/" target="_blank"> Sublime</a> é um editor de texto leve e fácil de usar. Para o uso é necessário adquirir uma 
+                        licença.</p>
+                    <p>O <a href="https://atom.io/" target="_blank">Atom</a> é um editor de texto e código-fonte gratuito compatível com macOS, Linux e Microsoft Windows com 
+                        suporte para plug-ins escritos em Javascript, desenvolvido pelo GitHub.</p>
+                    <p>O <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>, ou somente VSCode, é um editor de texto gratuito, de código aberto, 
+                        desenvolvido pela Microsoft compatível com sistema operacional Windows, Linux e macOS.</p>
+                    <li><strong>Conhecer a estrutura básica de um documento HTML!</strong></li>
+                    <p>A primeira linha indica a versão do documento HTML, o conteúdo deve ser <code>&lt;!DOCTYPE html"&gt;</code>.</p>
+                    <p>Em seguida, dá-se início à estruturação do HTML. Para isso, os demais elementos HTML, devem ficar entre os elementos <code>&lt;html&gt;</code> e
+                        <code>&lt;/html&gt;</code>.</p>
+                    <p>Para incluir informações de cabeçalho como, por exemplo, o título e os metadados, deve-se informar esses dados entre os elementos <code>&lt;head&gt;</code> e
+                        <code>&lt;/head&gt;</code>.</p>    
+                    <p>Por fim, o conteúdo a ser mostrado pelo navegador ao usuário, deve ficar delimitado entre os elementos <code>&lt;body&gt;</code> e <code>&lt;/body&gt;</code>.</p>    
+                    
+                </ol>
+            </ul>
+            </div>
+    <!-- Conteúdo lateral -->
+<div class="col-md-4">
+
+    <div class="card mb-4">
+      <div class="card-header">Busca</div>
+      <div class="card-body">
+        <div class="input-group">
+          <input class="form-control" type="text" placeholder="Digite aqui...">
+          <button class="btn btn-secondary ml-2">Buscar</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card mb-4">
+      <div class="card-header">Disciplinas</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg">
+            <ul class="list-unstyled">
+              <li><a href="#">Desenvolvimento Front-end I</a></li>
+              <li><a href="#">Programação Estruturada</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card mb-4">
+      <div class="card-header">Autor</div>
+        <div class="card-body">
+          <div class="text-center">
+            <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+          </div>
+          <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+            estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+            Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+            HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <footer class="bg-dark py-3">
+    <p class="text-white text-center">Desenvolvido por Monica Lima de Paiva</p>
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+crossorigin="anonymous"></script>
+
 </body>
+
 </html>

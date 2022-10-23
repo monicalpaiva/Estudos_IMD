@@ -40,7 +40,7 @@
 <!-- Trilha menu -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Seletores avançados, Pseudoclasses e Pseudoelementos
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / HTML Responsivo
       </li>
     </ol>
   </nav>
@@ -51,85 +51,69 @@
       <div class="col-md-8">
 
         <h1 class="mb-4">
-          Aula 13 - Seletores avançados, Pseudoclasses e Pseudoelementos
+          Aula 12 - HTML Responsivo
         </h1>
         <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
         <hr>
         <p class="text-muted">postado em 23 de Outubro de 2022</p>
         <hr>
-        <img class="img-fluid rounded mb-4" src="Imagens/Aula_13.png" alt="Computador">
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_12.png" alt="Computador">
 <!-- CONTEUDO -->
-<h3>Seletores avançados</h3>
-<p><strong>Seletor global</strong></p>
-<p>O seletor global permite selecionar todos os elementos HTML. Veja a sintaxe:</p>
-<p class="codigo"><br>* {<br>
-    &nbsp &nbsp    margin: 0;<br>
-    &nbsp     }</p>
-<p>No exemplo acima, todos os elementos HTML da página terão sua margem alterada para zero.</p>
-<p><strong>Seletor descendente</strong></p>
-<p>Seleciona todos os elementos que estão no interior de outro elemento. Veja no exemplo:</p>
-<p class="codigo"><br>div p {<br>
-    &nbsp &nbsp color: rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que estão dentro de uma <code>&lt;div&gt;</code> serão
-     selecionado e terão a sua cor alterada.</p>
-<p><strong>Seletor descendente direto</strong></p>
-<p>Esse seletor seleciona todos os elementos que estão no interior de outro elemento diretamente.
-     Veja no exemplo:</p>
-<p class="codigo"><br>div > p {<br>
-    &nbsp &nbsp color:rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que possuem uma <code>&lt;div&gt;</code> como pai serão selecionados. Perceba que a
-diferença em relação ao anterior está relacionada a ser filho direto ou indireto do elemento pai.</p>
-<p><strong>Seletor de irmão</strong></p>
-<p>Esse seletor seleciona os elementos que são precedidos por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section ~ h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p> 
-<p>O exemplo acima seleciona todos os elementos <code>&lt;h2&gt;</code> que são precedidos
-     por um elemento <code>&lt;section&gt;</code>.</p>
-<p><strong>Seletor de irmão direto</strong></p>
-<p>Esse seletor seleciona elementos que são precedidos imediatamente por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section + h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p>
-<p>O exemplo acima seleciona o primeiro elemento <code>&lt;h2&gt;</code>, que é precedido imediatamente por um
-     elemento <code>&lt;section&gt;</code>.</p>
-<p><strong><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Mais seletores avançados.</a></strong></p>
-<h3>Pseudoclasses</h3>
-<p>As pseudoclasses devem ser definidas após o seletor e precedidas por ":".</p>
-<p><strong>:hover</strong></p>
-<p>A pseudoclasse hover(<strong>div:hover {</strong>) permite definir um estilo para quando o usuário está com o 
-    mouse sobre o elemento.</p>
-<p><strong>:first-child</strong></p>
-<p>A pseudoclasse first-child(<strong>p:first-child {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o primeiro filho de seus pais.</p>
-<p><strong>:last-child</strong></p>
-<p>A pseudoclasse last-child(<strong>p:last-child {</strong>) permite definir um estilo para qualquer elemento que
-    seja o último filho de seus pais.</p>
-<p><strong>:nth-child()</strong></p>
-<p>A pseudoclasse nth-child()(<strong>p:nth-child(2) {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o enésimo filho de seus pais. No exemplo, apenas o segundo elemento filho <code>&lt;p&gt;</code> será
-    selecionado.</p>
-<p>Além de permitir definir um número, pode-se utilizar algumas palavras-chaves como, por exemplo, "odd", para 
-    selecionar os ímpares e "even" para selecionar os pares. p:nth-child(<strong>even</strong>).</p>
-<h3>Pseudoelementos</h3>
-<p>Os pseudoelementos permitem fornecer estilo a uma parte específica do elemento selecionado. Os pseudoelementos
-    devem ser definidos após o seletor e após as pseudoclasses (se existir) e precedidos por "::".</p>
-<p><strong>::first-letter</strong></p>
-<p>O pseudoelemento ::first-letter(<strong>p::first-letter {</strong>) seleciona a primeira letra da primeira 
-    linha de um bloco. É possível combinar pseudoelementos com pseudoclasses para uma seleção ainda mais precisa.
-    (<strong>p:first-child::first-letter {</strong>)</p>
-<p><strong>::before</strong></p>
-<p>O pseudoelemento ::before(<strong>h2::before{</strong>) permite alterar conteúdo que precede o elemento 
-    selecionado.</p>
-<p><strong>::after</strong></p>
-<p>Similarmente ao pseudoelemento ::before, existe o pseudoelemento ::after(<strong>h2::after{</strong>), 
-    que permite alterar conteúdo após o elemento selecionado.</p>
-    <p><strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="_blank">Mais
-         pseudoelementos.</a></strong></p>
+<h3>O que é responsividade</h3>
+<p>A responsividade é a capacidade do site se adaptar a diferentes dispositivos.</p>
+<p><strong>Viewport</strong></p>
+<p>O primeiro conceito que você precisa entender para trabalhar com responsividade é o conceito de Viewport. 
+    O Viewport é a área disponível para o site no dispositivo. Diferentes dispositivos têm diferentes tamanhos
+     de viewport. Para criar sites responsivos é importante seguir algumas dicas:</p>
+<ul>
+    <li>Não use elementos grandes com largura fixa;</li>
+    <li>Não permita que o conteúdo dependa de determinada largura de viewport para renderizar bem;</li>
+    <li>Aplique diferentes estilos para diferentes tamanhos de tela.</li>
+</ul>
+<h3>Imagens responsivas</h3>
+<p>Um desses controles veio através da tag <strong><code>&lt;meta name="viewport" content="width=device-width, 
+    initial-scale=1.0"&gt;</code></strong>. Ao adicionar essa estrutura no cabeçalho do documento HTML, estamos informando 
+    ao navegador a escala do viewport, o que gera melhor aparência para diferentes dispositivos.</p>
+<p><strong>Importante: </strong>Por padrão, ao adicionar uma imagem ao HTML, ela é apresentada em seu tamanho real,
+     sem qualquer redimensionamento. Para deixá-la mais responsiva, você pode definir o tamanho da imagem de forma 
+     relativa. No entanto, a definição relativa através dos atributos "width" e "heigth", pode gerar perda de
+      qualidade da imagem - quando esta fica é apresentada em um tamanho maior que o real. Para resolver isso, 
+      o CSS criou um atributo chamado <strong>"max-width"</strong>, que permite definir o tamanho da imagem relativo,
+       mas respeitando o tamanho máximo real da imagem. Outra forma de controlar melhor a imagem, a depender da resolução, é utilizar a tag <code>&lt;picture&gt;</code>,
+     que permite definir diferentes imagens para diferentes resoluções de tela. </p>
+<p><br>
+<code>&lt;picture&gt;</code><br>
+    <code>&lt;source srcset="img/imagem-small.jpg" media="(max-width: 600px)" /&gt;</code><br>
+    <code>&lt;source srcset="img/imagem-med.jpg" media="(max-width: 1200px)" /&gt;</code><br>
+    <code>&lt;source srcset="img/imagem-large.jpg" /&gt;</code><br>
+    <code>&lt;img src="img/imagem-med.jpg" alt=""&gt;</code><br>
+<code>&lt;/picture&gt;</code>
+</p>
+<h3>Textos responsivos</h3>
+<p>É importante conhecer uma nova unidade que permite definir o tamanho da fonte de forma relativa ao viewport. Essa
+     configuração pode ser feita através da utilização da unidade "vw". Essa unidade permite definir um valor de 
+     tamanho relativo ao tamanho do viewport, deixando a aparência do texto melhor adaptada ao dispositivo.</p>
+<p>A medida "vw" é igual a 1/100 da largura da viewport. Então, por exemplo, se a largura do navegador é 900px, 1vw
+     equivale a 9px. Analogamente, há também a unidade "vh", que está relacionada à altura do viewport. Dessa forma,
+      se a altura da viewport é 750px, 1vh equivale a 7.5px.</p>
+<h3>Media Queries</h3>
+<p>Essa funcionalidade foi introduzida na versão 3 do CSS e facilitou a aplicação de estilos com base na resolução de tela disponível. </p>
+<p><br>
+    @media only screen and (max-width: 600px) {<br>
+        body {<br>
+          background-color: rebeccapurple;<br>
+        }<br>
+        <br>
+        @media only screen and (min-width: 1200px) {<br>
+        body {<br>
+          background-color: red;<br>
+        }<br>
+</p>
+<p>Diferentes condições podem ser utilizadas (orientação da tela, resolução etc). Além disso, é permitido o uso de 
+    múltiplas condições através de operadores lógicos. Para ver mais exemplos das possibilidades, consulte este 
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries" target="_blank">link</a>.</p>
+<h3>Layout responsivo</h3>
+<p><a href="Aula_12_Responsivo/Aula_12_exemplo.html" target="_blank">Página exemplo</a></p>
         
       </div>
       <!-- Conteúdo lateral -->

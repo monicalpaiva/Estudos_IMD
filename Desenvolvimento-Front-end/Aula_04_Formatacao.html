@@ -1,76 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Desenvolvimento Front-end I</title>
-    <style>
-        body {
-            background-color: rgb(0, 255, 47);
-        }
-    </style>
-    <link rel="stylesheet" href="estilo.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
+
 <body>
-    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
-    <header>
-        <h1 style="color:beige;">Curso de web IMD</h1>
-    </header>
-    <section>
-    <h3>Aula 04 - Formatação em HTML e Listas</h3>
-    <p><strong>Negrito</strong></p>
-    <p>Tags <code>&lt;b&gt;</code> ou <code>&lt;strong&gt;</code></p>
-    <p> Texto normal <b>texto em negrito</b> </p>
-    <p> Texto normal <strong>texto em negrito</strong> </p>
-    <p><strong>Itálico</strong></p>
-    <p>Tags <code>&lt;i&gt;</code> ou <code>&lt;em&gt;&lt;/em&gt;</code></p>
-    <p> Texto normal <i>texto em italico</i> </p>
-    <p> Texto normal <em>texto em itálico</em> </p>
-    <p><strong>Destacado</strong></p>
-    <p>Tag <code>&lt;mark&gt;</code></p>
-    <p> Texto normal <mark>texto em marcado</mark> </p>
-    <p><strong>Diminuto</strong></p>
-    <p>Tag <code>&lt;small&gt;&lt;/small&gt;</code></p>
-    <p> Texto normal <small>texto menor</small> </p>
-    <p><strong>Tachado</strong></p>
-    <p>Tag <code>&lt;del&gt;&lt;/del&gt;</code></p>
-    <p>Texto normal <del>texto tachado</del> </p>
-    <p><strong>Sobrescrito ou subscrito</strong></p>
-    <p>Tags <code>&lt;sup&gt;</code> para sobrescrito e <code>&lt;sub&gt;</code> para subscrito.</p>
-    <p> Texto normal <sup>texto sobrescrito</sup> e <sub>texto subscrito</sub> </p>
-    <h6>Listas</h6>
-    <p>Utilizam-se as tags <code>&lt;ul&gt;</code> para listas não ordenadas e a tag <code>&lt;ol&gt;</code>
-         para listas ordenadas. As tags <code>&lt;li&gt;</code> para cada elemento.</p>
-    <code>&lt;ol type="A"&gt;</code><br>
-    <code>&lt;li&gt;</code>Café<code>&lt;/li&gt;</code><br>
-    <code>&lt;li&gt;</code>Chá<code>&lt;/li&gt;</code><br>
-    <code>&lt;li&gt;</code>Leite<code>&lt;/li&gt;</code><br>
-    <code>&lt;/ol&gt;</code><br>
-    <ol>Atributos das listas numéricas no HTML
-        <li>Os itens serão numerados por algarismos arábicos (1)</li>
-        <li>Os itens serão numerados pelas letras maiúsculas do alfabeto (A)</li>
-        <li>Os itens serão numerados pelas letras minúsculas do alfabeto (a)</li>
-        <li>Os itens serão numerados por algarismos romanos maiúsculos (I)</li>
-        <li>Os itens serão numerados por algarismos romanos minúsculos (i)</li>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Formatação em HTML e Listas
+      </li>
     </ol>
-    <h6>Estilizando as listas</h6>
-    <p>A estilização das listas segue a mesma forma das demais estilizações. É possível aplicar através do CSS 
-    um estilo para todas as listas, ou apenas para seus itens. </p>
-    ul {<br>
-        list-style-type: <strong>disc</strong>;<br>
-      }<br>
-    <ul>Valores para a aparência dos marcadores
-        <li>Os marcadores serão discos sólidos (aparência padrão) - <strong>disc</strong></li>
-        <li>Os marcadores serão quadrados sólidos - <strong>square</strong></li>
-        <li>Os marcadores serão círculos vazados - <strong>circle</strong></li>
-        <li>Nenhum marcador será utilizado - <strong>none</strong></li>
-    </ul>
-    </section>
-<footer>
-    <p><strong>By Monica Lima de Paiva</strong></p>
-</footer>
-</body>
-</html>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 04 - Formatação em HTML e Listas
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_04.png" alt="Computador">
+<!-- CONTEUDO -->
+<p><strong>Negrito</strong></p>
+<p>Tags <code>&lt;b&gt;</code> ou <code>&lt;strong&gt;</code></p>
+<p> Texto normal <b>texto em negrito</b> </p>
+<p> Texto normal <strong>texto em negrito</strong> </p>
+<p><strong>Itálico</strong></p>
+<p>Tags <code>&lt;i&gt;</code> ou <code>&lt;em&gt;&lt;/em&gt;</code></p>
+<p> Texto normal <i>texto em italico</i> </p>
+<p> Texto normal <em>texto em itálico</em> </p>
+<p><strong>Destacado</strong></p>
+<p>Tag <code>&lt;mark&gt;</code></p>
+<p> Texto normal <mark>texto em marcado</mark> </p>
+<p><strong>Diminuto</strong></p>
+<p>Tag <code>&lt;small&gt;&lt;/small&gt;</code></p>
+<p> Texto normal <small>texto menor</small> </p>
+<p><strong>Tachado</strong></p>
+<p>Tag <code>&lt;del&gt;&lt;/del&gt;</code></p>
+<p>Texto normal <del>texto tachado</del> </p>
+<p><strong>Sobrescrito ou subscrito</strong></p>
+<p>Tags <code>&lt;sup&gt;</code> para sobrescrito e <code>&lt;sub&gt;</code> para subscrito.</p>
+<p> Texto normal <sup>texto sobrescrito</sup> e <sub>texto subscrito</sub> </p>
+<h6>Listas</h6>
+<p>Utilizam-se as tags <code>&lt;ul&gt;</code> para listas não ordenadas e a tag <code>&lt;ol&gt;</code>
+     para listas ordenadas. As tags <code>&lt;li&gt;</code> para cada elemento.</p>
+<code>&lt;ol type="A"&gt;</code><br>
+<code>&lt;li&gt;</code>Café<code>&lt;/li&gt;</code><br>
+<code>&lt;li&gt;</code>Chá<code>&lt;/li&gt;</code><br>
+<code>&lt;li&gt;</code>Leite<code>&lt;/li&gt;</code><br>
+<code>&lt;/ol&gt;</code><br>
+<ol>Atributos das listas numéricas no HTML
+    <li>Os itens serão numerados por algarismos arábicos (1)</li>
+    <li>Os itens serão numerados pelas letras maiúsculas do alfabeto (A)</li>
+    <li>Os itens serão numerados pelas letras minúsculas do alfabeto (a)</li>
+    <li>Os itens serão numerados por algarismos romanos maiúsculos (I)</li>
+    <li>Os itens serão numerados por algarismos romanos minúsculos (i)</li>
+</ol>
+<h6>Estilizando as listas</h6>
+<p>A estilização das listas segue a mesma forma das demais estilizações. É possível aplicar através do CSS 
+um estilo para todas as listas, ou apenas para seus itens. </p>
+ul {<br>
+    list-style-type: <strong>disc</strong>;<br>
+  }<br>
+<ul>Valores para a aparência dos marcadores
+    <li>Os marcadores serão discos sólidos (aparência padrão) - <strong>disc</strong></li>
+    <li>Os marcadores serão quadrados sólidos - <strong>square</strong></li>
+    <li>Os marcadores serão círculos vazados - <strong>circle</strong></li>
+    <li>Nenhum marcador será utilizado - <strong>none</strong></li>
+</ul>
+        
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>

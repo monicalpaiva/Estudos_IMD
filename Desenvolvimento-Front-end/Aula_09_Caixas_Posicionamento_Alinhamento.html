@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Modelo de caixas, Posicionamento e Alinhamento
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 09 - Modelo de caixas, Posicionamento e Alinhamento
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_09.png" alt="Computador">
+<!-- CONTEUDO -->
+        <h3>Modelo de caixa e suas propriedades</h3>
+
+        <img class="img-fluid" src="https://materiais.imd.ufrn.br/materialV2/assets/lib/upload/plugins/source/imagens/74/686/Captura%20de%20Tela%202021-01-05%20a%CC%80s%2021-07-43.png"/>
+        <p><strong>Padding</strong></p>
+        <p>O padding é o espaçamento entre o conteúdo e a borda que permite controlar o espaço
+        interno da caixa. Através do CSS, é possível controlar esse espaçamento em todos os lados. <strong>padding: 20px;</strong> </p>
+        <p><strong>Margem</strong></p>
+        <p>No modelo de caixa, a margem é o espaço entre a borda e os demais elementos HTML da página. Através do CSS, é possível controlar 
+        esse parâmetro para todos os lados de qualquer elemento HTML. <strong>margin: 10px</strong></p>
+        <p><strong>Borda</strong></p>
+        <p>A borda é a propriedade que controla o aspecto da fronteira do elemento HTML. A borda pode ser visível ou invisível e pode possuir diferentes aparências.</p>
+        <h3>Posicionamento</h3>
+        <p><strong>Static</strong></p>
+        <p>O posicionamento static mantém o posicionamento do fluxo do código HTML, posicionando os elementos em sequência - um abaixo do outro para elementos block e lado a lado para os inline.
+        <strong>position: static;</strong></p>
+        <p><strong>Relative</strong></p>
+        <p>No posicionamento relative, é possível alterar o posicionamento em relação ao posicionamento padrão (static).</p>
+        <p>
+        div.relative {<br>
+        position: relative;<br>
+        left: 10px;<br>
+        top: 5px;<br>
+        }
+        </p>
+        <p><strong>Fixed</strong></p>
+        <p>O posicionamento fixed mantém a posição dos elementos independente da rolagem da página. As opções top, right, left, bottom permitem indicar a distância do elemento em relação à janela de visualização (viewport). </p>
+        <p>
+        div.fixed {<br>
+        position: fixed;<br>
+        bottom: 0;<br>
+        right: 0;<br>
+        width: 300px;<br>
+        }
+        </p>
+        <p><strong>Absolute</strong></p>
+        <p>O posicionamento absolute controla o posicionamento de um elemento em relação à posição do elemento pai, que no que lhe concerne, deve ter um posicionamento diferente de static. Caso não haja um elemento pai com 
+        posicionamento diferente de static, a página toda será utilizada como referência. <strong><a href="Aula_09_exemplo01.html" target="_blank">Exemplo de página</a> </strong></p>
+        <p><strong>Stick</strong></p>
+        <p>Um elemento com posição sticky é posicionado com base na posição de rolagem do usuário. Um elemento sticky alterna entre relative e fixed, dependendo da posição de rolagem. Ele é posicionado de forma relativa até que uma determinada posição de deslocamento seja encontrada na janela de exibição -
+        então, ele "se fixa" no lugar (como posição: fixed). <strong><a href="Aula_09_exemplo02.html" target="_blank">Exemplo de página</a> </strong></p>
+        <p><strong>Posicionando ao centro</strong></p>
+        <p>Para posicionar um elemento no centro, pode-se utilizar a opção auto da propriedade margin. Com isso, a margem será automaticamente calculada, de forma a manter o elemento no centro.
+        <strong>margin: auto;</strong></p>
+        <h3>Propriedade overflow</h3>
+        <p>A propriedade overflow permite controlar o comportamento do elemento, quando seu conteúdo for maior que a área determinada para o 
+        elemento que está inserido.O comportamento padrão do HTML é mostrar o conteúdo que excede a área.</p>
+        <p>O padrão é o valor "visible" para essa propriedade. No entanto, é possível alterar esse comportamento escolhendo outras
+        opções disponíveis.</p>
+        <p>overflow: visible;</p>
+        <p>Caso desejes esconder o conteúdo que excede o tamanho do elemento, altere essa propriedade para o valor "hidden"</p>
+        <p>overflow: hidden;</p>
+        <p>Outra opção é mostrar uma barra de rolagem ao usuário, para que ele possa acessar o conteúdo que excede a área disponível.</p>
+        <p>overflow: scroll;</p>
+        <p>Também é possível configurar o comportamento para ser automático. Ou seja, um scroll é apresentado, apenas se o conteúdo for maior que a área disponível.</p>
+        <p>overflow: auto;</p>
+        <p><strong>OBS:</strong> Caso desejes ter controle do overflow no sentido horizontal, utilize a propriedade "overflow-x". Similarmente, se quiser controlar apenas o overflow no sentido vertical, utilize a propriedade "overflow-y".</p>
+
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>

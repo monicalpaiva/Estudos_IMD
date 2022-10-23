@@ -40,7 +40,7 @@
 <!-- Trilha menu -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Seletores avançados, Pseudoclasses e Pseudoelementos
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Elementos Block e Inline
       </li>
     </ol>
   </nav>
@@ -51,86 +51,46 @@
       <div class="col-md-8">
 
         <h1 class="mb-4">
-          Aula 13 - Seletores avançados, Pseudoclasses e Pseudoelementos
+          Aula 08 - Elementos Block e Inline
         </h1>
         <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
         <hr>
         <p class="text-muted">postado em 23 de Outubro de 2022</p>
         <hr>
-        <img class="img-fluid rounded mb-4" src="Imagens/Aula_13.png" alt="Computador">
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_08.png" alt="Computador">
 <!-- CONTEUDO -->
-<h3>Seletores avançados</h3>
-<p><strong>Seletor global</strong></p>
-<p>O seletor global permite selecionar todos os elementos HTML. Veja a sintaxe:</p>
-<p class="codigo"><br>* {<br>
-    &nbsp &nbsp    margin: 0;<br>
-    &nbsp     }</p>
-<p>No exemplo acima, todos os elementos HTML da página terão sua margem alterada para zero.</p>
-<p><strong>Seletor descendente</strong></p>
-<p>Seleciona todos os elementos que estão no interior de outro elemento. Veja no exemplo:</p>
-<p class="codigo"><br>div p {<br>
-    &nbsp &nbsp color: rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que estão dentro de uma <code>&lt;div&gt;</code> serão
-     selecionado e terão a sua cor alterada.</p>
-<p><strong>Seletor descendente direto</strong></p>
-<p>Esse seletor seleciona todos os elementos que estão no interior de outro elemento diretamente.
-     Veja no exemplo:</p>
-<p class="codigo"><br>div > p {<br>
-    &nbsp &nbsp color:rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que possuem uma <code>&lt;div&gt;</code> como pai serão selecionados. Perceba que a
-diferença em relação ao anterior está relacionada a ser filho direto ou indireto do elemento pai.</p>
-<p><strong>Seletor de irmão</strong></p>
-<p>Esse seletor seleciona os elementos que são precedidos por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section ~ h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p> 
-<p>O exemplo acima seleciona todos os elementos <code>&lt;h2&gt;</code> que são precedidos
-     por um elemento <code>&lt;section&gt;</code>.</p>
-<p><strong>Seletor de irmão direto</strong></p>
-<p>Esse seletor seleciona elementos que são precedidos imediatamente por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section + h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p>
-<p>O exemplo acima seleciona o primeiro elemento <code>&lt;h2&gt;</code>, que é precedido imediatamente por um
-     elemento <code>&lt;section&gt;</code>.</p>
-<p><strong><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Mais seletores avançados.</a></strong></p>
-<h3>Pseudoclasses</h3>
-<p>As pseudoclasses devem ser definidas após o seletor e precedidas por ":".</p>
-<p><strong>:hover</strong></p>
-<p>A pseudoclasse hover(<strong>div:hover {</strong>) permite definir um estilo para quando o usuário está com o 
-    mouse sobre o elemento.</p>
-<p><strong>:first-child</strong></p>
-<p>A pseudoclasse first-child(<strong>p:first-child {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o primeiro filho de seus pais.</p>
-<p><strong>:last-child</strong></p>
-<p>A pseudoclasse last-child(<strong>p:last-child {</strong>) permite definir um estilo para qualquer elemento que
-    seja o último filho de seus pais.</p>
-<p><strong>:nth-child()</strong></p>
-<p>A pseudoclasse nth-child()(<strong>p:nth-child(2) {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o enésimo filho de seus pais. No exemplo, apenas o segundo elemento filho <code>&lt;p&gt;</code> será
-    selecionado.</p>
-<p>Além de permitir definir um número, pode-se utilizar algumas palavras-chaves como, por exemplo, "odd", para 
-    selecionar os ímpares e "even" para selecionar os pares. p:nth-child(<strong>even</strong>).</p>
-<h3>Pseudoelementos</h3>
-<p>Os pseudoelementos permitem fornecer estilo a uma parte específica do elemento selecionado. Os pseudoelementos
-    devem ser definidos após o seletor e após as pseudoclasses (se existir) e precedidos por "::".</p>
-<p><strong>::first-letter</strong></p>
-<p>O pseudoelemento ::first-letter(<strong>p::first-letter {</strong>) seleciona a primeira letra da primeira 
-    linha de um bloco. É possível combinar pseudoelementos com pseudoclasses para uma seleção ainda mais precisa.
-    (<strong>p:first-child::first-letter {</strong>)</p>
-<p><strong>::before</strong></p>
-<p>O pseudoelemento ::before(<strong>h2::before{</strong>) permite alterar conteúdo que precede o elemento 
-    selecionado.</p>
-<p><strong>::after</strong></p>
-<p>Similarmente ao pseudoelemento ::before, existe o pseudoelemento ::after(<strong>h2::after{</strong>), 
-    que permite alterar conteúdo após o elemento selecionado.</p>
-    <p><strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="_blank">Mais
-         pseudoelementos.</a></strong></p>
+        <h3>Elemento Div e Span</h3>
+
+        <p><strong>Div</strong></p>
+        <p>O div é um elemento HTML que tem a função de agrupar outros elementos. Além disso, o div é um componente block, 
+        ou seja, ocupa toda a área disponível no sentido horizontal. Para adicionar um elemento div no documento, 
+        basta utilizar a tag <div>.</p>
+        <p><strong>Span</strong></p>
+        <p>O span, assim como a div, é um elemento HTML que tem a função de agrupar outros elementos. Diferentemente da div,
+        o span é um componente inline, ou seja, ocupa apenas a área necessária para mostrar seu conteúdo. Para adicionar
+        um elemento span no documento, basta utilizar a tag <code>&lt;span&gt;</code>.</p>
         
+        <h3>Controlando o display pelo CSS</h3>
+
+        <p>É possível controlar pelo CSS e o display dos elementos. Por padrão, os elementos HTML já possuem um display que 
+        pode ser inline ou block, conforme vimos nos elementos div e span. O CSS pode alterar esse comportamento padrão.</p>
+        <p>Além dos elementos block e inline, existe o tipo inline-block, que é um misto dos dois tipos. No inline-block o 
+        elemento ocupará apenas a área necessária para agrupar o componente, mas diferentemente do inline, é possível 
+        controlar o tamanho do componente pela propriedade width do CSS. Para outros valores para o display, consulte
+        este <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/display" target= "_blank">link.</a></p>
+        <p><strong>Display Block</strong></p>
+        <p>A seguir, confira a lista dos elementos HTML que, por padrão, possuem o display block:</p>
+        <img height="50%" width="50%" src="https://materiais.imd.ufrn.br/materialV2/assets/lib/upload/plugins/source/imagens/74/685/Captura%20de%20Tela%202021-01-05%20a%CC%80s%2018-42-59.png"/>
+        <p><strong>Display inline</strong></p>
+        <p>A seguir, confira a lista de elementos HTML que, por padrão, possuem o display inline.</p>
+        <img height="50%" width="50%" src="https://materiais.imd.ufrn.br/materialV2/assets/lib/upload/plugins/source/imagens/74/685/Captura%20de%20Tela%202021-01-05%20a%CC%80s%2018-43-06.png"/>
+        
+        <h3>Criando layout com divs</h3>
+
+        <p>As divs podem ser utilizadas para organizar as seções de um documento HTML, criando um layout. </p>
+        <p>Para verificar a formatação da aula segue o link: <a href="Aula_08_exemplos.html" target="_black">Layout aula</a></p>
+
+        </div>
       </div>
       <!-- Conteúdo lateral -->
       <div class="col-md-4">

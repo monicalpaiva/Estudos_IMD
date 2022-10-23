@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Identificando e Estilizando elementos
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 05 - Identificando e Estilizando elementos
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_05.png" alt="Computador">
+<!-- CONTEUDO -->
+<p><strong>Seletores de classes</strong></p>
+<code>&lt;ul class="list-1"&gt;</code>
+<p>ul class="importante" {<br>
+    list-style-type: disc;<br>
+}</p>
+<p>Estilizando a class no CSS:</p>
+<p>.importante{<br>
+    font-size: 30px;<br>
+}</p>
+<p><strong>Seletores de Identificadores</strong></p>
+<code>&lth1 id="secao1"&gt;</code>
+<p>Estilizando o identificador</p>
+<p>#secao1{<br>
+    font-size: 10px;<br>
+}</p>
+<p><strong>Importante:</strong>O id deve ser utilizado quando se deseja selecionar um elemento em específico. 
+    Os ids são identificadores únicos dos elementos no documento HTML e por isso não é uma boa prática possuir 
+    vários elementos com o mesmo identificador.</p>
+<h3>Plano de fundo com CSS</h3>
+<p>Para aplicar uma imagem de fundo em toda página, pode-se utilizar a propriedade "background-image"
+     do elemento HTML "body". <strong>background-image: url('imgs/bg-gradient.jpg');</strong></p>
+<p>Por padrão, a imagem é replicada em todos os sentidos. No entanto, é possível controlar como se
+     dará a repetição através da propriedade "background-repeat". <strong>background-repeat: repeat-x;</strong></p>
+<table>
+    <caption>Valores da propriedade background-repeat</caption>
+    <tr>
+        <th>Valor</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <th>no-repeat</th>
+        <th>A imagem não será repetida</th>
+    </tr>
+    <tr>
+        <th>repeat</th>
+        <th>Repete a imagem em ambas as direções <strong>(padrão)</strong></th>
+    </tr>
+    <tr>
+        <th>repeat-x</th>
+        <th>Repete a imagem apenas na horizontal</th>
+    </tr>
+    <tr>
+        <th>repeat-y</th>
+        <th>Repete a imagem apenas na vertical</th>
+    </tr>
+    <tr>
+        <th>space</th>
+        <th>As imagens são repetidas de forma a não haver cortes.<br>
+             Um espaço entre as imagens é adicionado no espaço excedente.</th>
+    </tr>
+    <tr>
+        <th>round</th>
+        <th>As imagens são repetidas de forma a não haver cortes. <br>
+            As imagens são redimensionadas de forma a preencher todos os espaços.</th>
+    </tr>
+</table>
+<p>É possível controlar a posição da imagem de fundo. Para isso, 
+    utiliza-se a propriedade "background-position". <strong> background-position: right top;</strong>. 
+    Você pode utilizar as opções <strong>"left", "center" e "right" </strong>para controlar a posição no eixo horizontal
+     e as opções <strong>"top", "center" e "bottom"</strong> para controlar a posição no eixo vertical. <strong>background-position: right top;</strong></p>
+<p>Por padrão, as imagens de fundo rolam com o conteúdo da página. Caso deseje controlar o comportamento da imagem
+     de fundo durante a rolagem da página, utilize a propriedade "background-attachment". <strong>background-attachment: fixed;</strong></p>
+<h3>Bordas</h3>
+<table>
+    <caption>Valores para os estilos de borda</caption>
+    <tr>
+        <th>Valor</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <th>dotted</th>
+        <th>Borda pontilhada</th>
+    </tr>
+    <tr>
+        <th>dashed</th>
+        <th>Borda tracejada</th>
+    </tr>
+    <tr>
+        <th>solid</th>
+        <th>Borda sólida</th>
+    </tr>
+    <tr>
+        <th>double</th>
+        <th>Borda dupla</th>
+    </tr>
+    <tr>
+        <th>groove</th>
+        <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+    </tr>
+    <tr>
+        <th>ridge</th>
+        <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+    </tr>
+    <tr>
+        <th>inset</th>
+        <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+    </tr>
+    <tr>
+        <th>outset</th>
+        <th>Borda com efeito 3D. O efeito depende das cores da borda</th>
+    </tr>
+    <tr>
+        <th>none</th>
+        <th>Sem borda</th>
+    </tr>
+    <tr>
+        <th>hidden</th>
+        <th>Borda invisível</th>
+    </tr>
+</table>
+<p>Para controlar a espessura da <strong>borda</strong> deve-se utilizar a propriedade "border-width". 
+    Para controlar a <strong>cor</strong>, deve-se utilizar a propriedade "border-color". 
+    Caso deseje <strong>arredondar a borda nos cantos</strong>, utilize a propriedade "border-radius", definida em pixels. </p>
+<p>
+    border-style: solid;<br>
+    border-width: 6px;<br>
+    border-color: aqua;<br>
+    border-radius: 4px;<br>
+</p>
+<p>Além disso, é possível especificar estilos diferentes para lados diferentes da borda. Para isso, utilize os sufixos 
+    ("-top", "-right", "-left" e "-bottom") nas propriedades que deseja alterar. <strong>border-top: 5px solid red;</strong></p>
+<p>Além dessa forma, é possível especificar mais de um valor (separados por espaço) em uma propriedade da borda. Nesse caso, 
+    cada valor estará relacionado a um dos lados da borda, seguindo a seguinte ordem: <strong>cima, direita, baixo e esquerda</strong>. </p>
+<p> border-style: solid dashed none double;</p>
+        
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>

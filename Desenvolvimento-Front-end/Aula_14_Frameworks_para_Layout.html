@@ -40,7 +40,7 @@
 <!-- Trilha menu -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Seletores avançados, Pseudoclasses e Pseudoelementos
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Frameworks para Layout
       </li>
     </ol>
   </nav>
@@ -51,85 +51,60 @@
       <div class="col-md-8">
 
         <h1 class="mb-4">
-          Aula 13 - Seletores avançados, Pseudoclasses e Pseudoelementos
+          Aula 14 - Frameworks para Layout
         </h1>
         <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
         <hr>
         <p class="text-muted">postado em 23 de Outubro de 2022</p>
         <hr>
-        <img class="img-fluid rounded mb-4" src="Imagens/Aula_13.png" alt="Computador">
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_14.png" alt="Computador">
 <!-- CONTEUDO -->
-<h3>Seletores avançados</h3>
-<p><strong>Seletor global</strong></p>
-<p>O seletor global permite selecionar todos os elementos HTML. Veja a sintaxe:</p>
-<p class="codigo"><br>* {<br>
-    &nbsp &nbsp    margin: 0;<br>
-    &nbsp     }</p>
-<p>No exemplo acima, todos os elementos HTML da página terão sua margem alterada para zero.</p>
-<p><strong>Seletor descendente</strong></p>
-<p>Seleciona todos os elementos que estão no interior de outro elemento. Veja no exemplo:</p>
-<p class="codigo"><br>div p {<br>
-    &nbsp &nbsp color: rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que estão dentro de uma <code>&lt;div&gt;</code> serão
-     selecionado e terão a sua cor alterada.</p>
-<p><strong>Seletor descendente direto</strong></p>
-<p>Esse seletor seleciona todos os elementos que estão no interior de outro elemento diretamente.
-     Veja no exemplo:</p>
-<p class="codigo"><br>div > p {<br>
-    &nbsp &nbsp color:rgb(79, 165, 56);<br>
-    &nbsp }</p>
-<p>No exemplo acima, todos os parágrafos que possuem uma <code>&lt;div&gt;</code> como pai serão selecionados. Perceba que a
-diferença em relação ao anterior está relacionada a ser filho direto ou indireto do elemento pai.</p>
-<p><strong>Seletor de irmão</strong></p>
-<p>Esse seletor seleciona os elementos que são precedidos por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section ~ h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p> 
-<p>O exemplo acima seleciona todos os elementos <code>&lt;h2&gt;</code> que são precedidos
-     por um elemento <code>&lt;section&gt;</code>.</p>
-<p><strong>Seletor de irmão direto</strong></p>
-<p>Esse seletor seleciona elementos que são precedidos imediatamente por outro elemento (no mesmo nível do HTML). 
-    Veja no exemplo:</p>
-<p class="codigo"><br>section + h2 {<br>
-    &nbsp &nbsp color: lightsteelblue; <br>
-    &nbsp }</p>
-<p>O exemplo acima seleciona o primeiro elemento <code>&lt;h2&gt;</code>, que é precedido imediatamente por um
-     elemento <code>&lt;section&gt;</code>.</p>
-<p><strong><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Mais seletores avançados.</a></strong></p>
-<h3>Pseudoclasses</h3>
-<p>As pseudoclasses devem ser definidas após o seletor e precedidas por ":".</p>
-<p><strong>:hover</strong></p>
-<p>A pseudoclasse hover(<strong>div:hover {</strong>) permite definir um estilo para quando o usuário está com o 
-    mouse sobre o elemento.</p>
-<p><strong>:first-child</strong></p>
-<p>A pseudoclasse first-child(<strong>p:first-child {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o primeiro filho de seus pais.</p>
-<p><strong>:last-child</strong></p>
-<p>A pseudoclasse last-child(<strong>p:last-child {</strong>) permite definir um estilo para qualquer elemento que
-    seja o último filho de seus pais.</p>
-<p><strong>:nth-child()</strong></p>
-<p>A pseudoclasse nth-child()(<strong>p:nth-child(2) {</strong>) permite definir um estilo para qualquer elemento 
-    que seja o enésimo filho de seus pais. No exemplo, apenas o segundo elemento filho <code>&lt;p&gt;</code> será
-    selecionado.</p>
-<p>Além de permitir definir um número, pode-se utilizar algumas palavras-chaves como, por exemplo, "odd", para 
-    selecionar os ímpares e "even" para selecionar os pares. p:nth-child(<strong>even</strong>).</p>
-<h3>Pseudoelementos</h3>
-<p>Os pseudoelementos permitem fornecer estilo a uma parte específica do elemento selecionado. Os pseudoelementos
-    devem ser definidos após o seletor e após as pseudoclasses (se existir) e precedidos por "::".</p>
-<p><strong>::first-letter</strong></p>
-<p>O pseudoelemento ::first-letter(<strong>p::first-letter {</strong>) seleciona a primeira letra da primeira 
-    linha de um bloco. É possível combinar pseudoelementos com pseudoclasses para uma seleção ainda mais precisa.
-    (<strong>p:first-child::first-letter {</strong>)</p>
-<p><strong>::before</strong></p>
-<p>O pseudoelemento ::before(<strong>h2::before{</strong>) permite alterar conteúdo que precede o elemento 
-    selecionado.</p>
-<p><strong>::after</strong></p>
-<p>Similarmente ao pseudoelemento ::before, existe o pseudoelemento ::after(<strong>h2::after{</strong>), 
-    que permite alterar conteúdo após o elemento selecionado.</p>
-    <p><strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="_blank">Mais
-         pseudoelementos.</a></strong></p>
+<h3>O que é o Bootstrap?</h3>
+<p><strong><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></strong></p>
+<p>O Bootstrap é uma biblioteca criada para facilitar a criação de sites responsivos desenvolvida pelo Twitter 
+    e depois disponibilizada gratuitamente para a comunidade. O Bootstrap oferece um conjunto de CSS 
+    (e Javascripts) que coferem ao documento um aspecto profissional e responsivo.</p>
+<h3>Containers e Grid (parte 1)</h3>
+<p><strong><a href="https://getbootstrap.com.br/docs/4.1/layout/grid/" target="_blank">Sistema de grid do Bootstrap.</a></strong></p>
+<p>O sistema de grid é uma importante ferramenta que facilita a estruturação do conteúdo do documento HTML. 
+    Seu funcionamento consiste em dividir o conteúdo em linhas e colunas. Você pode controlar o número de colunas,
+     sua proporção. O comportamento é dinâmico e adaptável a diferentes resoluções.</p>
+<p>Toda a configuração é realizada através da criação de "divs" com classes específicas do Bootstrap. As classes
+     permitem definir linhas, colunas e seu comportamento em diferentes resoluções.</p>
+<p>O Bootstrap permite criar um grid com no máximo 12 colunas. No entanto, é possível controlar a distribuição dos
+     espaços entre as colunas através do uso de classes específicas. Por exemplo, se quisermos que uma coluna possua o
+      tamanho referente a 4 espaços, devemos utilizar a classe "col-md-4" (você pode trocar o "md" por "sm", "lg", "xl"
+       para diferentes pontos de quebra, ou até mesmo utilizar apenas "col-4").</p>
+<h3>Tabelas</h3>
+<p><strong><a href="https://getbootstrap.com.br/docs/4.1/content/tables/" target="_blank">Tabelas utilizando classes
+     do Bootstrap</a></strong></p>
+<p>Perceba o uso das tags <code>&lt;thead&gt;</code> e <code>&lt;tbody&gt;</code> para descrever o cabeçalho e o 
+    corpo da tabela, respectivamente. Similarmente, existe também a tag <code>&lt;tfoot&gt;</code>, com o objetivo
+     de descrever o rodapé da tabela, quando houver. Essas tags semânticas foram adicionadas no HTML5 e servem para 
+     descrever o conteúdo da tabela e facilitar, inclusive, a aplicação de estilo e acessibilidade.</p>
+<p><strong>Opções de cabeçalho</strong></p>
+<p>Você pode controlar a aparência do cabeçalho. Por padrão, o cabeçalho terá a aparência clara. Para alterar esse 
+    comportamento, você pode utilizar a classe "thead-dark" no elemento <code>&lt;thead&gt;</code>.</p>
+<p><strong>Linhas zebradas</strong></p>
+<p>Você pode utilizar a classe "table-striped" para tornar as linhas zebradas, facilitando a identificação das linhas.</p>
+<p><strong>Linhas com efeito "hover"</strong></p>
+<p>Você pode adicionar efeito de destaque, quando o usuário tiver com o mouse em cima de uma linha. Para isso, 
+    deve-se utilizar a classe "table-hover". </p>
+<p><strong>Tabela pequena</strong></p>
+<p>O estilo padrão das tabelas do Bootstrap possui um "padding" para espaçamento interno. Caso deseje ter uma 
+    tabela mais condensada, você pode utilizar a classe "table-sm". </p>
+<h3>Alguns componentes do Bootstrap</h3>
+<p><strong>Barra de navegação</strong></p>
+<p>A barra de navegação permite criar menus responsivos.</p>
+<p><strong>Carousel</strong></p>
+<p>O Carousel é um componente de slideshow para fazer troca de elementos (imagens ou slides de texto), como se fosse um carrossel.</p>
+<p><strong>Cards</strong></p>
+<p>Os Cards Bootstrap proporcionam um contêiner de conteúdo flexível e extensível com múltiplas variantes e opções.</p>
+<p><strong>Sombras</strong></p>
+<p>Adicione ou remova sombras de elementos, usando os utilitários box-shadows. Para adicionar sombra a um elemento,
+     basta adicionar a classe "shadow". </p>
+<p><strong><a href="https://getbootstrap.com.br/docs/4.1/utilities/borders/" target="_blank">Detalhes de borda</a> </strong></p>
+
         
       </div>
       <!-- Conteúdo lateral -->
