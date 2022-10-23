@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desenvolvimento Front-end I</title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CSS on-line -->
+    
+</head>
+<body>
+    <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+    <header>
+        <h1 style="color:beige;">Curso de web IMD</h1>
+    </header>
+    <section>
+        <h2>Aula 13 - Seletores avançados, Pseudoclasses e Pseudoelementos</h2>
+        <h3>Seletores avançados</h3>
+        <p><strong>Seletor global</strong></p>
+        <p>O seletor global permite selecionar todos os elementos HTML. Veja a sintaxe:</p>
+        <p class="codigo"><br>* {<br>
+            &nbsp &nbsp    margin: 0;<br>
+            &nbsp     }</p>
+        <p>No exemplo acima, todos os elementos HTML da página terão sua margem alterada para zero.</p>
+        <p><strong>Seletor descendente</strong></p>
+        <p>Seleciona todos os elementos que estão no interior de outro elemento. Veja no exemplo:</p>
+        <p class="codigo"><br>div p {<br>
+            &nbsp &nbsp color: rgb(79, 165, 56);<br>
+            &nbsp }</p>
+        <p>No exemplo acima, todos os parágrafos que estão dentro de uma <code>&lt;div&gt;</code> serão
+             selecionado e terão a sua cor alterada.</p>
+        <p><strong>Seletor descendente direto</strong></p>
+        <p>Esse seletor seleciona todos os elementos que estão no interior de outro elemento diretamente.
+             Veja no exemplo:</p>
+        <p class="codigo"><br>div > p {<br>
+            &nbsp &nbsp color:rgb(79, 165, 56);<br>
+            &nbsp }</p>
+        <p>No exemplo acima, todos os parágrafos que possuem uma <code>&lt;div&gt;</code> como pai serão selecionados. Perceba que a
+     diferença em relação ao anterior está relacionada a ser filho direto ou indireto do elemento pai.</p>
+        <p><strong>Seletor de irmão</strong></p>
+        <p>Esse seletor seleciona os elementos que são precedidos por outro elemento (no mesmo nível do HTML). 
+            Veja no exemplo:</p>
+        <p class="codigo"><br>section ~ h2 {<br>
+            &nbsp &nbsp color: lightsteelblue; <br>
+            &nbsp }</p> 
+        <p>O exemplo acima seleciona todos os elementos <code>&lt;h2&gt;</code> que são precedidos
+             por um elemento <code>&lt;section&gt;</code>.</p>
+        <p><strong>Seletor de irmão direto</strong></p>
+        <p>Esse seletor seleciona elementos que são precedidos imediatamente por outro elemento (no mesmo nível do HTML). 
+            Veja no exemplo:</p>
+        <p class="codigo"><br>section + h2 {<br>
+            &nbsp &nbsp color: lightsteelblue; <br>
+            &nbsp }</p>
+        <p>O exemplo acima seleciona o primeiro elemento <code>&lt;h2&gt;</code>, que é precedido imediatamente por um
+             elemento <code>&lt;section&gt;</code>.</p>
+        <p><strong><a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Mais seletores avançados.</a></strong></p>
+        <h3>Pseudoclasses</h3>
+        <p>As pseudoclasses devem ser definidas após o seletor e precedidas por ":".</p>
+        <p><strong>:hover</strong></p>
+        <p>A pseudoclasse hover(<strong>div:hover {</strong>) permite definir um estilo para quando o usuário está com o 
+            mouse sobre o elemento.</p>
+        <p><strong>:first-child</strong></p>
+        <p>A pseudoclasse first-child(<strong>p:first-child {</strong>) permite definir um estilo para qualquer elemento 
+            que seja o primeiro filho de seus pais.</p>
+        <p><strong>:last-child</strong></p>
+        <p>A pseudoclasse last-child(<strong>p:last-child {</strong>) permite definir um estilo para qualquer elemento que
+            seja o último filho de seus pais.</p>
+        <p><strong>:nth-child()</strong></p>
+        <p>A pseudoclasse nth-child()(<strong>p:nth-child(2) {</strong>) permite definir um estilo para qualquer elemento 
+            que seja o enésimo filho de seus pais. No exemplo, apenas o segundo elemento filho <code>&lt;p&gt;</code> será
+            selecionado.</p>
+        <p>Além de permitir definir um número, pode-se utilizar algumas palavras-chaves como, por exemplo, "odd", para 
+            selecionar os ímpares e "even" para selecionar os pares. p:nth-child(<strong>even</strong>).</p>
+        <h3>Pseudoelementos</h3>
+        <p>Os pseudoelementos permitem fornecer estilo a uma parte específica do elemento selecionado. Os pseudoelementos
+            devem ser definidos após o seletor e após as pseudoclasses (se existir) e precedidos por "::".</p>
+        <p><strong>::first-letter</strong></p>
+        <p>O pseudoelemento ::first-letter(<strong>p::first-letter {</strong>) seleciona a primeira letra da primeira 
+            linha de um bloco. É possível combinar pseudoelementos com pseudoclasses para uma seleção ainda mais precisa.
+            (<strong>p:first-child::first-letter {</strong>)</p>
+        <p><strong>::before</strong></p>
+        <p>O pseudoelemento ::before(<strong>h2::before{</strong>) permite alterar conteúdo que precede o elemento 
+            selecionado.</p>
+        <p><strong>::after</strong></p>
+        <p>Similarmente ao pseudoelemento ::before, existe o pseudoelemento ::after(<strong>h2::after{</strong>), 
+            que permite alterar conteúdo após o elemento selecionado.</p>
+            <p><strong><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements" target="_blank">Mais
+                 pseudoelementos.</a></strong></p>
+    </section>
+<footer>
+    <p><strong>By Monica Lima de Paiva</strong></p>
+
+</footer>
+</body>
+</html>
