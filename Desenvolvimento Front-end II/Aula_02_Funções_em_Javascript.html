@@ -51,16 +51,99 @@
       <div class="col-md-8">
 
         <h1 class="mb-4">
-          Aula 03 - Títulos, Parágrafos, Links e Imagens
+            Aula 02 - Funções em Javascript
         </h1>
         <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
         <hr>
-        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <p class="text-muted">postado em 26 de Outubro de 2022</p>
         <hr>
         <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
-<!-- CONTEUDO -->
-    
-<!-- Fim do conteúdo-->            
+        <!-- CONTEUDO -->
+        <h3>Declarando funções</h3>
+        <ul>Essa declaração de função consiste em:
+            <li>A palavra-chave function;</li>
+            <li>O nome da função, ou seu identificador, seguido de parênteses;</li>
+            <li>O corpo da função, ou o bloco de instruções necessárias para desempenhar uma tarefa, delimitado pelas chaves.</li>
+        </ul>
+                
+        <h3>Chamando uma função</h3>
+        <p>Para chamar uma função no seu código, é necessário incluir o nome da função seguida de parênteses. Uma característica 
+            interessante do Javascript é a possibilidade de realizar chamadas de função antes da efetiva declaração dessa mesma 
+            função.</p>
+        <pre>
+            function olaMundo() {
+                console.log('Olá Mundo!');
+             }
+             
+             olaMundo(); // chamando a função aqui!
+
+        </pre>
+
+        <h3>Parâmetros e argumentos</h3>
+        <p><strong>Parâmetros</strong> permitem que funções aceitem entradas e manipulem essas entradas para desempenhar alguma tarefa. Usamos 
+            parâmetros para definir qual a informação deve ser passada para a função quando ela é chamada.</p>
+        <p>Os valores que são passados para uma função quando ela é chamada são chamados <strong>argumentos</strong>.
+             Argumentos podem ser passados como valores ou como variáveis.</p>
+
+        <h3>Parâmetros padrão</h3>
+        <p>Ao utilizar <strong>parâmetros padrão</strong>, nós lidamos com situações em que um argumento não é passado para uma 
+            função que está esperando por um argumento.</p>
+        <pre>
+            function ola(nome) {
+                console.log('Olá, ' + nome + '!');
+            }
+            
+            ola('Maria'); // retorna "Olá Maria!"
+            ola(); // retorna "Olá undefinied!"
+        </pre>
+        <p>Para correção desse "undefinied" podemos editar como valor padrão:</p>
+        <pre>
+            function ola(<strong>nome = 'Estranho'</strong>) {
+                console.log('Olá, ' + nome + '!');
+            } 
+
+        ola(); // retorna "Olá Estranho!"
+        </pre>
+
+        <h3>Retornos</h3>
+        <p>Quando uma função é chamada, o computador irá executar o corpo dessa função e avaliar o resultado daquela chamada 
+            de função. Se não for explicitamente realizada a partir de uma instrução return, por padrão, o resultado é 
+            undefinied. Sempre em uma função, mesmo que tenha várias chamadas de retorno, quando a mesma encontrar o primeiro
+             <i>return</i> ela será encerrada.</p>
+        
+        <h3>Funções auxiliares</h3>
+        <p>Nós podemos usar o valor de retorno de uma função dentro de outra função. Essas funções que são chamadas dentro
+             de outras funções são comumentes chamadas de funções auxiliares.</p>
+        <p>Nós podemos usar funções para segmentar pequenas tarefas quando precisamos. Escrever funções auxiliares pode 
+            ajudar a quebrar tarefas grandes e complexas em tarefas menores e mais simples!</p>
+        
+        <h3>Expressão de função e funções flechas</h3>
+        <p>Outra forma de definir uma função é com a chamada <strong>expressão de função</strong>. Ela pode ser útil quando precisamos 
+            definir uma função dentro de alguma expressão. Por exemplo, para armazenarmos uma expressão de função dentro de 
+            uma variável</p>
+        <pre>
+        <strong>var eFimDeSemana</strong> = function(dia) {
+            if (dia === 'Sábado' || dia === "Domingo") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        console.log(eFimDeSemana('Segunda-Feira'))
+        </pre>
+        <p>O Javascript também permite escrever funções usando a sintaxe conhecida como <strong>função flecha</strong>, ou arrow 
+            function. Esse tipo de sintaxe permite omitir a palavra-chave function, deixando a definição de uma função bem mais 
+            reduzida. </p>
+        <pre>
+            var calcularArea = (comprimento, altura) => {
+                return comprimento * altura;
+            }
+            
+            console.log(calcularArea(10, 6));
+        </pre>
+        <pre>var olaComFuncoesFlechaCondensada = nome => console.log('Olá ' + nome + "!");</pre>
+        <!-- Fim do conteúdo-->            
       </div>
       <!-- Conteúdo lateral -->
       <div class="col-md-4">

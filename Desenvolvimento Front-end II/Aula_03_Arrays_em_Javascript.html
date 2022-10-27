@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Títulos, Parágrafos, Links e Imagens
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+            Aula 03 - Arrays em Javascript
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 26 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
+<!-- CONTEUDO -->
+        <h3>Criação de arrays em Javascript</h3>
+        <p>Criamos um array envolvendo seus itens com colchetes e separando seus itens por vírgula:</p>
+        <pre>
+        var arrayHomogenea = ['segunda', 'terça', 'quarta'];
+        var arrayHeterogeneo = ['domingo', 3, true];
+        </pre>
+
+        <h3>Acessando elementos de um array</h3>
+        <p>Cada elemento em um array tem uma posição numérica chamada índice. Nós podemos acessar itens
+             individualmente em um array usando o seu índice.</p>
+        <pre>
+        const cidades = ['Natal', 'Fortaleza', 'Recife'];
+        var minhaCidade = cidades[0];
+
+        console.log(minhaCidade)
+        console.log(cidades[2]);
+        </pre>
+
+        <h3>Atualizando itens de um array</h3>
+        <p>Uma vez que você tem acesso ao elemento em um array, pode atualizar o valor armazenado.</p>
+        <pre>
+        let cursosTecnicos = ['web', 'eletrônica', 'redes'];
+
+        cursosTecnicos[1] = 'jogos';
+        console.log(cursosTecnicos); // Saída: ['web', 'jogos', 'redes']
+        </pre>
+
+        <h3>Propriedade length</h3>
+        <p>Por fim, uma das propriedades nativas do array é a propriedade length, que retorna o 
+            seu comprimento, ou seja, o número de elementos armazenados no array em questão.</p>
+        <pre>
+        const listaDeCompras = ['ovos', 'leite', 'manteiga'];
+        console.log(listaDeCompras.length);
+
+        const novaListaDeCompras = ['ovos', 'leite', 'manteiga', 'chocolate', 'pão'];
+        console.log(novaListaDeCompras.length);
+        </pre>
+        
+        <h3>Métodos push() e pop()</h3>
+        <p>O <strong>método push()</strong> permite que você adicione itens no fim de um array.</p>
+        <p>Dica: Note que o método push() de fato modifica diretamente o array na qual o método 
+            é chamado. Por esse motivo, o método push() é considerado um <strong>método destrutivo</strong>, 
+            pois modifica o array original.</p>
+        <pre>
+        const objetivos = ['estudar javascript', 'passar na disciplina'];
+        objetivos.push('trabalhar com TI', 'relaxar');
+        console.log(objetivos); // [ 'estudar javascript', 'passar na disciplina', 'trabalhar com TI', 'relaxar' ]
+        </pre>
+        <p>Já o <strong>método pop()</strong> remove o último item de um array. Note que o método pop() 
+            retorna o elemento removido.</p>
+        <pre>
+        const objetivos = ['estudar javascript', 'passar na disciplina', 'trabalhar com TI'];
+        var itemRemovido = objetivos.pop();
+        console.log(objetivos); // [ 'estudar javascript', 'passar na disciplina' ]
+        console.log(itemRemovido); // 'trabalhar com TI'
+        </pre>
+
+        <h3>Métodos shift() e unshift()</h3>
+        <p>O <strong>método shift()</strong> remove o primeiro elemento de um array. Funciona de maneira similar ao pop(), 
+            porém ao invés de remover o último item da lista, ele remove o primeiro item.</p>
+        <p>Já o <strong>método unshift()</strong> permite adicionar itens ao início de um array. Funciona de maneira similar 
+            ao push(), porém ao invés de adicionar um item no fim da lista, ele adiciona ao início dela. </p>
+        
+        <h3>Métodos splice() e slice()</h3>
+        <p>O <strong>método splice()</strong> nos permite adicionar ou remover elementos no meio, ou em qualquer 
+            posição do array. Esse método modifica o array original. </p>
+        <pre>
+            const mensagens = ['Mensagem 1', 'Mensagem 2', 'Mensagem 3'];
+
+            mensagens.splice(1, 1); // <strong>(inicio da manipulação, quantos elementos após o indice inicial)</strong>
+            mensagens.splice(1, 0, 'Nova Mensagem'); // <strong>(inicio da manipulação, não remover, inserir elemento no seguinte indice)</strong>
+            mensagens.splice(2, 1, 'Nova Mensagem 3'); // <strong>(inicio da manipulação, remover o numero de elementos (1), inserir o elemento)</strong>
+        </pre>
+        <p>O <strong>método slice()</strong> retorna um array contendo a cópia de uma parte de um array original, selecionado de
+             um índice inicial até um final (final não incluso). Uma observação importante é que o array original não é modificado. </p>
+        <pre>
+        const letras = ['a', 'b', 'c', 'd', 'e', 'f'];
+        let resultado = letras.slice(1, 4);
+        console.log(resultado); // [ 'b', 'c', 'd' ]
+        </pre>
+
+        <h3>Concatenando arrays</h3>
+        <p>O método concat() permite concatenar dois ou mais arrays. Note que o retorno da função corresponde às arrays 
+            concatenadas. </p>
+        <pre>
+            const array1 = ['a', 'b'];
+            const array2 = ['c', 'd'];
+            const array3 = ['e', 'f'];
+
+            const resultado = array1.concat(array2).concat(array3);
+
+            console.log(resultado); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+        </pre>
+
+        <h3>Iterando arrays com forEach()</h3>
+        <p>Esse é um método em que se executa uma função a cada iteração de um array. Portanto o método forEach() recebe 
+            como argumento uma função, também chamada de função de callback, com dois parâmetros: o valor e o índice do
+             elemento.</p>
+        <pre>
+        const array = ['João', 'Maria', 'Daniel', 'Alice'];
+
+        array.forEach((elemento, indice) => { array[indice] = elemento.toUpperCase(); });
+
+        console.log(array);  // [ 'JOÃO', 'MARIA', 'DANIEL', 'ALICE' ]
+
+        </pre>
+
+        <h3>Métodos every() e some()</h3>
+        <p>O <strong>método every()</strong> retorna true ou false, baseado na condição estabelecida e em todos 
+          os elementos do array em questão. É uma maneira interessante de rapidamente checar se <strong>todos os 
+            elementos dentro de um array</strong> satisfazem um determinado critério. </p>
+
+        <p>O <strong>método some()</strong> também retorna true ou false, porém para retornar true é suficiente 
+          que <strong>ao menos um dos elementos do array</strong> satisfaça o critério estabelecido pela função passada como argumento.</p>
+        <pre>
+        let numeros = [12, 19, 7, 3, 9, 7, 3, 11];
+        let todosMaioresQueTrinta = numeros.every(n => {return n < 30});
+        console.log('Todos os números são maiores que 30? ' + todosMaioresQueTrinta); // false
+
+        let algumMaiorQueTrinta = numeros.some(n => {return n > 30});
+        console.log('Tem algum número maior que 30? ' + algumMaiorQueTrinta); // true
+        </pre>
+        
+        <h3>Métodos filter(), map() e reduce()</h3>
+        <p>O <strong>filter()</strong> é um método que permite a criação de um novo array baseado nos elementos de um array preexistente
+           que satisfizerem o critério estabelecido na função passada como argumento da função filter(). 
+           Em outras palavras, o método filter() cria um novo array com todos os elementos que passaram no teste
+            implementado pela função fornecida.</p>
+        <p>O <strong>método map()</strong> cria uma nova array composta dos resultados da execução da função passada como argumento
+           em cada um dos elementos do array original.</p>
+
+        <pre>
+        const palavras = ['universidade', 'web', 'javascript', 'disciplina', 'aluno', 'nota'];
+        const resultado1 = palavras.filter(palavra => palavra.length > 6);
+        console.log(resultado1); // [ 'universidade', 'javascript', 'disciplina' ]
+
+        const array = [1, 4, 9, 16];
+        const resultado2 = array.map(x => x * 2);
+        console.log(resultado2); // [ 2, 8, 18, 32 ]
+        </pre>
+        
+        <p>o <strong>método reduce()</strong> executa uma função reducer (provida por você) para cada membro do array, resultando
+          num único valor de retorno. Para simplificar, uma função reducer é uma função agregadora. Pode ser para fazer uma soma,
+          encontrar o maior ou menor valor numa lista, entre muitas outras possibilidades. O reducer sempre percorrerá toda a 
+          lista e retornará apenas um resultado.</p>
+
+        <pre>
+        const precos = [7.50, 32.00, 12.50, 27.50, 16.50, 9.90];
+
+        const maiorPrecoReajustado = precos
+          .filter((produto) => { return produto > 15.00 })
+          .map((produto) => { return produto - 0.1*produto })
+          .reduce((a, b) => { return Math.max(a, b) } );                            
+
+        console.log(maiorPrecoReajustado); // 28.8
+        </pre>
+
+        <h3>Ordenando arrays</h3>
+        <p>Se quisermos ordenar de maneira descendente, basta invocar o sort() normalmente para ordenar de maneira 
+          crescente e chamar o método reverse() para reverter a ordem do array em questão.</p>
+        
+        <h3>Buscando em arrays com indexOf(), find() e findIndex()</h3>
+        <p><strong>Método indexOf()</strong> permite encontrar o índice da primeira ocorrência do valor passado como
+           parâmetro.</p>
+        <p>O <strong>método find()</strong> retorna o valor da primeira ocorrência no array que satisfaça a função 
+          passada como argumento.</p>
+        <p>Note que o find() é bastante similar ao filter(), porém o find() para a execução e retorna somente 
+          o primeiro valor que satisfaça a condição estabelecida pela função.</p>
+        <p>O <strong>método findIndex()</strong> retorna o índice (posição) da primeira ocorrência no array que satisfaça a 
+          função passada como argumento.</p>
+        <p>Outra maneira é através dos métodos find() e findIndex(). Funcionam de maneira similar, porém o primeiro 
+          retorna o valor e o segundo retorna o índice da primeira ocorrência no array que satisfaça a função passada
+           como argumento. Note que o find() é bastante similar ao filter(), porém o find() para a execução e retorna
+            somente o primeiro valor que satisfaça a condição estabelecida pela função.</p>
+        <pre>
+        const mensagens1 = ['Mensagem 1', 'Mensagem 2', 'Mensagem 3', 'Mensagem 2'];
+        var busca = mensagens1.<strong>indexOf</strong>('Mensagem 2');
+        console.log(busca); // 1
+
+        const array1 = [5, 12, 8, 130, 44];
+        const valor = array1.<strong>find</strong>(item => item > 10);
+        console.log(valor); // 12
+
+        const array2 = [5, 12, 8, 130, 44];
+        const indice = array2.<strong>findIndex</strong>(item => item > 10);
+        console.log(indice); // 1
+
+        const mensagens2 = ['Mensagem 1', 'Mensagem 2', 'Mensagem 3', 'Mensagem 2'];
+        var busca = mensagens2.<strong>indexOf</strong>('Mensagem 2');
+        console.log(busca); // 1
+        </pre>
+<!-- Fim do conteúdo-->            
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                  <li><a href="#">Desenvolvimento Front-end II</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>
