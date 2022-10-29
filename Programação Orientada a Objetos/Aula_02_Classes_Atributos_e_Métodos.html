@@ -57,11 +57,197 @@
         <hr>
         <p class="text-muted">postado em 23 de Outubro de 2022</p>
         <hr>
-        <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="aula15">
 <!-- CONTEUDO -->
+
     <h3>Classe</h3>
+    <p>A classe não serve para organizar no sentido de guardar os objetos, ela serve de modelo de construção.</p>
+    <ul style="list-style-type:none;padding:0;margin:0">
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">O modelo define as características e comportamentos que os objetos irão determinar, seus valores e suas ações, respectivamente;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">A classe é o modelo ou molde de construção de objetos;</li>
+      <li style="padding:8px 16px;">A classe é abstrata (não existe concretamente).</li>
+    </ul>
+
+    <h3>Implementação de uma Classe em TypeScript</h3>
+    <p>Utilizamos a palavra reservada <strong>class</strong> seguida do nome da classe e, entre chaves, o corpo da classe.</p>
+    <p>
+      <pre>
+        class Carro {
+          modelo: string;
+          cor: string;
+          placa: string;
+        }
+      </pre>
+    </p>
+
+    <h3>Declaração de Atributos</h3>
+    <ul style="list-style-type:none;padding:0;margin:0">
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Devem começar com uma letra ou com _ (note que NÃO podemos 
+        começar com um número);</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Podem conter letras, dígitos, _ e $ (note que NÃO podemos 
+        usar nem hífen nem ponto);</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">O nome também não deve ser igual ao de um comando, uma 
+        classe, um método, uma função ou 
+        de uma palavra reservada da linguagem, tais como: class, number, while;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Espaços não são permitidos em nomes de variáveis;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Nomes de variáveis são sensíveis a letras minúsculas e 
+        maiúsculas. Em outras palavras, dois atributos com nomes "placa" e "Placa", por exemplo, são considerados dois 
+        atributos diferentes, chamamos isso de case sensitive;</li>
+      <li style="padding:8px 16px;">Além disso, podemos utilizar um padrão chamado de Camel Case, que é a prática de 
+        utilizar palavras compostas alternando as iniciais das palavras com letra maiúscula ou minúscula.</li>
+    </ul>
+
+    <h3>Tipos de Dados</h3>
+    <ol>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd"><strong>number</strong>: recebe valores numéricos de ponto
+         flutuante ou inteiro;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd"><strong>string</strong>: recebe uma cadeia de caracteres 
+        alfanuméricos delimitados por aspas ou apóstrofos;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd"><strong>boolean</strong>: valores lógicos true ou false;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd"><strong>enum</strong>: permite a definição de um conjunto 
+        de valores numéricos em que cada elemento recebe uma identificação para maior legibilidade;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd"><strong>any</strong>: indica que qualquer tipo de dado pode 
+        ser atribuído à variável;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd"><strong>void</strong>: não é bem um tipo de dado, mas sim 
+        uma declaração de sua ausência, utilizado na declaração de funções que não retornam um valor.</li>
+    </ol>
+
+    <h3>Adicionando Comportamentos</h3>
+    <p>Os objetos das classes precisam não só de suas características, mas também de comportamentos que expressem as ações 
+      possíveis de serem executadas</p>
+    <p>
+      <pre>
+        class Carro {
+          modelo: string;
+          cor: string;
+          placa: string;
+          numPortas: number;
+
+          getCor (): string {
+            return <strong>this</strong>.cor;
+          }
+
+          setCor (cor:string):void {
+            <strong>this</strong>.cor = cor;
+          }
+        }
+      </pre>
+    </p>
+    <p>Usa-se a palavra reservada <strong>this</strong> antes do nome cor, informando que estamos referenciando o atributo 
+      da classe e não o parâmetro do método.</p>
+
+    <h3>Definição de Métodos</h3>
+
+    <ol>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Tipo de acesso do método (public, private, protected);</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Nome do método;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Tipo de retorno, o qual pode ser um objeto ou tipo primitivo;</li>
+      <li style="padding:8px 16px;border-bottom:1px solid #ddd">Um ou mais parâmetros;</li>
+      <li style="padding:8px 16px;">Corpo do método.</li>
+    </ol>
     
-        
+    <img class="img-fluid rounded mb-4" src="https://materiais.imd.ufrn.br/materialV2/assets/lib/upload/plugins/source/imagens/76/698/imagem_definicao_metodos.png">
+
+    <h3>Criando Objetos</h3>
+
+    <p>O comando new Carro() <strong> cria uma instância</strong> da classe Carro, que também podemos chamar de um objeto da classe Carro. 
+      Chamamos o método setCor para alterar a cor do carro e o método getCor para recuperar/acessar o valor do atributo cor.</p>
+    <p>
+      <pre>
+        class Carro {
+          modelo: string;
+          cor: string;
+          placa: string;
+          numPlaca: number;
+
+          getCor(): string {
+            return this.cor;
+          }
+
+          setCor(cor:string): void {
+            this.cor = cor;
+          }
+        }
+
+        let c = new Carro();
+        c.setCor("Azul");
+        console.log(c.getCor());
+      </pre>
+    </p>
+
+    <h3>Chamando os Métodos como Atributos</h3>
+    <p>No TypeScript não precisamos chamar os métodos de forma explícita.</p>
+    <p>
+      <pre>
+        class Carro {
+          modelo: string;
+          <strong>_cor</strong>: string;
+          placa: string;
+          numPortas: number;
+
+          <strong>get cor()</strong>: string {
+            return this._cor;
+          }
+
+          <strong>set cor</strong> (cor:string): void {
+            this._cor = cor;
+          }
+        }
+
+        var c = new Carro();
+        console.log(c.cor)</strong>;
+      </pre>
+    </p>
+
+    <h3>Preparando o Ambiente de Execução</h3>
+    <p><strong>Ferramentas</strong></p>
+    <p>Incialmente iremos instalar no computador o TypeScript que é a linguagem que iremos utilizar e o Visual Code (VS Code), 
+      que é a IDE que iremos utilizar para desenvolver, digitar os códigos em TypeScript e executá-los.</p>
+    <p>Iremos Instalar o TypeScript através do npm , que é um gerenciador de pacotes do node. O node é um ambiente de execução 
+      do JavaScript, ambiente server-side, ou seja, do lado do servidor. Em nosso caso, iremos utilizar o ambiente node para
+       executar o TypeScript no terminal do computador, embora o node nos possibite criar uma aplicação completa em TypeScript, 
+       no contexto desta disciplina iremos utilizar como ambiente de execução dos nossos códigos.</p>
+    <p><strong>Habiltar o Terminal Integrado</strong></p>
+    <p>Para habilitar o terminal integrado na IDE, clica no menu Terminal e depois em New Terminal</p>
+    <p><strong>Transpilando e executando</strong></p>
+    <p>Para executar o arquivo, digite o seguinte comando:</p>
+
+    <p><strong>tsc</strong> exemplo.ts</p>
+      
+    <p>Esse comando vai fazer o processo de transpiler, que criará um arquivo Javascript (.js). Para executar o arquivo, digita o comando:</p>
+      
+    <p><strong>node</strong> exemplo</p>
+
+    <h3>Transpilando em modo observação</h3>
+
+    <p>Execute o compilador (Transpiler) no modo de observação. Observe os arquivos de entrada e caso ocorra alteração nos arquivos a 
+      recompilação é acionada. Para isso, abra um novo terminal e execute o seguinte comando:</p>
+    <p><strong>tsc - w</strong> ou <strong>tsc --watch</strong></p>
+    <p>Para que essa opção funcione é necessário criarmos o arquivo de configuração do TypeScript: tsconfig.json<br>
+
+      {<br>
+      
+      }<br>
+    </p>
+    
+    <h3>Visualizando no Console do Navegador</h3>
+
+    <p>Para que seja possível visualizar a saída do console no navegador, é necessário criarmos um projeto com um 
+      arquivo html e na tag <code>&lt;script&gt;&lt;/script&gt;</code> passarmos o caminho do arquivo javascript.</p>
+    
+    <p>Seguem abaixo os passos para instalação e configuração do live-server:</p>
+    <ol>
+      <li>Criar o arquivo package.json, este é um descritor do nosso projeto, onde podemos configurar, além de informações sobre o projeto, 
+        scripts e dependências. Para criar o arquivo, podemos digitar dentro da pasta raiz do projeto o seguinte comando: npm init -y</li>
+      <li>Instalando o live-server: npm install -s live-server</li>
+      <li>Criando um script para executar o live-server em nosso projeto. No arquivo package.json, em scripts acrescentar a seguinte linha:
+        "start": "live-server"</li>
+      <li>Executando o servidor: npm start</li>
+    </ol>
+    <p>
+    
+    <h3>Colocando em Prática o Conceito de Classe</h3>
+
 <!-- Fim do conteúdo-->            
       </div>
       <!-- Conteúdo lateral -->
