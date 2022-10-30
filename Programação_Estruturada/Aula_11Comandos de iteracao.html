@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../Index.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Arrays: Introdução, Acesso e Métodos
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 11 - Arrays: Introdução, Acesso e Métodos
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
+<!-- CONTEUDO -->
+        <h3>Introdução aos arrays</h3>
+        <p><strong>Importante!!!</strong></p>
+        <p>Uma informação importante: Várias linguagens de programação, como Java, por exemplo, definem essas estruturas como 
+        estruturas homogêneas, ou seja, elas podem armazenar diversos valores de um mesmo tipo de dado. No entanto, em 
+        JavaScript, não há essa exigência. Mesmo assim, nesta aula, faremos o uso homogêneo dos arrays. Ou seja, em todos 
+        os nossos exemplos, os elementos do array terão o mesmo tipo. Mas lembre-se: em JavaScript arrays podem ter elementos 
+        de tipos diferentes.</p>
+        <p>Array é uma estrutura de dados indexada que nos permite armazenar diversos valores em uma única variável e você 
+        pode acessar esses valores individualmente fazendo referência ao seu índice. </p>
+        <img  class="img-fluid rounded mb-4" src="https://materiais.imd.ufrn.br/materialV2/assets/imagens/programacao-estruturada/2020_prog_estruturada_a11_f02.png">
+        <p>Chamamos essa forma de definição de arrays de notação literal.</p>
+        <p><strong>Atenção:</strong>Algumas linguagens de programação suportam arrays com índices não numéricos, os quais são chamados 
+        de arrays associativos (ou hashes), que são estruturas de dados diferentes compostas de um conjunto não ordenado de pares 
+        formados por uma chave e um valor. <strong>O JavaScript não suporta arrays associativos.</strong> Em JavaScript, arrays 
+        usam índices numerados. Se você utilizar um índice nomeado, ao acessar um array, o JavaScript redefinirá o array para um 
+        objeto padrão. Após essa redefinição automática, métodos e propriedades do array produzirão resultados indefinidos ou 
+        incorretos. </p> 
+        <p>Exemplo:</p>
+
+        <hr>
+        <h6>Dias da Semana</h6>
+        <button onclick="dia_da_semana1()">INICIAR</button>
+        <p id="resultado1"></p>
+        <hr>
+
+        <p>Caso necessite criar um array vazio, você pode simplesmente escrever os colchetes sem nenhum elemento entre eles.</p>
+        <p><br>
+        var vetor = [ ];<br>
+        var vetor1 = new Array(1,10); //[1,10]<br>
+        var vetor2 = new Array(1); // [undefined]
+        </p>
+        <p>Outra característica importante dos arrays em JavaScript é que eles são um <strong>tipo especial de objeto</strong>. O operador typeof 
+        em JavaScript retorna object para arrays. Porém, arrays em JavaScript são melhor descritos como arrays mesmo.</p>
+
+        <h3>Acessando Elementos de um Array</h3>
+        <p>Primeiramente, você precisa conhecer uma propriedade muito importante do array, o seu tamanho. Essa propriedade pode 
+        ser acessada usando a palavra-chave <strong>length</strong>. </p>
+        <hr>
+        <p>Exemplo:</p>
+        <button onclick="dia_da_semana2()">INICIAR</button>
+        <p id="resultado2"></p>
+        <hr>
+        
+        <p>Agora você irá aprender a adicionar elementos a um array. A essa altura, você já sabe bem que os índices dos arrays 
+          em JavaScript começam com 0 e que, por isso, o último índice do array é igual ao tamanho do array menos um, ou seja,
+          array.length-1.</p>
+        
+        <p>Exemplo:</p>
+        Quantas pessoas? <input type="number" id="total" value="">
+        <button onclick="nomes()">INICIAR</button>
+        <p id="resultado3"></p>
+
+
+<!-- Fim do conteúdo-->            
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                  <li><a href="#">Desenvolvimento Front-end II</a></li>
+                  <li><a href="#">Programação Orientada a Objetos</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+        <script src="script/script_aula_11.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>
