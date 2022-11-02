@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Títulos, Parágrafos, Links e Imagens
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 12 - Arrays: Ordenação, Iteração e Matrizes
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 23 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
+<!-- CONTEUDO -->
+    <p>Ordenar os elementos de um array. JavaScript oferece o <strong>método sort</strong> ("ordenar" em inglês), que ordena um 
+      array crescente em ordem ALFABÉTICA.</p>
+   
+    <hr>
+    <h3>Ordenação</h3>
+    <p>cores = ["Verde","Amarelo","Azul","Branco"]</p>
+    <p>cores.sort();<br>
+      cores.reverse();</p>
+    <p id="resultado"></p>
+    <hr>
+    <p>Essa função compara dois valores para poder ordená-los, ela utiliza uma função de comparação e verifica o seu retorno. 
+      Dados dois valores a e b:</p>
+    <ul>
+      <li>Se o resultado da função de comparação for negativo, a é classificado antes de b.</li>
+      <li>Se o resultado da função de comparação for 0, nenhuma alteração será feita com a ordem de classificação dos dois valores.</li>
+      <li>Por fim, se o resultado da função de comparação for positivo, b é classificado antes de a.</li>
+    </ul>
+
+    <p>A função sort, porém, pode receber uma função de comparação como parâmetro. Nos casos de valores numéricos, essa função 
+      pode ser definida da seguinte maneira:</p>
+      <p>
+        <pre>
+          var numeros = [100,25];
+          numero.sort(comparar);
+
+          resposta = "Array ordenado = [" + numeros + "] <br>";
+          document.getElementById("resultado").innerHTML = resposta; 
+          function comparar(a,b){
+            return a - b;
+          }
+        </pre>
+      </p>
+      
+      <p>Note que essa função tem exatamente o resultado desejado. Ou seja:</p>
+    <ul>
+      <li>Se a for menor que b, a função retorna um número negativo</li>
+      <li>Se a for igual a b, a função retorna 0</li>
+      <li>Por fim, se a for maior que b, a função retorna um número positivo</li>
+    </ul>
+    <p>Portanto:</p>
+    <ul>
+      <li>Se compararmos 25 e 100, a função retorna um número negativo, -75</li>
+      <li>Já, se compararmos 25 e 25, a função retorna 0</li>
+      <li>E se compararmos 100 e 25, a função retorna um número positivo, 75</li>
+    </ul>
+    <p>Agora, tudo o que precisamos fazer é passar essa função para o método sort.</p>
+
+    <hr>
+    <p> numeros = [40,100,25,45,30]</p>
+    <p id="resultado2"></p>
+    <hr>
+
+    <p>É importante destacar que, se apenas forem invertidos o a e o b na subtração 
+      da função de ordenação, o array será ordenado decrescentemente.</p>
+
+    <hr>
+    <p> numeros = [40,100,25,45,30]</p>
+    <p id="resultado3"></p>
+    <hr>
+
+    <p>Inviável para retirar o menor e maior. Uma opção mais simples é utilizar a expressão 
+      Math.min.apply(null, numeros) que retorna o menor valor do array numeros e a expressão 
+      Math.max.apply(null, numeros) que retorna o maior valor do array numeros.</p>
+
+      <hr>
+      <p> numeros = [40,100,25,45,30]</p>
+      <p id="resultado4"></p>
+      <hr>
+
+      <p>Outra forma é com funções mais adequadas:</p>
+      <hr>
+      <p id="resultado5"></p>
+      <hr>
+
+      <p>O <strong>método indexOf (numeros.indexOf(elemento))</strong> ("índice de" em inglês) procura no array o elemento passado como parâmetro e 
+        retorna o índice no array de sua primeira ocorrência. Por outro lado, o <strong>método lastIndexOf (numeros.lastIndexOf(elemento)</strong> 
+        ("último índice de" em inglês) procura no array o elemento passado como parâmetro, mas retorna o índice no 
+        array de sua última ocorrência. Em ambos os métodos, caso o elemento não seja encontrado no array, o retorno é -1.</p>
+      <p>O método indexOf pode receber um segundo parâmetro para indicar de onde começar a busca pela primeira 
+        ocorrência do valor passado. <strong>numeros.indexOf(100, 1)</strong></p>
+
+      <h3>Iteração sobre Arrays</h3>
+
+      <p>Os itens dos arrays recebem como um dos argumentos o que chamamos de métodos de callback, os quais são utilizados 
+        durante a iteração sendo executados em algum momento. Serão apresentados:</p>
+      <p>O <strong>método forEach</strong> ("para cada" em inglês) chama a função de callback passada como argumento uma 
+        vez para cada elemento do array. </p>
+        <hr>
+        <p><strong>Exemplo método forEach</strong></p>
+      <p id="resultado6"></p>
+        <hr>
+      
+      <p>O <strong>método map</strong> ("mapear" em inglês) cria um novo array executando a função de callback passada a cada 
+        elemento do array original, sem alterá-lo. Assim como no método forEach, os métodos de callback utilizados no map 
+        também podem ter mais dois argumentos, o índice e o array.</p>
+      <p>O <strong>método filter</strong> ("filtrar" em inglês) retorna um novo array contendo apenas elementos que satisfaçam 
+        uma determinada condição ou, em outras palavras, que passem em um teste. Para isso, ela utiliza uma função de callback 
+        que retorna um valor booleano para cada valor do array. A função filter filtra o array e mantém apenas índices com 
+        retorno verdadeiro. </p>
+
+        <hr>
+        <p><strong>Exemplo métodos map e filter</strong></p>
+      <p id="resultado6"></p>
+        <hr>
+<!-- Fim do conteúdo-->            
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                  <li><a href="#">Desenvolvimento Front-end II</a></li>
+                  <li><a href="#">Programação Orientada a Objetos</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+        <script src="script/script_aula_12.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>

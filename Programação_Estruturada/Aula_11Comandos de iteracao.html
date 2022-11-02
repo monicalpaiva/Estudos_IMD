@@ -59,6 +59,7 @@
         <hr>
         <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
 <!-- CONTEUDO -->
+
         <h3>Introdução aos arrays</h3>
         <p><strong>Importante!!!</strong></p>
         <p>Uma informação importante: Várias linguagens de programação, como Java, por exemplo, definem essas estruturas como 
@@ -101,17 +102,99 @@
         <button onclick="dia_da_semana2()">INICIAR</button>
         <p id="resultado2"></p>
         <hr>
-        
+
         <p>Agora você irá aprender a adicionar elementos a um array. A essa altura, você já sabe bem que os índices dos arrays 
-          em JavaScript começam com 0 e que, por isso, o último índice do array é igual ao tamanho do array menos um, ou seja,
-          array.length-1.</p>
-        
+        em JavaScript começam com 0 e que, por isso, o último índice do array é igual ao tamanho do array menos um, ou seja,
+        array.length-1.</p>
+        <hr>
         <p>Exemplo:</p>
         Quantas pessoas? <input type="number" id="total" value="">
         <button onclick="nomes()">INICIAR</button>
         <p id="resultado3"></p>
+        <hr>
 
+        <h3>Métodos para Arrays</h3>
+        <p>Métodos para inserir e remover elementos e métodos para concatenar, ou seja, unir dois arrays. São eles:</p> 
+          <ul>
+            <li>toString</li>
+            <li>join</li>
+            <li>split</li>
+            <li>push</li>
+            <li>pop</li>
+          </ul>
 
+          <p>Os métodos <strong>toString</strong>[cores.toString()], <strong>join</strong> [cores.join(" + ")] e 
+            <strong>split</strong> [resposta.split("+")]</strong> nos permitem trabalhar com arrays e strings. Para começar, 
+            você já conheceu o comportamento do método toString, o qual, quando aplicado a um array, retorna uma string 
+            contendo os elementos do array separados por vírgula. </p>
+          <p>Caso você deseje escolher o separador, deve usar o método join, o qual tem o mesmo comportamento do método 
+            toString, mas utiliza o separador passado por você para separar os elementos do arrays na string resultante</p>
+          <p>O método split recebe uma string que indica quem é o separador dos elementos e retorna um array contendo os 
+            elementos que estão separados pelo separador indicado pelo programador. </p>
+          <p>Para retirar os espaços em branco, precisamos aplicar o método replace à string antes de chamarmos o 
+            método split.</p>
+          <p>Métodos que nos permitem adicionar e remover elementos no final do array. Primeiramente, o <strong>método 
+            push</strong> [cores.push("Preto")] adiciona o elemento passado no final do array e retorna o tamanho final do array.
+            O <strong>método pop</strong> [cores.pop()] remove o último elemento do array e retorna esse elemento.</p>
+          <p>Juntos, os métodos push e pop nos oferecem a oportunidade de usar arrays como pilhas, outra estrutura de dados 
+            muito utilizada em programas que se baseia no princípio Last In First Out (LIFO); ou seja, "o último que entra 
+            é o primeiro que sai" e caracteriza um empilhamento de dados.</p>
+          <hr>
+            <p>Exemplo Métodos para Arrays:
+              <p><br>var cores = ["Verde","Amarelo","Azul","Branco"];<br>
+                var resposta = "";<br>
+                var nome = ["monica", "lima", "paiva"];</p>
+
+            </p>
+            <p id="resultado4"></p>
+          <hr>
+
+          <p>Métodos para inserir e remover elementos e métodos para concatenar, ou seja, unir dois arrays. São eles:</p> 
+          <ul>
+            <li>unshift</li>
+            <li>shift</li>
+            <li>delete</li>
+            <li>splice</li>
+            <li>concat</li>
+            <li>slice</li>
+          </ul>
+
+          <p>O <strong>método unshift</strong> ( cores.unshift("Preto") ) adiciona o elemento passado no início do array e 
+            retorna o tamanho final do array. O <strong>método shift</strong> ( cores.shift() ) remove o primeiro elemento 
+            do array e o retorna. </p>
+          <p>O <strong>operador delete</strong> ( delete cores [2] ) remove uma propriedade de um objeto. Como arrays0
+            JavaScript são objetos, podemos excluir elementos usando esse operador. Ao aplicarmos o delete no elemento 
+            de índice 2, alteramos o valor desse elemento para undefined. Ao aplicarmos o delete no elemento de índice 2, 
+            alteramos o valor desse elemento para undefined. Porém, esse comando cria um "buraco" de valor undefined no array. 
+            Por esse motivo, para remover um elemento, o uso de pop ou shift é mais recomendado.</p>
+          
+          <p>o <strong>método splice</strong> ( splice(2,1,"Preto","Cinza") ), que também pode ser usado para adicionar e 
+            remover elementos do array. A sua principal diferença é que ele permite que isso seja feito dentro dos arrays 
+            e não apenas no início e no final. O primeiro parâmetro do método splice define a posição onde os novos elementos 
+            devem ser adicionados. O segundo parâmetro indica quantos elementos devem ser removidos a partir do índice usado 
+            no primeiro parâmetro. Por fim, o restante dos parâmetros define os novos elementos a serem adicionados. Além de 
+            transformar o array, o método splice retorna um array contendo os elementos removidos. Se usarmos apenas os dois 
+            primeiros parâmetros, ou seja, a posição onde os novos elementos deveriam ser adicionados e quantos elementos devem 
+            ser removidos a partir dessa posição. Ao não passarmos mais parâmetros, não adicionaremos nenhum novo elemento. 
+            Na prática, isso será o mesmo que apenas remover elementos. ( splice(2,1) )</p>
+          <p>O <strong>método concat</strong> ( x.concat(y) ou x.concat(y,z) ), que concatena os arrays passados como parâmetros.
+            Em outras palavras, esse método une os dois arrays.</p>
+          <p>O <strong>método slice</strong> (cores.slice(1) ou cores.slice(1,2) ) retorna uma "fatia" (slice em inglês) do array
+            à qual ele é aplicado. Assim como o método concat, ele não altera o array original, mas apenas retorna um novo array 
+            com o resultado da operação. Isto é, retorna uma "fatia" do array que começa no índice passado como primeiro parâmetro
+            e termina no elemento de índice anterior ao índice passado como segundo parâmetro. </p>
+          
+          <hr>
+            <p>Exemplo Métodos para Arrays:
+              <br>var cores = ["Verde","Amarelo","Azul","Branco"];<br>
+                var nome = ["monica", "lima", "paiva"]; <br>
+                var x3 = ["cavalo","cachorro"];<br>
+                var y2 = ["gato","papagaio"];<br>
+                var z = ["suco de uva"];</p>
+            <p id="resultado5"></p>
+          <hr>
+
+          
 <!-- Fim do conteúdo-->            
       </div>
       <!-- Conteúdo lateral -->

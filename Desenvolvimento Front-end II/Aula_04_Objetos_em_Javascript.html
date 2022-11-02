@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estudos IMD - Informática para Internet</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+  <!-- Menu superior -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Estudos IMD - Informática para Internet</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="../Index.html">Home<span class="sr-only">(Página atual)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Disciplinas.html">Disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Contato.html">Contanto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- Trilha menu -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"><a href="../Index.html">Home</a> / Títulos, Parágrafos, Links e Imagens
+      </li>
+    </ol>
+  </nav>
+<!-- Estrutura inicial da página -->
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <h1 class="mb-4">
+          Aula 04 - Objetos em Javascript
+        </h1>
+        <p class="lead">Postado por <a href="#">Monica Lima de Paiva</a></p>
+        <hr>
+        <p class="text-muted">postado em 26 de Outubro de 2022</p>
+        <hr>
+        <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="Computador">
+<!-- CONTEUDO -->
+        <h3>Objetos em Javascript</h3>
+        <p>Usamos chaves {} para designar um objeto usando <strong>notação literal</strong>. Seus dados, também chamados de 
+          propriedades, são organizados usando pares chave-valor. Uma chave é um nome que aponta para uma posição na memória 
+          que armazenar um valor de qualquer tipo. Criamos um par chave-valor escrevendo um identificador para servir como 
+          chave, seguido de dois-pontos e então o valor. Separamos cada par chave-valor por vírgulas. Chaves são strings, 
+          mas o Javascript permite que escrevamos as chaves sem aspas caso não tenhamos nenhum caractere especial, como os 
+          espaços. </p>
+      <p>
+        <pre>
+          let carro = {
+            'Tipo de Combustivel': 'Gasolina',
+            cor: 'prata',
+            potencia: 115
+          };
+        </pre>
+      </p>
+
+      <h3>Propriedades dos objetos</h3>
+      <p>Existem duas maneiras de acessar as propriedades de um objeto, usando a notação com <strong>ponto-final</strong>
+         e a notação usando <strong>colchetes</strong>. Com a notação de ponto-final colocamos o identificador do objeto 
+         seguido de ponto do nome da chave da propriedade. Já com a notação de colchetes podemos acessar qualquer propriedade, 
+         inclusive aquelas que têm como chave uma string. </p>
+      <p>
+        <pre>
+          let naveEspacial = {
+            planetaOrigem: 'Terra',
+            tripulacao:  5,
+            'Missão Ativa': true,
+            cor: 'prata',
+            'Tipo de Combustível': 'Hidrogênio',
+            trajeto: ['Vênus', 'Marte', 'Saturno']
+        }
+        
+        var tamanhoTripulacao = naveEspacial.tripulacao; // notação ponto final
+        
+        var missaoAndamento = naveEspacial['Missão Ativa']; // notação colchetes
+        </pre>
+      </p>
+
+      <h3>Atribuindo valores as propriedades de objetos</h3>
+      <p>Após definirmos um objeto, temos a possibilidade de atualizar os valores de suas propriedades e também criar novas 
+        propriedades, uma vez que um objeto é mutável. Podemos usar tanto a notação ponto-final quanto a notação com colchetes 
+        junto com o operador de atribuição =, para adicionar novas propriedades ou atualizar propriedades já existentes. 
+        Ou seja, duas situações podem ocorrer:</p>
+        <ol>
+          <li>Se a propriedade já existe no objeto, qualquer valor anteriormente armazenado será substituído pelo novo valor atribuído;</li>
+          <li>Se não existe uma propriedade com aquele nome, uma nova propriedade será adicionada ao objeto.</li>
+        </ol>
+        <p>Note que mesmo um objeto declarado com const pode ter suas propriedades modificadas. O que não podemos fazer é atribuir
+           um novo objeto a essa variável.</p>
+        <p>
+          <pre>
+            let naveEspacial = {
+              planetaOrigem: 'Terra',
+              tripulacao:  5,
+              'Missão Ativa': true,
+              cor: 'prata',
+              'Tipo de Combustível': 'Hidrogênio',
+              trajeto: ['Vênus', 'Marte', 'Saturno']
+          }
+          
+          naveEspacial.cor = 'branca'; // como a propriedade 'cor' já existe, somente o valor foi atualizado.
+          naveEspacial['Nome do piloto'] = 'Bob'; // como a propriedade 'Nome do piloto' não existe, ela foi criada.
+          </pre>
+        </p>
+
+        <h3>Removendo propriedades de objetos</h3>
+        <p>Para deletar uma propriedade, utilizamos a palavra-chave delete seguida da propriedade que queremos.<br>
+           <strong>delete naveEspacial.planetaOrigem;</strong></p>
+        
+        <h3>Métodos dos objetos</h3>
+        <p>OBS: Uma <strong>propriedade</strong> é o que um objeto tem, enquanto um <strong>método</strong> é o que um objeto faz.</p>
+        <p>
+          <pre>
+            let naveEspacial = {
+              tripulacao: 5,
+              'Missão Ativa': true,
+              decolar: function () {
+                  console.log('Decolando...');
+              },
+              pousar() {
+                  console.log('Pousando!');
+              }
+          }
+          
+          naveEspacial.decolar(); // Decolando...
+          naveEspacial.pousar(); // Pousando!
+          </pre>
+        </p>
+
+        <h3>Objetos aninhados</h3>
+        <p>Em aplicações reais, é comum objetos estarem aninhados uns nos outros. </p>
+        <p>
+          <pre>
+            let naveEspacial = {
+              passageiros: [{nome: 'cachorro espacial'}, {nome: 'gato espacial'}],
+              tripulacao: { //objeto e propriedade
+                  capitao: { //objeto e propriedade
+                      nome: 'Daniel', //propriedade
+                      especialidade: 'Engenharia da Computação', //propriedade
+                      'comidas favoritas': ['bolo', 'cuscuz', 'pipoca'], //propriedade
+                      cumprimentar() { console.log('Olá pessoal, sou o Cap. Daniel.') }//metodo
+                  }
+              },
+              motor: {
+                  modelo: 'RocketDyne F1',
+                  ano: 2017,
+                  potencia: 4400
+              }
+          }
+          
+          naveEspacial.tripulacao.capitao.cumprimentar();
+          console.log(naveEspacial.passageiros[0].nome);
+          </pre>
+        </p>
+
+        <h3>Objetos passados como referência</h3>
+        <p>Objetos são passados como referência. Isso quer dizer que quando passamos um objeto como argumento de uma função, 
+          o computador interpreta esse parâmetro como um apontamento para o espaço em memória em que aquele objeto está 
+          armazenado. O impacto disso é que funções que mudam as propriedades de um objeto realmente alteram o objeto 
+          permanentemente.</p>
+
+        <p>
+          <pre>
+            let naveEspacial = {
+              tripulacao:  5,
+              'Missão Ativa': true,
+              trajeto: ['Vênus', 'Marte', 'Saturno']
+          }
+          
+          function desativarMissao(obj) {
+              obj['Missão Ativa'] = false;
+          }
+          
+          let adicionarJupiterNoTrajeto = (obj) => {
+              obj.trajeto.push('Júpiter');
+          }
+          
+          desativarMissao(naveEspacial);
+          adicionarJupiterNoTrajeto(naveEspacial);
+          console.log(naveEspacial); // { tripulacao: 5, 'Missão Ativa': false, trajeto: [ 'Vênus', 'Marte', 'Saturno', 'Júpiter' ] }
+          </pre>
+        </p>
+
+        <h3>Iterando através das propriedades de um objeto</h3>
+        <p>Os pares chave-valor de um objeto não são ordenados, por isso temos uma estrutura chamada <strong>for..in</strong> que
+           permite que executemos um trecho de código para cada uma das propriedades de um objeto. </p>
+        <p>
+          <pre>
+            let naveEspacial = {
+              tripulacao: {
+                  capitao: {
+                      nome: 'Daniel',
+                      especialidade: 'Engenharia da Computação',
+                      cumprimentar() { console.log('Olá pessoal, sou o Cap. Daniel.') }
+                  },
+                  medico: {
+                      nome: 'Alice',
+                      especialidade: 'Medicina',
+                      anunciar() { console.log('Realizando exames periódicos na tripulação!') }
+                  },
+                  cientista: {
+                      nome: 'Carla',
+                      especialidade: 'Física',
+                      pesquisar() { console.log('Iniciando pesquisa sobre a teoria da relatividade...') }
+                  }
+              }
+          }
+          
+          for (let membro in naveEspacial.tripulacao) {
+              console.log(`${membro}: ${naveEspacial.tripulacao[membro].nome}`);
+          }
+          // capitao: Daniel
+          // medico: Alice
+          // cientista: Carla
+          </pre>
+        </p>
+
+        <h3>A palavra-chave this</h3>
+        <p>Dentro do escopo de método em objetos, podemos usar a palavra-chave this para fazer referência ao próprio objeto. 
+          Dessa maneira, podemos fazer associações e operações usando as próprias propriedades do objeto no qual o método 
+          foi chamado.</p>
+        <p>
+          <pre>
+            const robo = {
+              modelo: 'T-800',
+              nivelEnergia: 90,
+              pegarInfo() {
+                  return `Eu sou o ${this.modelo} e meu atual nível de energia é ${this.nivelEnergia}%.`;
+              },
+              carregarBateria() {
+                  this.nivelEnergia = 100;
+              }
+          };
+          
+          console.log(robo.pegarInfo()); // Eu sou o T-800 e meu atual nível de energia é 90%.
+          </pre>
+        </p>
+
+        <h3>Construtores</h3>
+        <p>A sintaxe regular de criar objetos usando a notação literal permite criar um único objeto com aquelas propriedades e 
+          métodos. Mas existem cenários em que precisamos criar vários objetos similares, como, por exemplo, múltiplos usuários 
+          ou itens de menu. Isso pode ser atendido usando as funções construtoras e a palavra-chave new.</p>
+        <p>Construtores tecnicamente são como funções regulares, que você já aprendeu a criar. Porém, existem duas convenções 
+          para criação de construtores:</p>
+        <ol>
+          <li>São nomeados com a primeira letra em maiúsculo.</li>
+          <li>Eles devem ser executados junto com o operador new.</li>
+        </ol>
+        <p>
+          <pre>
+            function FabricaDeRobos(modelo, material) {
+              this.modelo = modelo;
+              this.material = material;
+              this.nivelEnergia = 100;
+              this.pegarInfo = () => `Eu sou o ${this.modelo} e meu atual nível de energia é ${this.nivelEnergia}%.`;
+          }
+          
+          let robo1 = new FabricaDeRobos('R2D2', 'Liga de Titânio');
+          let robo2 = new FabricaDeRobos('C3PO', 'Latão');
+          
+          console.log(robo1.pegarInfo()); // Eu sou o R2D2 e meu atual nível de energia é 100%.
+          console.log(robo2.pegarInfo()); // Eu sou o C3PO e meu atual nível de energia é 100%.
+          </pre>
+        </p>
+         
+        <h3>Métodos nativos dos objetos: keys(), entries(), assign()</h3>
+        <p>O <strong>método keys()</strong> (Object.keys(robo);) retorna um array contendo as chaves do objeto passado como 
+          argumento.</p>
+        <p>Dica: Temos também disponível o método Object.values(), que retorna um array contendo os valores do objeto 
+          passado como argumento</p>
+        <p>O <strong>método entries()</strong> (Object.entries(robo) retorna um array de pares [chave, valor] do objeto 
+          passado como argumento.</p>
+        <p>O <strong>método assign()</strong> (Object.assign({'Reconhecimento de Voz': true, versao: '1.3.1'}, robo);)retorna um novo objeto contendo a cópia todas as propriedades de um ou mais
+           objetos passados como argumentos.</p>
+        <p>
+          <pre>
+            const robo = {
+              modelo: 'T-800',
+              nivelEnergia: 85,
+              ativo: true
+          };
+          
+          const chavesRobo = Object.keys(robo);
+          console.log(chavesRobo); // [ 'modelo', 'nivelEnergia', 'ativo' ]
+          
+          const valoresRobo = Object.values(robo);
+          console.log(valoresRobo); // [ 'T-800', 85, true ]
+          
+          const entradasRobo = Object.entries(robo)
+          console.log(entradasRobo); // [ [ 'modelo', 'T-800' ], [ 'nivelEnergia', 85 ], [ 'ativo', true ] ]
+          
+          const novoRobo = Object.assign({'Reconhecimento de Voz': true, versao: '1.3.1'}, robo);
+          console.log(novoRobo); // { 'Reconhecimento de Voz': true, versao: '1.3.1', modelo: 'T-800', nivelEnergia: 85, ativo: true }
+          </pre>
+        </p>
+<!-- Fim do conteúdo-->            
+      </div>
+      <!-- Conteúdo lateral -->
+      <div class="col-md-4">
+      
+        <div class="card mb-4">
+          <div class="card-header">Busca</div>
+          <div class="card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Digite aqui...">
+              <button class="btn btn-secondary ml-2">Buscar</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Disciplinas</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled">
+                  <li><a href="#">Desenvolvimento Front-end I</a></li>
+                  <li><a href="#">Programação Estruturada</a></li>
+                  <li><a href="#">Desenvolvimento Front-end II</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card mb-4">
+          <div class="card-header">Autor</div>
+            <div class="card-body">
+              <div class="text-center">
+                <img src="../imagens/perfil.gif" class="rounded-circle" alt="">
+              </div>
+              <p class="py-3">Graduanda em Ciência e Tecnologia(C&T) pela Univerdidade Federal do Rio Grande do Norte(UFRN), 
+                estudante do Tecnico de Informática para Internet e formada em Tecnico de Eletrônica. Bolsista de apoio tecnico da Biblioteca Central Zila 
+                Mamede(BCZM) no setor de Repositórios Digitias. Já trabalhei com suporte de computadores e periféricos, estou tralhando no momento com PHP, 
+                HTML, CSS e JavaScript. Iniciando em paralelo o estudo básico para dispositivos móveis devido disciplina do curso de graduação.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <footer class="bg-dark py-3" r>
+          <p class="text-white text-center">Desenvolvido pelo IMD</p>
+        </footer>
+      
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+      
+      
+      
+      </body>
+      
+      </html>
