@@ -59,6 +59,55 @@
         <hr>
         <img class="img-fluid rounded mb-4" src="Imagens/Aula_15.png" alt="aula15">
 <!-- CONTEUDO -->
+        <h3>Conceitos: Construtores e Objetos</h3>
+        <p>Antes de tudo, é preciso ter em mente que objetos são construídos, você NÃO pode criar um novo objeto sem invocar 
+          um construtor. Construtores representam o código que roda sempre que você usa a palavra-chave <strong>new</strong>.</p>
+        <p>Toda classe DEVE ter um construtor. Mas isso não significa que o programador tem que necessariamente 
+          codificar um. Caso não seja explicitamente declarado, o compilador criará um por padrão.</p>
+        <p>
+          <pre>
+            let c = new Carro();
+            c.cor = "Vermelho";
+            console.log(c.cor);
+          </pre>
+        </p>
+        <p>Observe que quando utilizamos o operador new não existem argumentos (ou parâmetros) dentro dos parênteses. 
+          Isso significa que podemos usar o construtor padrão (ou, em inglês, default).</p>
+        
+        <h3>Métodos construtores</h3>
+        <p><strong>O que são construtores?</strong></p>
+        <ol>
+          <li>São métodos especiais para a criação e inicialização de novas instâncias de classe (objetos);</li>
+          <li>Inicializam o novo objeto e seus atributos;</li>
+          <li>Realizam todas as outras operações que ele precisa para ser inicializado.</li>
+        </ol>
+        <p><strong>O que faz o operador new?</strong></p>
+        <p>Ele inicializa o novo objeto e seus atributos</p>
+        <p><strong>Criando um método construtor</strong></p>
+        <p>
+        <pre>
+          export class Carro{
+
+            modelo: string;
+            _cor: string;
+            placa: string;
+            numPortas: number;
+        
+            constructor(modelo:string, cor: string, placa: string, numPortas: number){
+                this.modelo = modelo;
+                this._cor = cor;
+                this.placa = placa;
+                this.numPortas = numPortas;
+            }
+        
+          }
+        </pre>
+        </p>
+        <p>Os construtores não têm tipo de retorno e devemos utilizar a palavra reservada <strong>constructor</strong>.</p>
+        <p>Se a classe não tiver método construtor, o objeto ainda pode ser criado usando a instrução (ou operador) new. 
+          Mas, nesse caso, será provavelmente necessário chamar métodos de acesso (set) para definir valores para os 
+          atributos da classe.</p>
+        <p><pre>let c = new Carro("Fiesta","Vermelha","AEC-9898",4);</pre></p>
 
     
 <!-- Fim do conteúdo-->            
