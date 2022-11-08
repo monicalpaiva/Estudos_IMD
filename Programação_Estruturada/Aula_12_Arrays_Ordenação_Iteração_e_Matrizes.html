@@ -159,9 +159,109 @@
         que retorna um valor booleano para cada valor do array. A função filter filtra o array e mantém apenas índices com 
         retorno verdadeiro. </p>
 
-        <hr>
-        <p><strong>Exemplo métodos map e filter</strong></p>
-      <p id="resultado6"></p>
+      <hr>
+      <p><strong>Exemplo métodos map e filter</strong></p>
+      <p id="resultado7"></p>
+      <hr>
+
+      <p>Os <strong>métodos reduce</strong> ("reduzir" em inglês) e <strong>reduceRight</strong> ("reduzir da direita" em inglês) 
+        executam uma função em cada elemento da matriz para produzir um único valor. A diferença entre eles é que o primeiro faz 
+        essa aplicação da esquerda para a direita e o segundo faz essa aplicação da direita para esquerda. </p>
+      <p>Uma diferença importante entre eles e os que vimos até então é que a função de callback tem quatro argumentos: além do 
+        valor do item, do índice do item e do próprio array, a função também recebe um acumulador. Esse acumulador inicialmente 
+        recebe um valor inicial passado na chamada do método reduce e reduceRight, e depois fica recebendo o valor retornado na 
+        aplicação da função ao elemento anterior do array.</p>
+      <p><strong> Importante:</strong> É importante observar que caso o valor inicial do acumulador não seja passado na chamada 
+        do método reduce e reduceRight, ele receberá o valor do primeiro elemento do array. Por isso, chamar reduce em um array 
+        vazio sem valor inicial para o acumulador, é um erro. O mais seguro, portanto, é fornecer um valor inicial. Existem 
+        outras situações peculiares que acontecem com arrays vazios e de tamanho 1, dependendo do fornecimento ou não do valor 
+        inicial do acumulador. Veja agora exemplos práticos de uso de reduce e reduceRight, além dessas situações peculiares.</p>
+
+      <hr>
+      <p><strong>Reduce e ReduceRight</strong></p>
+      <p id="resultado8"></p>
+      <hr>
+
+      <p>Os quatro últimos métodos são capazes de verificar os elementos de um array com relação a alguma 
+        condição. São eles: every, some, find e findIndex. Assim como os métodos anteriores, esses métodos <strong>não alteram o 
+          array original</strong>. Além disso, com relação às funções de callback que podem ser usadas, esses métodos são idênticos 
+        ao método filter em dois aspectos:</p>
+      <ol>
+        <li>A função de callback usa três argumentos: o valor do item, o índice do item e o próprio array. Caso a função de 
+          callback utilize apenas o valor do item, ela pode ser definida com apenas um argumento, o valor. Por simplicidade, 
+          no que se segue, vamos utilizar funções de callback com um argumento apenas.</li>
+        <li>A função de callback representa condições, ou seja, deve retornar valores booleanos para cada valor do array.</li>
+      </ol>
+
+      <p>O <strong>método every </strong>("todos" em inglês) retorna true apenas se todos os elementos do array satisfizerem a 
+        condição representada pela função de callback. Ou seja, o retorno dessa função deve ser true para todos os elementos 
+        do array. Por outro lado, o <strong>método some</strong> ("algum" em inglês) retorna true apenas se algum elemento do 
+        array satisfizer a condição representada pela função de callback. Ou seja, o retorno dessa função deve ser true para 
+        pelo menos um dos elementos do array.</p>
+      
+      <hr>
+      <p><strong>Every e Some</strong></p>
+      <p id="resultado9"></p>
+      <hr>
+      
+      <p>Os <strong>métodos find e findIndex</strong> procuram um elemento no array que satisfaz a condição representada pela 
+        função de callback. No entanto, find retorna o elemento encontrado e findIndex retorna o índice desse elemento. 
+        Caso nenhum elemento satisfaça a condição, find retorna o valor undefined e findIndex retorna -1.</p>
+
+      <hr>
+      <P><strong>Find e FindIndex</strong></P>
+      <p id="resultado10"></p>
+      <hr>
+
+      <h3>Matriz</h3>
+      <p>São elementos matemáticos que oferecem uma solução simples e poderosa à representação dos dados e das relações 
+        existentes entre eles. Quando trabalhamos com matrizes, é comum chamarmos os índices de linhas e colunas. No caso, 
+        é comum considerarmos que o primeiro índice indexa as linhas e o segundo índice indexa as colunas. Lembre-se que 
+        continuamos trabalhando com arrays. Por esse motivo, os índices variam de 0 ao tamanho da dimensão menos um.</p>
+      <p>
+        <pre>
+          var num = [
+            [1,2,3,4],
+            [5,6,7,8],
+            [9,10,11,12]
+          ];
+          num[0] = [1,2,3,4];
+          num[1][2] = 7;
+        </pre>
+      </p>
+
+      <hr>
+      <p><strong>Distâncias - matriz</strong></p>
+
+        Cidade 1: 
+        <select id="cidade1">
+            <option value=0>Maceió</option> 
+            <option value=1>Manaus</option>
+            <option value=2>Natal</option>
+            <option value=3>Palmas</option>
+            <option value=4>Porto Alegre</option>
+            <option value=5>Porto Velho</option>
+        </select>
+        <br><br>
+        Cidade 2: 
+        <select id="cidade2">
+            <option value=0>Maceió</option> 
+            <option value=1>Manaus</option>
+            <option value=2>Natal</option>
+            <option value=3>Palmas</option>
+            <option value=4>Porto Alegre</option>
+            <option value=5>Porto Velho</option>
+        </select>
+        <br><br>
+        Tipo de Distância: 
+        <select id="distancia">
+            <option value=0>Rodoviária</option> 
+            <option value=1>Aérea</option>
+        </select>
+        <br><br>
+        <button onclick="calcular()">OK</button><br>
+
+        <p id="resultado11"></p>
         <hr>
 <!-- Fim do conteúdo-->            
       </div>
