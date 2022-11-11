@@ -1,13 +1,6 @@
-function mostrar_soma(x:number, y:number){
-    console.log(x+y);
+function mostrar_soma (num1:number, num2:number){
+    let soma = num1 + num2;
+    console.log(soma);
 }
-
+ 
 mostrar_soma(2,3);
-
-/** JavaScript (tsc exemplo.ts -> node exemplo)
- * "use strict";
- * function mostrar_soma(x, y) {
- *     console.log(x + y);
- * }
- * mostrar_soma(2, 3);
- */
