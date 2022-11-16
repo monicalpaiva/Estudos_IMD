@@ -3,6 +3,7 @@
  * Objetos em Javascript
 */
 
+
 const excluirPropriedades = (objeto, propriedades) => {
    propriedades.forEach(p => {
     delete objeto[p];
