@@ -13,6 +13,12 @@ function areaCirculo (numero){
     return resultado;
 }
 
+const botao = document.querySelector(".potencia-button");
+const alerta = document.querySelector(".alerta-indisponivel");
 
+function revelar() {
+    botao.classList.toggle("hide");
+    alerta.classList.toggle("hide");
+}
 
-document.getElementById("solucao").innerHTML = potencia(document.querySelector('#potencia-input'));
+botao.onclick = revelar;
