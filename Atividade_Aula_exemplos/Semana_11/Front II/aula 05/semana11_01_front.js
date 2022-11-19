@@ -15,7 +15,7 @@ const estiloLi = document.querySelectorAll('li');
 for (const element of estiloLi){
     element.style.color = 'red';
 }
-
+ 
 //e)
 document.body.insertBefore(document.createElement("img"), document.querySelector("h1"));
 const image = document.querySelector('img');

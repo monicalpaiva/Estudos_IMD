@@ -1,6 +1,6 @@
 function potencia (numero){
     var resultado = Math.pow(numero,3);
-    return resultado;
+    document.getElementById("solucao").innerHTML = resultado;
 }
 
 function metade (numero){
@@ -13,12 +13,8 @@ function areaCirculo (numero){
     return resultado;
 }
 
-const botao = document.querySelector(".potencia-button");
-const alerta = document.querySelector(".alerta-indisponivel");
+const element = document.getElementById("potencia-input");
+const element2 = element.addEventListener("number", function(){potencia(element);});
 
-function revelar() {
-    botao.classList.toggle("hide");
-    alerta.classList.toggle("hide");
-}
 
-botao.onclick = revelar;
+document.getElementById("solucao").innerHTML = element + "<br>" + element2;
